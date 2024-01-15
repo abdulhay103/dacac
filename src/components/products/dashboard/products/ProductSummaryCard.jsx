@@ -13,7 +13,7 @@ export default function ProductSummaryCard(props) {
             return accumulator + currentValue._count.categoryId;
         }, 0);
     return (
-        <div className=" col-span-1 bg-gradient-to-tl from-orange-50 to-blue-50 p-6 xl:p-8 2xl:p-10 rounded-xl">
+        <div className=" col-span-1 bg-gradient-to-tl from-orange-50 to-deep-orange-50 p-6 xl:p-8 2xl:p-10 rounded-xl">
             <h4 className=" text-orange-600 text-center border-b-2 border-orange-500 pb-1">
                 {text}:
                 <span className=" text-3xl font-semibold pl-2">

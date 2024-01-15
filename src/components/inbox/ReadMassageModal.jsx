@@ -48,12 +48,12 @@ export function ReadMassageModal({ modalData }) {
             ) : (
                 <Eye
                     onClick={handleOpen}
-                    className=" w-6 h-6 cursor-pointer text-blue-500"
+                    className=" w-6 h-6 cursor-pointer text-deep-orange-500"
                 />
             )}
 
             <Dialog open={open} handler={handleOpen} size="md">
-                <h4 className="text-center py-3 border-b text-blue-500">
+                <h4 className="text-center py-3 border-b text-deep-orange-500">
                     Email Details
                 </h4>
                 <div className=" p-6">
@@ -69,7 +69,7 @@ export function ReadMassageModal({ modalData }) {
                 <DialogFooter className="space-x-2">
                     <Button
                         variant="text"
-                        color="blue-gray"
+                        color="deep-orange-gray"
                         onClick={closeHandler}
                         className=" border "
                     >

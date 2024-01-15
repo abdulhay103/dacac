@@ -200,7 +200,7 @@ export default function AddProduct(props) {
                 className=" flex gap-3 w-full justify-center cursor-pointer"
             >
                 <PlusCircle size={25} />
-                <p className=" hover:text-blue-500 inline-block relative transition-all duration-500 before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[3px] before:rounded-full before:opacity-0 before:transition-all before:duration-500 before:bg-gradient-to-l before:from-amber-500 before:to-blue-500 hover:before:w-full hover:before:opacity-100 ">
+                <p className=" hover:text-deep-orange-500 inline-block relative transition-all duration-500 before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[3px] before:rounded-full before:opacity-0 before:transition-all before:duration-500 before:bg-gradient-to-l before:from-amber-500 before:to-deep-orange-500 hover:before:w-full hover:before:opacity-100 ">
                     Add Items
                 </p>
             </div>
@@ -224,7 +224,7 @@ export default function AddProduct(props) {
                                     name="title"
                                     id="title"
                                     placeholder="Product Name"
-                                    className=" w-full py-1 px-5 border rounded outline-blue-300 focus:text-blue-500 mb-4"
+                                    className=" w-full py-1 px-5 border rounded outline-deep-orange-300 focus:text-deep-orange-500 mb-4"
                                 />
                             </div>
                             <div className=" w-full">
@@ -242,7 +242,7 @@ export default function AddProduct(props) {
                                     name="short_desc"
                                     id="short_desc"
                                     placeholder="Short Description"
-                                    className=" w-full py-1 px-5 border rounded outline-blue-300 focus:text-blue-500 mb-4"
+                                    className=" w-full py-1 px-5 border rounded outline-deep-orange-300 focus:text-deep-orange-500 mb-4"
                                 />
                             </div>
                         </div>
@@ -366,7 +366,7 @@ export default function AddProduct(props) {
                                     name="origin"
                                     id="origin"
                                     placeholder="Country Origin"
-                                    className=" w-full py-1 px-5 border rounded outline-blue-300 focus:text-blue-500 mb-4"
+                                    className=" w-full py-1 px-5 border rounded outline-deep-orange-300 focus:text-deep-orange-500 mb-4"
                                 />
                             </div>
                             <div className=" w-full">
@@ -379,7 +379,7 @@ export default function AddProduct(props) {
                                     name="price"
                                     id="price"
                                     placeholder="Product Price"
-                                    className=" w-full py-1 px-5 border rounded outline-blue-300 focus:text-blue-500 mb-4"
+                                    className=" w-full py-1 px-5 border rounded outline-deep-orange-300 focus:text-deep-orange-500 mb-4"
                                 />
                             </div>
                             <div className=" w-full">
@@ -395,7 +395,7 @@ export default function AddProduct(props) {
                                     name="discount"
                                     id="discount"
                                     placeholder="Discount"
-                                    className=" w-full py-1 px-5 border rounded outline-blue-300 focus:text-blue-500 mb-4"
+                                    className=" w-full py-1 px-5 border rounded outline-deep-orange-300 focus:text-deep-orange-500 mb-4"
                                 />
                             </div>
                         </div>
@@ -444,7 +444,7 @@ export default function AddProduct(props) {
                                     id="support_n_care"
                                     rows="3"
                                     placeholder="Support and Care"
-                                    className="w-full py-1 px-5 border rounded outline-blue-300 focus:text-blue-500 mb-4"
+                                    className="w-full py-1 px-5 border rounded outline-deep-orange-300 focus:text-deep-orange-500 mb-4"
                                 />
                             </div>
                             <div className=" w-full">
@@ -463,7 +463,7 @@ export default function AddProduct(props) {
                                     id="how_to_setup"
                                     rows="3"
                                     placeholder="Support and Care"
-                                    className="w-full py-1 px-5 border rounded outline-blue-300 focus:text-blue-500 mb-4"
+                                    className="w-full py-1 px-5 border rounded outline-deep-orange-300 focus:text-deep-orange-500 mb-4"
                                 />
                             </div>
                         </div>
@@ -479,7 +479,7 @@ export default function AddProduct(props) {
                                     id="faq"
                                     rows="3"
                                     placeholder="Frequently Asked Questions"
-                                    className="w-full py-1 px-5 border rounded outline-blue-300 focus:text-blue-500 mb-4"
+                                    className="w-full py-1 px-5 border rounded outline-deep-orange-300 focus:text-deep-orange-500 mb-4"
                                 />
                             </div>
                             <div className=" w-full">

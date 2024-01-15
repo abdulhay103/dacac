@@ -31,7 +31,9 @@ export default function FounderUi() {
                                 <h5 className=" text-lg xl:text-xl">
                                     Engr. Md Kamrul Hasan
                                 </h5>
-                                <p className=" text-blue-500">Proprietor</p>
+                                <p className=" text-deep-orange-500">
+                                    Proprietor
+                                </p>
                             </div>
                         </div>
                     </div>

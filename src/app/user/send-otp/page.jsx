@@ -9,8 +9,8 @@ export default function SendOTP() {
                     <h2>Send OTP</h2>
                     <p className=" flex items-center py-1">
                         Conented with
-                        <span className=" flex items-center text-blue-600 px-2">
-                            <SparklesIcon className="w-5 h-5" /> MEC Trade
+                        <span className=" flex items-center text-deep-orange-700 px-2">
+                            <SparklesIcon className="w-5 h-5 mr-1" /> DACAC
                         </span>
                     </p>
                 </div>

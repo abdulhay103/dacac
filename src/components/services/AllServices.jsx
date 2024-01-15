@@ -57,7 +57,7 @@ export default function () {
                 {servicesArray.map((item, index) => (
                     <div
                         key={index}
-                        className=" p-5 lg:p-6 col-span-12 lg:col-span-4 gap-6 lg:gap-8 xl:gap-10 min-h-[430px] border rounded-md bg-white shadow-lg hover:shadow-xl hover:text-white hover:bg-blue-500 transition-all"
+                        className=" p-5 lg:p-6 col-span-12 lg:col-span-4 gap-6 lg:gap-8 xl:gap-10 min-h-[430px] border rounded-md bg-white shadow-lg hover:shadow-xl hover:text-white hover:bg-deep-orange-500 transition-all"
                     >
                         <div className=" flex flex-col gap-5 items-center justify-center">
                             <div className=" w-28 h-28 lg:w-32 lg:h-32 overflow-hidden bg-white rounded-full">

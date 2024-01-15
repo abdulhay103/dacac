@@ -65,7 +65,7 @@ export function OrderStatusModal({ modalData }) {
             <div onClick={handleOpen}>
                 <DotsThreeCircleVertical
                     size={26}
-                    className=" cursor-pointer text-blue-500"
+                    className=" cursor-pointer text-deep-orange-500"
                 />
             </div>
 
@@ -110,7 +110,7 @@ export function OrderStatusModal({ modalData }) {
                 <DialogFooter className="space-x-2">
                     <Button
                         variant="text"
-                        color="blue-gray"
+                        color="deep-orange-gray"
                         onClick={handleOpen}
                     >
                         Cancel

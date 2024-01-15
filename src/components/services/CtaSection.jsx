@@ -17,7 +17,7 @@ export default function CtaSection() {
                         <div className=" flex justify-center py-6 lg:py-8 xl:py-10">
                             <Link
                                 href="/contact"
-                                className=" py-3 px-8 bg-gradient-to-tr from-blue-500 to-purple-300 rounded-full text-white hover:scale-105 transition-all"
+                                className=" py-3 px-8 bg-gradient-to-tr from-deep-orange-500 to-purple-300 rounded-full text-white hover:scale-105 transition-all"
                             >
                                 Explore Our Services
                             </Link>

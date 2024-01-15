@@ -32,7 +32,7 @@ export function SidebarUi({ totalMassage }) {
         setOpen(open === value ? 0 : value);
     };
     return (
-        <Card className="h-[100vh] w-80 2xl:w-96  p-4 shadow-xl shadow-blue-gray-900/5">
+        <Card className="h-[100vh] w-80 2xl:w-96  p-4 shadow-xl shadow-deep-orange-gray-900/5">
             <Link href="/" className=" w-11/12 p-5">
                 <Image
                     src={mecLogoTitle}
@@ -69,7 +69,7 @@ export function SidebarUi({ totalMassage }) {
                                 <ShoppingBagIcon className="h-5 w-5" />
                             </ListItemPrefix>
                             <Typography
-                                color="blue-gray"
+                                color="deep-orange-gray"
                                 className="mr-auto font-normal"
                             >
                                 <Link href="#" className="w-full">
@@ -160,7 +160,7 @@ export function SidebarUi({ totalMassage }) {
                                 value={totalMassage}
                                 size="sm"
                                 variant="ghost"
-                                color="blue-gray"
+                                color="deep-orange-gray"
                                 className="rounded-full"
                             />
                         )}

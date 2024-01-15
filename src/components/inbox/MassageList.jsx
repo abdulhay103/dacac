@@ -31,8 +31,8 @@ export default function MassageList({ allMassage }) {
     };
     return (
         <div className="p-10 2xl:p-16">
-            <div className="border-2 border-blue-500 rounded-md overflow-hidden">
-                <h4 className="py-4 text-center bg-blue-500 text-white">
+            <div className="border-2 border-deep-orange-500 rounded-md overflow-hidden">
+                <h4 className="py-4 text-center bg-deep-orange-500 text-white">
                     All Massages
                 </h4>
                 <table className=" w-full table-auto text-left">
@@ -41,11 +41,11 @@ export default function MassageList({ allMassage }) {
                             {TABLE_HEAD.map((head) => (
                                 <th
                                     key={head}
-                                    className="border-t-2 border-b-2 border-blue-500 bg-gray-300 p-4"
+                                    className="border-t-2 border-b-2 border-deep-orange-500 bg-gray-300 p-4"
                                 >
                                     <Typography
                                         variant="small"
-                                        color="blue-gray"
+                                        color="deep-orange-gray"
                                         className="font-normal leading-none opacity-70"
                                     >
                                         {head}
@@ -60,14 +60,14 @@ export default function MassageList({ allMassage }) {
                                 const isLast = index === allMassage.length - 1;
                                 const classes =
                                     status === "unread"
-                                        ? "p-4 bg-orange-50 border-b border-blue-gray-100"
-                                        : "p-4 border-b bg-white border-blue-gray-100";
+                                        ? "p-4 bg-orange-50 border-b border-deep-orange-gray-100"
+                                        : "p-4 border-b bg-white border-deep-orange-gray-100";
                                 return (
                                     <tr key={id}>
                                         <td className={classes}>
                                             <Typography
                                                 variant="small"
-                                                color="blue-gray"
+                                                color="deep-orange-gray"
                                                 className="font-normal"
                                             >
                                                 {name}
@@ -76,7 +76,7 @@ export default function MassageList({ allMassage }) {
                                         <td className={classes}>
                                             <Typography
                                                 variant="small"
-                                                color="blue-gray"
+                                                color="deep-orange-gray"
                                                 className="font-normal"
                                             >
                                                 {email}
@@ -85,7 +85,7 @@ export default function MassageList({ allMassage }) {
                                         <td className={classes}>
                                             <Typography
                                                 variant="small"
-                                                color="blue-gray"
+                                                color="deep-orange-gray"
                                                 className="font-normal"
                                             >
                                                 {massage}

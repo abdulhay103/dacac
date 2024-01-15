@@ -16,7 +16,7 @@ export default function StoryAndCoreValues() {
             </div>
             <div className=" col-span-2 lg:col-span-1 ">
                 <div className=" relative">
-                    <div className=" bg-blue-300 py-[6px] w-[300px] absolute top-4"></div>
+                    <div className=" bg-deep-orange-300 py-[6px] w-[300px] absolute top-4"></div>
                     <h3 className=" absolute font-bold">
                         Story & Core Values:
                     </h3>

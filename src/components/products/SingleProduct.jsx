@@ -154,7 +154,7 @@ export default function SingleProduct({ data }) {
                         </div>
 
                         <div className=" flex gap-5 items-center py-6">
-                            <div className="flex gap-3 justify-center items-center bg-blue-300 rounded-md border-2 border-blue-300">
+                            <div className="flex gap-3 justify-center items-center bg-deep-orange-300 rounded-md border-2 border-deep-orange-300">
                                 <p
                                     className={
                                         qtr > 1
@@ -172,7 +172,7 @@ export default function SingleProduct({ data }) {
                                     name="qtr"
                                     id="qtr"
                                     value={qtr}
-                                    className="px-3 py-[6px] w-16 focus:outline-none rounded text-center text-blue-500"
+                                    className="px-3 py-[6px] w-16 focus:outline-none rounded text-center text-deep-orange-500"
                                 />
                                 <p
                                     onClick={incrementQtr}
@@ -245,12 +245,12 @@ export default function SingleProduct({ data }) {
                                 <h6 className=" py-2">Free Shipping</h6>
                                 <p>On order over &#2547;2000</p>
                             </div>
-                            <div className=" col-span-2 lg:col-span-1 p-6 bg-blue-100 rounded-lg">
+                            <div className=" col-span-2 lg:col-span-1 p-6 bg-deep-orange-100 rounded-lg">
                                 <ReceiptRefundIcon className=" w-6 h-6" />
                                 <h6 className=" py-2">Free Shipping</h6>
                                 <p>On order over &#2547;2000</p>
                             </div>
-                            <div className=" col-span-2 lg:col-span-1 p-6 bg-blue-100 rounded-lg">
+                            <div className=" col-span-2 lg:col-span-1 p-6 bg-deep-orange-100 rounded-lg">
                                 <ReceiptRefundIcon className=" w-6 h-6" />
                                 <h6 className=" py-2">Free Shipping</h6>
                                 <p>On order over &#2547;2000</p>

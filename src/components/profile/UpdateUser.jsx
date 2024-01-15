@@ -126,7 +126,7 @@ export default function UpdateUser(props) {
             <div className=" flex w-full justify-center pt-6 lg:justify-end">
                 <button
                     onClick={handleOpen}
-                    className=" bg-blue-600 text-white px-5 py-2 rounded hover:opacity-75 transition-all"
+                    className=" bg-deep-orange-600 text-white px-5 py-2 rounded hover:opacity-75 transition-all"
                 >
                     Edit Profile
                 </button>
@@ -154,7 +154,7 @@ export default function UpdateUser(props) {
                                     name="firstName"
                                     id="firstName"
                                     placeholder="First Name"
-                                    className=" w-full py-1 px-5 border rounded outline-blue-300 focus:text-blue-500 mb-4"
+                                    className=" w-full py-1 px-5 border rounded outline-deep-orange-300 focus:text-deep-orange-500 mb-4"
                                 />
                             </div>
                             <div>
@@ -171,7 +171,7 @@ export default function UpdateUser(props) {
                                     name="lastName"
                                     id="lastName"
                                     placeholder="Last Name"
-                                    className=" w-full py-1 px-5 border rounded outline-blue-300 focus:text-blue-500 mb-4"
+                                    className=" w-full py-1 px-5 border rounded outline-deep-orange-300 focus:text-deep-orange-500 mb-4"
                                 />
                             </div>
                         </div>
@@ -187,7 +187,7 @@ export default function UpdateUser(props) {
                                 id="bio"
                                 rows="6"
                                 value={inputValues.bio}
-                                className="w-full py-1 px-5 border rounded outline-blue-300 focus:text-blue-500 mb-4"
+                                className="w-full py-1 px-5 border rounded outline-deep-orange-300 focus:text-deep-orange-500 mb-4"
                             />
                         </div>
                         <div className=" flex gap-10 items-center py-6">
@@ -207,7 +207,7 @@ export default function UpdateUser(props) {
                                         name="profession"
                                         id="profession"
                                         value={inputValues.profession}
-                                        className="w-full py-1 px-5 border rounded outline-blue-300 focus:text-blue-500 mb-4"
+                                        className="w-full py-1 px-5 border rounded outline-deep-orange-300 focus:text-deep-orange-500 mb-4"
                                     />
                                 </div>
                                 <div className=" w-full">
@@ -224,7 +224,7 @@ export default function UpdateUser(props) {
                                         name="email"
                                         id="email"
                                         placeholder="Example@gmail.com"
-                                        className=" w-full py-1 px-5 border rounded outline-blue-300 focus:text-blue-500 mb-4"
+                                        className=" w-full py-1 px-5 border rounded outline-deep-orange-300 focus:text-deep-orange-500 mb-4"
                                     />
                                 </div>
                                 <div className=" w-full">
@@ -241,7 +241,7 @@ export default function UpdateUser(props) {
                                         name="phone"
                                         id="phone"
                                         placeholder="Phone Number"
-                                        className=" w-full py-1 px-5 border rounded outline-blue-300 focus:text-blue-500 mb-4"
+                                        className=" w-full py-1 px-5 border rounded outline-deep-orange-300 focus:text-deep-orange-500 mb-4"
                                     />
                                 </div>
                             </div>
@@ -292,7 +292,7 @@ export default function UpdateUser(props) {
                                 name="address"
                                 id="address"
                                 value={inputValues.address}
-                                className="w-full py-1 px-5 border rounded outline-blue-300 focus:text-blue-500 mb-4"
+                                className="w-full py-1 px-5 border rounded outline-deep-orange-300 focus:text-deep-orange-500 mb-4"
                             />
                         </div>
                         <div>
@@ -306,7 +306,7 @@ export default function UpdateUser(props) {
                                 name="password"
                                 id="password"
                                 placeholder="New Password"
-                                className=" w-full py-1 px-5 border rounded outline-blue-300 focus:text-blue-500 mb-4"
+                                className=" w-full py-1 px-5 border rounded outline-deep-orange-300 focus:text-deep-orange-500 mb-4"
                             />
                         </div>
                         <div className=" w-full flex justify-center py-2 gap-6">

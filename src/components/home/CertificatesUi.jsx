@@ -17,8 +17,8 @@ export default function CertificatesUi() {
             />
 
             <div className=" container grid grid-flow-row lg:grid-flow-col grid-cols-3 gap-6 xl:gap-10 2xl0:gap-16 py-10 xl:py-16 2xl:py-20">
-                <div className=" col-span-3 lg:col-span-1 min-h-[500px] border-b-3 border-e-3 border hover:border-blue-500 rounded hover:shadow-lg transition-all">
-                    <div className=" w-ful border-b-3 border-white hover:border-blue-500 rounded-b-lg transition-all">
+                <div className=" col-span-3 lg:col-span-1 min-h-[500px] border-b-3 border-e-3 border hover:border-deep-orange-500 rounded hover:shadow-lg transition-all">
+                    <div className=" w-ful border-b-3 border-white hover:border-deep-orange-500 rounded-b-lg transition-all">
                         <div className=" w-full p-6 overflow-hidden">
                             <Image
                                 src={Certificate}
@@ -53,8 +53,8 @@ export default function CertificatesUi() {
                         <CtaBtn href="/about" text="Learn More" />
                     </div>
                 </div>
-                <div className=" col-span-3 lg:col-span-1 min-h-[500px] border-b-3 border-e-3 border hover:border-blue-500 rounded hover:shadow-lg transition-all">
-                    <div className=" w-ful border-b-3 border-white hover:border-blue-500 rounded-b-lg transition-all">
+                <div className=" col-span-3 lg:col-span-1 min-h-[500px] border-b-3 border-e-3 border hover:border-deep-orange-500 rounded hover:shadow-lg transition-all">
+                    <div className=" w-ful border-b-3 border-white hover:border-deep-orange-500 rounded-b-lg transition-all">
                         <div className=" w-full p-6 overflow-hidden">
                             <Image
                                 src={Certificate}
@@ -90,8 +90,8 @@ export default function CertificatesUi() {
                         <CtaBtn href="/about" text="Learn More" />
                     </div>
                 </div>
-                <div className=" col-span-3 lg:col-span-1 min-h-[500px] border-b-3 border-e-3 border hover:border-blue-500 rounded hover:shadow-lg transition-all">
-                    <div className=" w-ful border-b-3 border-white hover:border-blue-500 rounded-b-lg transition-all">
+                <div className=" col-span-3 lg:col-span-1 min-h-[500px] border-b-3 border-e-3 border hover:border-deep-orange-500 rounded hover:shadow-lg transition-all">
+                    <div className=" w-ful border-b-3 border-white hover:border-deep-orange-500 rounded-b-lg transition-all">
                         <div className=" w-full p-6 overflow-hidden">
                             <Image
                                 src={Certificate}

@@ -23,11 +23,11 @@ export function ProductTable(props) {
                         {TABLE_HEAD.map((head) => (
                             <th
                                 key={head}
-                                className="border-b border-blue-gray-100 bg-blue-gray-50 p-4"
+                                className="border-b border-deep-orange-gray-100 bg-deep-orange-gray-50 p-4"
                             >
                                 <Typography
                                     variant="small"
-                                    color="blue-gray"
+                                    color="deep-orange-gray"
                                     className="font-normal leading-none opacity-70"
                                 >
                                     {head}
@@ -53,7 +53,7 @@ export function ProductTable(props) {
                             const isLast = index === products.length - 1;
                             const classes = isLast
                                 ? "p-4"
-                                : "p-4 border-b border-blue-gray-50";
+                                : "p-4 border-b border-deep-orange-gray-50";
 
                             return (
                                 <tr key={id}>
@@ -69,7 +69,7 @@ export function ProductTable(props) {
                                     <td className={` w-80 ${classes}`}>
                                         <Typography
                                             variant="small"
-                                            color="blue-gray"
+                                            color="deep-orange-gray"
                                             className="font-normal"
                                         >
                                             {title}
@@ -78,7 +78,7 @@ export function ProductTable(props) {
                                     <td className={classes}>
                                         <Typography
                                             variant="small"
-                                            color="blue-gray"
+                                            color="deep-orange-gray"
                                             className="font-normal"
                                         >
                                             {category["name"]}
@@ -87,7 +87,7 @@ export function ProductTable(props) {
                                     <td className={classes}>
                                         <Typography
                                             variant="small"
-                                            color="blue-gray"
+                                            color="deep-orange-gray"
                                             className="font-normal"
                                         >
                                             {type}
@@ -96,7 +96,7 @@ export function ProductTable(props) {
                                     <td className={classes}>
                                         <Typography
                                             variant="small"
-                                            color="blue-gray"
+                                            color="deep-orange-gray"
                                             className="font-normal"
                                         >
                                             {price}
@@ -105,7 +105,7 @@ export function ProductTable(props) {
                                     <td className={classes}>
                                         <Typography
                                             variant="small"
-                                            color="blue-gray"
+                                            color="deep-orange-gray"
                                             className="font-normal"
                                         >
                                             {discount}%

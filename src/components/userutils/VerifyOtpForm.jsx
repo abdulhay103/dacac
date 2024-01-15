@@ -62,13 +62,13 @@ export default function VerifyOtpForm() {
                     name="otp"
                     id="otp"
                     placeholder="6 digit OTP here"
-                    className=" w-full py-2 px-5 border rounded outline-blue-300 focus:text-blue-500 mb-4"
+                    className=" w-full py-2 px-5 border rounded outline-deep-orange-300 focus:text-deep-orange-500 mb-4"
                 />
                 <div className=" w-full flex justify-center py-2">
                     <SubmitBtn
                         submit={submit}
                         text="Submit"
-                        className=" px-6 py-2 bg-blue-500 text-white rounded flex gap-2 text-lg"
+                        className=" px-6 py-2 bg-deep-orange-500 text-white rounded flex gap-2 text-lg"
                     />
                 </div>
             </form>

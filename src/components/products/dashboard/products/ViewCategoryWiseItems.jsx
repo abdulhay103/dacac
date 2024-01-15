@@ -24,7 +24,7 @@ export default function ViewCategoryWiseItems(props) {
             <div className=" flex w-full justify-center">
                 <p
                     onClick={handleOpen}
-                    className=" hover:text-blue-500 cursor-pointer inline-block relative transition-all duration-500 before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[3px] before:rounded-full before:opacity-0 before:transition-all before:duration-500 before:bg-gradient-to-l before:from-amber-500 before:to-blue-500 hover:before:w-full hover:before:opacity-100 "
+                    className=" hover:text-deep-orange-500 cursor-pointer inline-block relative transition-all duration-500 before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[3px] before:rounded-full before:opacity-0 before:transition-all before:duration-500 before:bg-gradient-to-l before:from-amber-500 before:to-deep-orange-500 hover:before:w-full hover:before:opacity-100 "
                 >
                     All Items
                 </p>
@@ -47,11 +47,11 @@ export default function ViewCategoryWiseItems(props) {
                                 {TABLE_HEAD.map((head) => (
                                     <th
                                         key={head}
-                                        className="border-b border-blue-gray-100 bg-blue-gray-50 p-4"
+                                        className="border-b border-deep-orange-gray-100 bg-deep-orange-gray-50 p-4"
                                     >
                                         <Typography
                                             variant="small"
-                                            color="blue-gray"
+                                            color="deep-orange-gray"
                                             className="font-normal leading-none opacity-70"
                                         >
                                             {head}
@@ -78,7 +78,7 @@ export default function ViewCategoryWiseItems(props) {
                                         index === products.length - 1;
                                     const classes = isLast
                                         ? "p-4"
-                                        : "p-4 border-b border-blue-gray-50";
+                                        : "p-4 border-b border-deep-orange-gray-50";
                                     return (
                                         <tr key={id}>
                                             <td className={classes}>
@@ -93,7 +93,7 @@ export default function ViewCategoryWiseItems(props) {
                                             <td className={classes}>
                                                 <Typography
                                                     variant="small"
-                                                    color="blue-gray"
+                                                    color="deep-orange-gray"
                                                     className="font-normal"
                                                 >
                                                     {title}
@@ -102,7 +102,7 @@ export default function ViewCategoryWiseItems(props) {
                                             <td className={classes}>
                                                 <Typography
                                                     variant="small"
-                                                    color="blue-gray"
+                                                    color="deep-orange-gray"
                                                     className="font-normal"
                                                 >
                                                     {category["name"]}
@@ -111,7 +111,7 @@ export default function ViewCategoryWiseItems(props) {
                                             <td className={classes}>
                                                 <Typography
                                                     variant="small"
-                                                    color="blue-gray"
+                                                    color="deep-orange-gray"
                                                     className="font-normal"
                                                 >
                                                     {type}
@@ -120,7 +120,7 @@ export default function ViewCategoryWiseItems(props) {
                                             <td className={classes}>
                                                 <Typography
                                                     variant="small"
-                                                    color="blue-gray"
+                                                    color="deep-orange-gray"
                                                     className="font-normal"
                                                 >
                                                     {price}
@@ -129,7 +129,7 @@ export default function ViewCategoryWiseItems(props) {
                                             <td className={classes}>
                                                 <Typography
                                                     variant="small"
-                                                    color="blue-gray"
+                                                    color="deep-orange-gray"
                                                     className="font-normal"
                                                 >
                                                     {discount}%

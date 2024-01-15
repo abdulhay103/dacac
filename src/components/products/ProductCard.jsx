@@ -103,9 +103,9 @@ export default async function ProductCard({ products, user }) {
                                         mount: { scale: 1, y: 0 },
                                         unmount: { scale: 0, y: 25 },
                                     }}
-                                    className="bg-blue-400"
+                                    className="bg-deep-orange-400"
                                 >
-                                    <ShoppingCartIcon className=" w-7 h-7 cursor-pointer hover:text-blue-500 transition-all" />
+                                    <ShoppingCartIcon className=" w-7 h-7 cursor-pointer hover:text-deep-orange-500 transition-all" />
                                 </Tooltip>
                             </div>
                         </div>

@@ -19,7 +19,7 @@ export default async function PendingOrders() {
                 <OrdersList
                     allOrders={allPendingOrders}
                     text="pending"
-                    color="blue"
+                    color="deep-orange"
                 />
             )}
         </div>

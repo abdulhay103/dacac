@@ -9,7 +9,7 @@ import UpdateUser from "./UpdateUser";
 export default function UserProfile({ user }) {
     return (
         <div className="flex flex-col justify-center items-center">
-            <div className=" w-full lg:w-2/3 p-6 xl:p-10 2xl:p-14 border border-blue-200 shadow-lg rounded-xl">
+            <div className=" w-full lg:w-2/3 p-6 xl:p-10 2xl:p-14 border border-deep-orange-200 shadow-lg rounded-xl">
                 <div className="flex flex-col lg:flex-row gap-6 justify-center items-center">
                     <div className=" w-28 h-28">
                         {user.avater === "0" ? (
@@ -20,12 +20,12 @@ export default function UserProfile({ user }) {
                                 alt={user.firstName}
                                 width={100}
                                 height={100}
-                                className=" border-2 rounded-full border-blue-600 object-cover h-full w-full"
+                                className=" border-2 rounded-full border-deep-orange-600 object-cover h-full w-full"
                             />
                         )}
                     </div>
                     <div className="">
-                        <h3 className=" text-blue-600">
+                        <h3 className=" text-deep-orange-600">
                             {user.firstName}
                             <span className=" pl-1">{user.lastName}</span>
                         </h3>

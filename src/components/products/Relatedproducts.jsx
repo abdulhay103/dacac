@@ -11,7 +11,7 @@ export default async function Relatedproducts({ relatedproducts }) {
                     <Link
                         key={product.id}
                         href={`/products/details/${product.id}`}
-                        className=" col-span-4 lg:col-span-2 xl:col-span-1 bg-gray-100 rounded-lg -skew-x-2 border-r-2 border-b-3 hover:border-r-2 hover:border-b-3 hover:border-blue-500 transition-all"
+                        className=" col-span-4 lg:col-span-2 xl:col-span-1 bg-gray-100 rounded-lg -skew-x-2 border-r-2 border-b-3 hover:border-r-2 hover:border-b-3 hover:border-deep-orange-500 transition-all"
                     >
                         <div>
                             <Image

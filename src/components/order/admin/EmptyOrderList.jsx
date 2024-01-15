@@ -13,7 +13,7 @@ export default function EmptyOrderList() {
                     className=" object-cover"
                     alt="Empty Order List"
                 />
-                <h3 className=" text-center text-blue-500 pt-10">
+                <h3 className=" text-center text-deep-orange-500 pt-10">
                     The List Is Empty
                 </h3>
             </div>

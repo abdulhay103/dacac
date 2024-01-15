@@ -143,7 +143,7 @@ export default function ContactInfo() {
                                 autoComplete="true"
                                 required
                                 placeholder="Your Full Name"
-                                className=" px-6 py-2 text-blue-500 focus:outline-blue-400 placeholder:text-gray-600 w-full border-none bg-gray-100 rounded mb-4"
+                                className=" px-6 py-2 text-deep-orange-500 focus:outline-deep-orange-400 placeholder:text-gray-600 w-full border-none bg-gray-100 rounded mb-4"
                             />
                             <input
                                 onChange={(e) =>
@@ -155,7 +155,7 @@ export default function ContactInfo() {
                                 autoComplete="true"
                                 required
                                 placeholder="Your Valid Email"
-                                className=" px-6 py-2 text-blue-500 focus:outline-blue-400 placeholder:text-gray-600 w-full border-none bg-gray-100 rounded mb-4"
+                                className=" px-6 py-2 text-deep-orange-500 focus:outline-deep-orange-400 placeholder:text-gray-600 w-full border-none bg-gray-100 rounded mb-4"
                             />
                             <textarea
                                 onChange={(e) =>
@@ -164,14 +164,14 @@ export default function ContactInfo() {
                                 value={massage}
                                 name="massage"
                                 rows="10"
-                                className=" px-6 py-2 text-blue-500 focus:outline-blue-400 placeholder:text-gray-600 w-full bg-gray-100 border-none rounded"
+                                className=" px-6 py-2 text-deep-orange-500 focus:outline-deep-orange-400 placeholder:text-gray-600 w-full bg-gray-100 border-none rounded"
                                 placeholder="Write your massage here."
                             ></textarea>
                             <div className=" text-right">
                                 <SubmitBtn
                                     submit={submit}
                                     text="Submit"
-                                    className=" bg-blue-500 px-6 py-2 text-cyan-50 rounded my-3"
+                                    className=" bg-deep-orange-500 px-6 py-2 text-cyan-50 rounded my-3"
                                 />
                             </div>
                         </form>

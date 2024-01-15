@@ -126,7 +126,7 @@ export function OrdersModal({ modalData }) {
                 <DialogFooter className="space-x-2">
                     <Button
                         variant="text"
-                        color="blue-gray"
+                        color="deep-orange-gray"
                         onClick={handleOpen}
                     >
                         Cancel

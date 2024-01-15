@@ -217,7 +217,7 @@ export default function UpdateProduct(props) {
                         name="title"
                         id="title"
                         placeholder="Product Name"
-                        className=" w-full py-1 px-5 border rounded outline-blue-300 focus:text-blue-500 mb-4"
+                        className=" w-full py-1 px-5 border rounded outline-deep-orange-300 focus:text-deep-orange-500 mb-4"
                     />
                 </div>
                 <div className=" w-full">
@@ -231,7 +231,7 @@ export default function UpdateProduct(props) {
                         name="short_desc"
                         id="short_desc"
                         placeholder="Short Description"
-                        className=" w-full py-1 px-5 border rounded outline-blue-300 focus:text-blue-500 mb-4"
+                        className=" w-full py-1 px-5 border rounded outline-deep-orange-300 focus:text-deep-orange-500 mb-4"
                     />
                 </div>
             </div>
@@ -367,7 +367,7 @@ export default function UpdateProduct(props) {
                         name="origin"
                         id="origin"
                         placeholder="Country Origin"
-                        className=" w-full py-1 px-5 border rounded outline-blue-300 focus:text-blue-500 mb-4"
+                        className=" w-full py-1 px-5 border rounded outline-deep-orange-300 focus:text-deep-orange-500 mb-4"
                     />
                 </div>
                 <div className=" w-full">
@@ -381,7 +381,7 @@ export default function UpdateProduct(props) {
                         name="price"
                         id="price"
                         placeholder="Product Price"
-                        className=" w-full py-1 px-5 border rounded outline-blue-300 focus:text-blue-500 mb-4"
+                        className=" w-full py-1 px-5 border rounded outline-deep-orange-300 focus:text-deep-orange-500 mb-4"
                     />
                 </div>
                 <div className=" w-full">
@@ -395,7 +395,7 @@ export default function UpdateProduct(props) {
                         name="discount"
                         id="discount"
                         placeholder="Discount"
-                        className=" w-full py-1 px-5 border rounded outline-blue-300 focus:text-blue-500 mb-4"
+                        className=" w-full py-1 px-5 border rounded outline-deep-orange-300 focus:text-deep-orange-500 mb-4"
                     />
                 </div>
             </div>
@@ -440,7 +440,7 @@ export default function UpdateProduct(props) {
                         id="support_n_care"
                         rows="3"
                         placeholder="Support and Care"
-                        className="w-full py-1 px-5 border rounded outline-blue-300 focus:text-blue-500 mb-4"
+                        className="w-full py-1 px-5 border rounded outline-deep-orange-300 focus:text-deep-orange-500 mb-4"
                     />
                 </div>
                 <div className=" w-full">
@@ -455,7 +455,7 @@ export default function UpdateProduct(props) {
                         id="how_to_setup"
                         rows="3"
                         placeholder="Support and Care"
-                        className="w-full py-1 px-5 border rounded outline-blue-300 focus:text-blue-500 mb-4"
+                        className="w-full py-1 px-5 border rounded outline-deep-orange-300 focus:text-deep-orange-500 mb-4"
                     />
                 </div>
             </div>
@@ -470,7 +470,7 @@ export default function UpdateProduct(props) {
                         id="faq"
                         rows="3"
                         placeholder="Frequently Asked Questions"
-                        className="w-full py-1 px-5 border rounded outline-blue-300 focus:text-blue-500 mb-4"
+                        className="w-full py-1 px-5 border rounded outline-deep-orange-300 focus:text-deep-orange-500 mb-4"
                     />
                 </div>
                 <div className=" w-full">

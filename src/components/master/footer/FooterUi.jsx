@@ -162,7 +162,7 @@ export default function FooterUi({ categories }) {
                             onClick={onSubmitHandler}
                             text="Subscribe"
                             submit={submit}
-                            className=" px-4 py-2 rounded bg-blue-500 text-cyan-50 hover:text-white border border-blue-500 transition-all"
+                            className=" px-4 py-2 rounded bg-deep-orange-500 text-cyan-50 hover:text-white border border-deep-orange-500 transition-all"
                         />
                     </div>
                 </div>

@@ -5,7 +5,7 @@ export default function WhyChoseUs() {
         <section className=" py-6 lg:py-8 xl:py-16 2xl:py-20 bg-gradient-to-br from-amber-50 to-cyan-50 mt-8 lg:mt-16 xl:mt-20 2xl:mt-28">
             <div className=" container w-full xl:w-2/3">
                 <div className="flex justify-center">
-                    <h3 className=" inline-block relative before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-[3px] before:rounded-full before:opacity-100 before:bg-gradient-to-l before:from-amber-500 before:to-blue-500">
+                    <h3 className=" inline-block relative before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-[3px] before:rounded-full before:opacity-100 before:bg-gradient-to-l before:from-amber-500 before:to-deep-orange-500">
                         Why Chose Us!
                     </h3>
                 </div>
@@ -17,7 +17,7 @@ export default function WhyChoseUs() {
                 </p>
             </div>
             <div className="container grid grid-flow-row grid-cols-12 items-center gap-6 lg:gap-8 xl:gap-10 py-6 lg:py-8 xl:py-16 2xl:py-20">
-                <div className=" col-span-12 lg:col-span-4 xl:col-span-3 border-2 border-gray-400 rounded-lg min-h-[200px] bg-gradient-to-bl from-blue-50 via-white to-red-100">
+                <div className=" col-span-12 lg:col-span-4 xl:col-span-3 border-2 border-gray-400 rounded-lg min-h-[200px] bg-gradient-to-bl from-deep-orange-50 via-white to-red-100">
                     <h1 className=" pt-3 px-6 text-right">01</h1>
                     <div className=" px-5 pb-5">
                         <p className=" text-lg font-bold">Quality Assurance:</p>
@@ -28,7 +28,7 @@ export default function WhyChoseUs() {
                         </p>
                     </div>
                 </div>
-                <div className=" col-span-12 lg:col-span-3 border-2 border-gray-400 rounded-lg min-h-[200px] bg-gradient-to-bl from-blue-50 via-white to-red-100">
+                <div className=" col-span-12 lg:col-span-3 border-2 border-gray-400 rounded-lg min-h-[200px] bg-gradient-to-bl from-deep-orange-50 via-white to-red-100">
                     <h1 className=" pt-3 px-6 text-right">02</h1>
                     <div className=" px-5 pb-5">
                         <p className=" text-lg font-bold">
@@ -41,7 +41,7 @@ export default function WhyChoseUs() {
                         </p>
                     </div>
                 </div>
-                <div className=" col-span-12 lg:col-span-4 xl:col-span-3 border-2 border-gray-400 rounded-lg min-h-[200px] bg-gradient-to-bl from-blue-50 via-white to-red-100">
+                <div className=" col-span-12 lg:col-span-4 xl:col-span-3 border-2 border-gray-400 rounded-lg min-h-[200px] bg-gradient-to-bl from-deep-orange-50 via-white to-red-100">
                     <h1 className=" pt-3 px-6 text-right">03</h1>
                     <div className=" px-5 pb-5">
                         <p className=" text-lg font-bold">Expert Guidance:</p>
@@ -52,7 +52,7 @@ export default function WhyChoseUs() {
                         </p>
                     </div>
                 </div>
-                <div className=" col-span-12 lg:col-span-4 xl:col-span-3 border-2 border-gray-400 rounded-lg min-h-[200px] bg-gradient-to-bl from-blue-50 via-white to-red-100">
+                <div className=" col-span-12 lg:col-span-4 xl:col-span-3 border-2 border-gray-400 rounded-lg min-h-[200px] bg-gradient-to-bl from-deep-orange-50 via-white to-red-100">
                     <h1 className=" pt-3 px-6 text-right">04</h1>
                     <div className=" px-5 pb-5">
                         <p className=" text-lg font-bold">Timely Delivery:</p>

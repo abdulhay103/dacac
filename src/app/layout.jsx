@@ -1,27 +1,21 @@
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
-import NextTopLoader from "nextjs-toploader";
 import { inter, kalam, rubik } from "@/fonts/fonts";
 import NextUiProvider from "@/components/nextui/NextUiProvider";
 
 export const metadata = {
-    title: "Home | MEC Trade Link",
+    title: "Home | Dream Angels Centre for Autistic Children",
     description:
-        "The company was established in 2013. The main business for this company is to create technical matters relating to planning, preparation of technical specifications, installation, and management of after-sales services for medical equipment. Mec Trade Link is headed by a proprietor Md Kamrul Hasan who has completed BSC of EEE Dhaka International University of the batch 2006. An Electro-Medical Engineer Md. AL MAMUM, B.Sc (Mechanical from the Philippines). In the year 2013, the company started marketing disposable and other medical-related items. Our marketed brands are well known in the market and in some cases, we are leading the market.",
+        "Dream Angels Centre for Autistic Children (DACAC) is a specialized centre for physically and mentally challenged children between the ages of 2- 8 years especially with symptoms of AUTISM. DACAC is run and managed by professional speech therapists, occupational therapists, physiotherapists and special educators ably supported by caregivers and administrative staff.",
 };
 
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body
-                className={`${inter.variable} ${rubik.variable} ${kalam.variable}`}
+                className={`max-h-[768px] w-full overflow-y-auto ${inter.variable} ${rubik.variable} ${kalam.variable}`}
             >
                 <NextUiProvider>
-                    {/* <NextTopLoader
-                        height={3}
-                        color="#2563eb"
-                        showSpinner={false}
-                    /> */}
                     <Toaster position="top-center" />
                     {children}
                 </NextUiProvider>

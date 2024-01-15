@@ -30,11 +30,11 @@ export default function OrdersList({ allOrders, text, color }) {
                             {TABLE_HEAD.map((head) => (
                                 <th
                                     key={head}
-                                    className={`border-t border-b border-${color}-200 bg-blue-gray-50 p-4`}
+                                    className={`border-t border-b border-${color}-200 bg-deep-orange-gray-50 p-4`}
                                 >
                                     <Typography
                                         variant="small"
-                                        color="blue-gray"
+                                        color="deep-orange-gray"
                                         className="font-normal leading-none opacity-70"
                                     >
                                         {head}
@@ -56,13 +56,13 @@ export default function OrdersList({ allOrders, text, color }) {
                             const isLast = index === allOrders.length - 1;
                             const classes = isLast
                                 ? "p-4"
-                                : "p-4 border-b border-blue-gray-50";
+                                : "p-4 border-b border-deep-orange-gray-50";
                             return (
                                 <tr key={id}>
                                     <td className={classes}>
                                         <Typography
                                             variant="small"
-                                            color="blue-gray"
+                                            color="deep-orange-gray"
                                             className="font-normal"
                                         >
                                             {id}
@@ -71,7 +71,7 @@ export default function OrdersList({ allOrders, text, color }) {
                                     <td className={classes}>
                                         <Typography
                                             variant="small"
-                                            color="blue-gray"
+                                            color="deep-orange-gray"
                                             className="font-normal"
                                         >
                                             {product.title}
@@ -80,7 +80,7 @@ export default function OrdersList({ allOrders, text, color }) {
                                     <td className={classes}>
                                         <Typography
                                             variant="small"
-                                            color="blue-gray"
+                                            color="deep-orange-gray"
                                             className="font-normal"
                                         >
                                             {qtr}pcs
@@ -89,7 +89,7 @@ export default function OrdersList({ allOrders, text, color }) {
                                     <td className={classes}>
                                         <Typography
                                             variant="small"
-                                            color="blue-gray"
+                                            color="deep-orange-gray"
                                             className="font-normal"
                                         >
                                             {totalPrice}&#2547;
@@ -98,7 +98,7 @@ export default function OrdersList({ allOrders, text, color }) {
                                     <td className={classes}>
                                         <Typography
                                             variant="small"
-                                            color="blue-gray"
+                                            color="deep-orange-gray"
                                             className="font-normal"
                                         >
                                             {totalDiscount}&#2547;
@@ -107,7 +107,7 @@ export default function OrdersList({ allOrders, text, color }) {
                                     <td className={classes}>
                                         <Typography
                                             variant="small"
-                                            color="blue-gray"
+                                            color="deep-orange-gray"
                                             className="font-normal"
                                         >
                                             {totalPrice - totalDiscount}
@@ -117,7 +117,7 @@ export default function OrdersList({ allOrders, text, color }) {
                                     <td className={classes}>
                                         <Typography
                                             variant="small"
-                                            color="blue-gray"
+                                            color="deep-orange-gray"
                                             className="font-normal"
                                         >
                                             {user.firstName +
@@ -128,7 +128,7 @@ export default function OrdersList({ allOrders, text, color }) {
                                     <td className={classes}>
                                         <Typography
                                             variant="small"
-                                            color="blue-gray"
+                                            color="deep-orange-gray"
                                             className="font-normal"
                                         >
                                             {user.phone}
@@ -137,7 +137,7 @@ export default function OrdersList({ allOrders, text, color }) {
                                     <td className={classes}>
                                         <Typography
                                             variant="small"
-                                            color="blue-gray"
+                                            color="deep-orange-gray"
                                             className="font-normal"
                                         >
                                             {user.address}

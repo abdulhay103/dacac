@@ -84,7 +84,7 @@ export default async function Dashboard() {
                 <h3 className=" pb-5">All Order History:</h3>
                 <div className="grid grid-flow-col grid-cols-4 gap-10">
                     <OrderHistoryCard
-                        color="blue"
+                        color="deep-orange"
                         text="pending"
                         totalPendingOrder={pendingOrders}
                     />

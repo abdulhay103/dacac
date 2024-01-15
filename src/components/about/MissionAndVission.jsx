@@ -16,7 +16,7 @@ export default function MissionAndVission() {
             </div>
             <div className=" w-full lg:w-1/2">
                 <div className=" relative">
-                    <div className=" bg-blue-300 py-[6px] w-[262px] absolute top-4"></div>
+                    <div className=" bg-deep-orange-300 py-[6px] w-[262px] absolute top-4"></div>
                     <h3 className=" absolute font-bold">Mission & Vission:</h3>
                 </div>
                 <div className=" pt-10 text-justify">

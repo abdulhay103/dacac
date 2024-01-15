@@ -1,8 +1,8 @@
 "use client";
 import { Carousel } from "@material-tailwind/react";
-import physioEquipment from "/public/products/Physio-Equipment.png";
-import medicalEquipment from "/public/products/Medical-Equipment.png";
-import gyneeEquipment from "/public/products/Gynee-Equipment.png";
+import SltService from "../../../public/slider/slt-service.png";
+import PtService from "../../../public/slider/pt-service.png";
+import TeachingService from "../../../public/slider/teaching-service.png";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -33,7 +33,7 @@ export function SliderUi() {
             >
                 <div className=" w-full xl:h-full relative">
                     <Image
-                        src={medicalEquipment}
+                        src={SltService}
                         width="1920"
                         height="500"
                         alt="Medical Equpment"
@@ -41,16 +41,16 @@ export function SliderUi() {
                     />
                     <div className=" min-h-full flex justify-start items-center inset-0 absolute left-14 bottom-10">
                         <Link
-                            className=" px-6 py-2 xl:px-10 xl:py-3 xl:text-lg xl:ml-16 2xl:ml-28 xl:mt-44 2xl:mt-56 font-bold text-blue-500 rounded-full hover:shadow-md bg-white mt-20"
+                            className=" px-6 py-2 xl:px-10 xl:py-3 xl:text-lg xl:ml-16 2xl:ml-28 xl:mt-44 2xl:mt-56 font-bold text-deep-orange-500 rounded-full hover:shadow-md bg-white mt-20"
                             href="/products/1"
                         >
-                            Explore Items
+                            Explore the Service
                         </Link>
                     </div>
                 </div>
                 <div className="w-full xl:h-full relative">
                     <Image
-                        src={gyneeEquipment}
+                        src={PtService}
                         width="1920"
                         height="500"
                         alt="Gynee Equpment"
@@ -58,16 +58,16 @@ export function SliderUi() {
                     />
                     <div className=" min-h-full flex justify-start items-center inset-0 absolute left-14 bottom-10">
                         <Link
-                            className=" px-6 py-2 xl:px-10 xl:py-3 xl:text-lg xl:ml-16 2xl:ml-28 xl:mt-44 2xl:mt-56 font-bold text-blue-500 rounded-full hover:shadow-md bg-white mt-20"
+                            className=" px-6 py-2 xl:px-10 xl:py-3 xl:text-lg xl:ml-16 2xl:ml-28 xl:mt-44 2xl:mt-56 font-bold text-deep-orange-500 rounded-full hover:shadow-md bg-white mt-20"
                             href="/products/2"
                         >
-                            Explore Items
+                            Explore the Service
                         </Link>
                     </div>
                 </div>
                 <div className="w-full xl:h-full relative">
                     <Image
-                        src={physioEquipment}
+                        src={TeachingService}
                         width="1920"
                         height="500"
                         alt="Physio Equpment"
@@ -75,10 +75,10 @@ export function SliderUi() {
                     />
                     <div className=" min-h-full flex justify-start items-center inset-0 absolute left-14 bottom-10">
                         <Link
-                            className=" px-6 py-2 xl:px-10 xl:py-3 xl:text-lg xl:ml-16 2xl:ml-28 xl:mt-44 2xl:mt-56 font-bold text-blue-500 rounded-full hover:shadow-md bg-white mt-20"
+                            className=" px-6 py-2 xl:px-10 xl:py-3 xl:text-lg xl:ml-16 2xl:ml-28 xl:mt-44 2xl:mt-56 font-bold text-deep-orange-500 rounded-full hover:shadow-md bg-white mt-20"
                             href="/products/3"
                         >
-                            Explore Items
+                            Explore the Service
                         </Link>
                     </div>
                 </div>
