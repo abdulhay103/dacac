@@ -1,7 +1,6 @@
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import { inter, kalam, rubik } from "@/fonts/fonts";
-import NextUiProvider from "@/components/nextui/NextUiProvider";
 
 export const metadata = {
     title: "Home | Dream Angels Centre for Autistic Children",
@@ -15,10 +14,8 @@ export default function RootLayout({ children }) {
             <body
                 className={`max-h-[768px] w-full overflow-y-auto ${inter.variable} ${rubik.variable} ${kalam.variable}`}
             >
-                <NextUiProvider>
-                    <Toaster position="top-center" />
-                    {children}
-                </NextUiProvider>
+                <Toaster position="top-center" />
+                {children}
             </body>
         </html>
     );
