@@ -50,7 +50,7 @@ export function NavbarUi() {
                 <Link href="/" className=" flex gap-5 items-center">
                     <Image
                         src={dacacLogo}
-                        width={175}
+                        width={150}
                         height={55}
                         className=" object-cover"
                         alt="Main Logo"
