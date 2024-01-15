@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body
-                className={`max-h-[768px] w-full overflow-y-auto ${inter.variable} ${rubik.variable} ${kalam.variable}`}
+                className={`w-full overflow-y-auto ${inter.variable} ${rubik.variable} ${kalam.variable}`}
             >
                 <Toaster position="top-center" />
                 {children}

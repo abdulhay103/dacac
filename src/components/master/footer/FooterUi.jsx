@@ -130,15 +130,7 @@ export default function FooterUi({ categories }) {
                 <div className=" col-span-6 lg:col-span-1">
                     <h6 className=" text-current pb-2">Products</h6>
                     <div className=" flex flex-col gap-1">
-                        {categories.map((item) => (
-                            <Link
-                                key={item.id}
-                                href={`/products/${item.id}`}
-                                className="text-cyan-100 hover:font-medium hover:text-white transition-all"
-                            >
-                                {item.name}
-                            </Link>
-                        ))}
+                        <Link href="/">Hello</Link>
                     </div>
                 </div>
                 <div className=" col-span-6 lg:col-span-2">

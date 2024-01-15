@@ -25,59 +25,30 @@ model users {
   type       String   @db.VarChar(10)
   createdAt  DateTime @default(now()) @db.Timestamp(0)
   updatedAt  DateTime @default(now()) @updatedAt @db.Timestamp(0)
-
-  // Relations
-  products products[]
-  orders   orders[]
 }
 
-model categories {
-  id        BigInt     @id @default(autoincrement()) @db.UnsignedBigInt
-  name      String     @unique @db.VarChar(30)
-  desc      String     @db.VarChar(1000)
-  createdAt DateTime   @default(now()) @db.Timestamp(0)
-  updatedAt DateTime   @default(now()) @updatedAt @db.Timestamp(0)
-  products  products[]
+model teams {
+  id            BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
+  firstName     String   @db.VarChar(25)
+  lastName      String   @db.VarChar(25)
+  profession    String   @db.VarChar(50)
+  bio           String   @db.Text
+  avater        String   @db.VarChar(300)
+  email         String   @unique @db.VarChar(50)
+  phone         String   @db.VarChar(20)
+  qualification String   @db.VarChar(150)
+  designation   String   @db.VarChar(50)
+  createdAt     DateTime @default(now()) @db.Timestamp(0)
+  updatedAt     DateTime @default(now()) @updatedAt @db.Timestamp(0)
 }
 
-model products {
-  id             BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
-  title          String   @unique @db.VarChar(100)
-  short_desc     String   @db.VarChar(150)
-  details        String   @db.VarChar(50000)
-  img1           String   @db.VarChar(255)
-  img2           String   @db.VarChar(255)
-  img3           String   @db.VarChar(255)
-  origin         String   @db.VarChar(10)
-  price          String   @db.VarChar(10)
-  discount       String   @db.VarChar(10)
-  status         String   @db.VarChar(100)
-  type           String   @db.VarChar(100)
-  support_n_care String   @db.VarChar(500)
-  how_to_setup   String   @db.VarChar(500)
-  faq            String   @db.VarChar(500)
-  userId         BigInt   @db.UnsignedBigInt
-  categoryId     BigInt   @db.UnsignedBigInt
-  createdAt      DateTime @default(now()) @db.Timestamp(0)
-  updatedAt      DateTime @default(now()) @db.Timestamp(0)
-
-  //Relations
-  user     users      @relation(fields: [userId], references: [id], onDelete: Restrict, onUpdate: Cascade)
-  category categories @relation(fields: [categoryId], references: [id], onDelete: Restrict, onUpdate: Cascade)
-  orders   orders[]
-}
-
-model orders {
+model notices {
   id        BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
-  userId    BigInt   @db.UnsignedBigInt
-  productId BigInt   @db.UnsignedBigInt
-  qtr       BigInt   @db.UnsignedBigInt
-  status    String   @db.VarChar(50)
+  title     String   @db.VarChar(500)
+  details   String   @db.LongText
+  status    String   @db.VarChar(15)
   createdAt DateTime @default(now()) @db.Timestamp(0)
-  updatedAt DateTime @default(now()) @db.Timestamp(0)
-  //Relations
-  user      users    @relation(fields: [userId], references: [id], onDelete: Restrict, onUpdate: Cascade)
-  product   products @relation(fields: [productId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  updatedAt DateTime @default(now()) @updatedAt @db.Timestamp(0)
 }
 
 model massages {
