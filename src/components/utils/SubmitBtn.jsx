@@ -1,5 +1,3 @@
-import { CircularProgress } from "@nextui-org/react";
-
 export default function SubmitBtn(props) {
     if (props.submit === false) {
         return (
@@ -18,12 +16,7 @@ export default function SubmitBtn(props) {
                     className="spinner-border spinner-border-sm"
                     role="status"
                 ></div>
-                <div className=" flex gap-2 items-center">
-                    <CircularProgress
-                        classNames={{ svg: "text-white w-7 h-7" }}
-                    />
-                    Processing...
-                </div>
+                <div className=" flex gap-2 items-center">Processing...</div>
             </button>
         );
     }
