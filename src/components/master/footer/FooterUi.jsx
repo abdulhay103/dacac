@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import LogoFull from "/public/brands/mec-nav-logo.png";
+import dacacLogo from "/public/brands/dacac-log.png";
 import { useState } from "react";
 import SubmitBtn from "@/components/utils/SubmitBtn";
 import Link from "next/link";
@@ -14,7 +14,7 @@ import {
 } from "@phosphor-icons/react";
 import { ErrorToast, IsEmail, SuccessToast } from "@/utils/formHelper";
 
-export default function FooterUi({ categories }) {
+export default function FooterUi() {
     const [submit, setSubmit] = useState(false);
     const date = new Date();
     let getYear = date.getFullYear();
@@ -59,12 +59,12 @@ export default function FooterUi({ categories }) {
         }
     };
     return (
-        <div className=" pb-6">
-            <div className=" container text-white grid gap-8 grid-flow-row lg:grid-flow-col grid-cols-6 pt-16 pb-8">
+        <div className=" pb-6 bg-deep-purple-900">
+            <div className=" container text-deep-orange-500 grid gap-8 grid-flow-row lg:grid-flow-col grid-cols-6 pt-16 pb-8">
                 <div className=" col-span-6 lg:col-span-2">
-                    <div className=" w-64 bg-white py-5 px-4 rounded-md">
+                    <div className=" w-full lg:w-64 bg-white py-5 px-6 rounded-lg">
                         <Image
-                            src={LogoFull}
+                            src={dacacLogo}
                             width="auto"
                             height=" auto"
                             className=" object-cover"
@@ -75,68 +75,108 @@ export default function FooterUi({ categories }) {
                         <Link href="#">
                             <FacebookLogo
                                 size={28}
-                                className=" text-cyan-100 hover:text-white hover:scale-110 transition-all"
+                                className=" text-white hover:text-deep-orange-500 hover:scale-110 transition-all"
                             />
                         </Link>
                         <Link href="#">
                             <TwitterLogo
                                 size={28}
-                                className=" text-cyan-100 hover:text-white hover:scale-110 transition-all"
+                                className=" text-white hover:text-deep-orange-500 hover:scale-110 transition-all"
                             />
                         </Link>
                         <Link href="#">
                             <LinkedinLogo
                                 size={28}
-                                className=" text-cyan-100 hover:text-white hover:scale-110 transition-all"
+                                className=" text-white hover:text-deep-orange-500 hover:scale-110 transition-all"
                             />
                         </Link>
                         <Link href="#">
                             <InstagramLogo
                                 size={28}
-                                className=" text-cyan-100 hover:text-white hover:scale-110 transition-all"
+                                className=" text-white hover:text-deep-orange-500 hover:scale-110 transition-all"
                             />
                         </Link>
                         <Link href="#">
                             <YoutubeLogo
                                 size={28}
-                                className=" text-cyan-100 hover:text-white hover:scale-110 transition-all"
+                                className=" text-white hover:text-deep-orange-500 hover:scale-110 transition-all"
                             />
                         </Link>
                     </div>
                 </div>
                 <div className=" col-span-6 lg:col-span-1">
-                    <h6 className=" text-current pb-2">Quick Links</h6>
+                    <h4 className=" text-white pb-6">Quick Links</h4>
                     <div className=" flex flex-col gap-1">
                         <Link
                             href="/about"
-                            className="text-cyan-100 hover:font-medium hover:text-white transition-all"
+                            className="text-white hover:font-medium hover:text-deep-orange-500 transition-all"
                         >
                             About
                         </Link>
                         <Link
                             href="/services"
-                            className="text-cyan-100 hover:font-medium hover:text-white transition-all"
+                            className="text-white hover:font-medium hover:text-deep-orange-500 transition-all"
                         >
                             Services
                         </Link>
                         <Link
                             href="/contact"
-                            className="text-cyan-100 hover:font-medium hover:text-white transition-all"
+                            className="text-white hover:font-medium hover:text-deep-orange-500 transition-all"
+                        >
+                            Notices
+                        </Link>
+                        <Link
+                            href="/contact"
+                            className="text-white hover:font-medium hover:text-deep-orange-500 transition-all"
+                        >
+                            Blogs
+                        </Link>
+                        <Link
+                            href="/contact"
+                            className="text-white hover:font-medium hover:text-deep-orange-500 transition-all"
                         >
                             Contact
                         </Link>
                     </div>
                 </div>
                 <div className=" col-span-6 lg:col-span-1">
-                    <h6 className=" text-current pb-2">Products</h6>
+                    <h4 className=" text-white pb-6">Posts</h4>
                     <div className=" flex flex-col gap-1">
-                        <Link href="/">Hello</Link>
+                        <Link
+                            href="/"
+                            className=" text-white hover:text-deep-orange-600"
+                        >
+                            Post-1
+                        </Link>
+                        <Link
+                            href="/"
+                            className=" text-white hover:text-deep-orange-600"
+                        >
+                            Post-2
+                        </Link>
+                        <Link
+                            href="/"
+                            className=" text-white hover:text-deep-orange-600"
+                        >
+                            Post-3
+                        </Link>
+                        <Link
+                            href="/"
+                            className=" text-white hover:text-deep-orange-600"
+                        >
+                            Post-5
+                        </Link>
+                        <Link
+                            href="/"
+                            className=" text-white hover:text-deep-orange-600"
+                        >
+                            Post-6
+                        </Link>
                     </div>
                 </div>
                 <div className=" col-span-6 lg:col-span-2">
-                    <h6 className=" text-current">
-                        Not Quite Ready For MEC Trade-Link?
-                    </h6>
+                    <h4 className=" text-white pb-6">News Letter</h4>
+                    <h6 className=" text-white">Not Quite Ready For DACAC?</h6>
                     <p className=" py-2 text-cyan-50">
                         Join our online community for free. No spam ever.
                     </p>
@@ -154,18 +194,18 @@ export default function FooterUi({ categories }) {
                             onClick={onSubmitHandler}
                             text="Subscribe"
                             submit={submit}
-                            className=" px-4 py-2 rounded bg-deep-orange-500 text-cyan-50 hover:text-white border border-deep-orange-500 transition-all"
+                            className=" px-4 py-2 rounded bg-deep-orange-500 hover:text-black text-white border border-deep-orange-500 transition-all"
                         />
                     </div>
                 </div>
             </div>
-            <div className=" container">
+            <div className="pt-5 lg:pt-3 container">
                 <div className="border-t border-cyan-100 py-5 grid grid-flow-row  gap-4 lg:grid-flow-col justify-between">
-                    <p className=" text-cyan-100 text-sm">
-                        <span>&#64;{getYear}</span> MEC Trade-Link, All Right
-                        Reserved.
+                    <p className=" text-white text-sm">
+                        <span>&#64;{getYear}</span> Dream Angels Center for
+                        Autistic Children(DACAC), All Right Reserved.
                     </p>
-                    <div className=" flex items-center text-cyan-100 text-sm">
+                    <div className=" flex items-center text-white text-sm">
                         Made with
                         <span className="text-red-500 px-1">
                             <Heart size={18} weight="fill" />

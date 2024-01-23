@@ -74,15 +74,9 @@ export default function ContactInfo() {
                             </h5>
                         </div>
                         <p className="pb-2">
-                            <span className=" font-medium pr-2">Resister:</span>
-                            MEC Trade-Link 17/3, Skaton road, Bangla Motor,
-                            Dhaka-1312, Bangladesh.
-                        </p>
-                        <p>
-                            <span className=" font-medium pr-2">
-                                Display Center:
-                            </span>
-                            781/3, West Shewrapara, Mirpur, Dhaka-1216.
+                            <span className=" font-medium pr-2">School:</span>
+                            House No-18-19, Siddique Bhaban, Avenue, Road-4,
+                            Mirpur-7, Dhaka 1216.
                         </p>
                     </div>
                     <div className=" py-3 px-3">
@@ -92,8 +86,7 @@ export default function ContactInfo() {
                                 Phone:
                             </h5>
                         </div>
-                        <p>+88 01756 173864</p>
-                        <p>+88 01912 858117</p>
+                        <p>+88 01678690707</p>
                     </div>
                     <div className=" py-3 px-3">
                         <div className="flex items-center gap-2">
@@ -102,7 +95,7 @@ export default function ContactInfo() {
                                 Email:
                             </h5>
                         </div>
-                        <p>mectradelink@gmail.com</p>
+                        <p>dacac.bd@gmail.com</p>
                     </div>
                     <div className=" py-3 px-3">
                         <div className="flex items-center gap-2">
@@ -116,7 +109,7 @@ export default function ContactInfo() {
                             following hours:
                         </p>
                         <p className="py-2 text-semibold">
-                            Monday to Friday: 9:00 AM - 5:00 PM
+                            Sunday to Thrusday: 9:00 AM - 3:00 PM
                         </p>
                     </div>
                 </div>

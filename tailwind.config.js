@@ -34,7 +34,11 @@ module.exports = withMT({
                 "2xl": "4rem",
             },
         },
-        extend: {},
+        extend: {
+            backgroundImage: {
+                parallax: "url('/public/others/footer-bg-image.png')",
+            },
+        },
     },
     plugins: [],
 });
