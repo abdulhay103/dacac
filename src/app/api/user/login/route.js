@@ -1,7 +1,6 @@
 import { CreateToken } from "@/utils/jwtHelper";
 import { PrismaClient } from "@prisma/client";
 import { NextResponse } from "next/server";
-import bcrypt from "bcrypt";
 
 export async function POST(req) {
     BigInt.prototype.toJSON = function () {
@@ -11,21 +10,9 @@ export async function POST(req) {
     try {
         const prisma = new PrismaClient();
         const reqBody = await req.json();
-
-        let uniqueUser = await prisma.users.findUnique({
-            where: { email: reqBody.email },
-        });
-
-        let isMatchedPassword = await bcrypt.compare(
-            reqBody.password,
-            uniqueUser.password
-        );
+        let uniqueUser = await prisma.users.findUnique({ where: reqBody });
 
         if (uniqueUser === null) {
-            return NextResponse.json({
-                status: "Invalid username or password.",
-            });
-        } else if (!isMatchedPassword) {
             return NextResponse.json({
                 status: "Invalid username or password.",
             });

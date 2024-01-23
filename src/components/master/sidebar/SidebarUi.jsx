@@ -19,7 +19,7 @@ import {
     ChevronRightIcon,
     ShoppingBagIcon,
 } from "@heroicons/react/24/solid";
-import mecLogoTitle from "/public/brands/mec-nav-logo.png";
+import dacacLogo from "/public/brands/dacac-log.png";
 import Image from "next/image";
 import Link from "next/link";
 import { FolderStar, Graph } from "@phosphor-icons/react";
@@ -32,10 +32,10 @@ export function SidebarUi({ totalMassage }) {
         setOpen(open === value ? 0 : value);
     };
     return (
-        <Card className="h-[100vh] w-80 2xl:w-96  p-4 shadow-xl shadow-deep-orange-gray-900/5">
-            <Link href="/" className=" w-11/12 p-5">
+        <Card className="h-[100vh] w-80 2xl:w-96  p-4 shadow-xl shadow-blue-gray-900/5">
+            <Link href="/" className=" w-11/12 px-10 py-5">
                 <Image
-                    src={mecLogoTitle}
+                    src={dacacLogo}
                     width="auto"
                     height="auto"
                     className=" object-cover"
@@ -69,7 +69,7 @@ export function SidebarUi({ totalMassage }) {
                                 <ShoppingBagIcon className="h-5 w-5" />
                             </ListItemPrefix>
                             <Typography
-                                color="deep-orange-gray"
+                                color="blue-gray"
                                 className="mr-auto font-normal"
                             >
                                 <Link href="#" className="w-full">
@@ -160,7 +160,7 @@ export function SidebarUi({ totalMassage }) {
                                 value={totalMassage}
                                 size="sm"
                                 variant="ghost"
-                                color="deep-orange-gray"
+                                color="blue-gray"
                                 className="rounded-full"
                             />
                         )}

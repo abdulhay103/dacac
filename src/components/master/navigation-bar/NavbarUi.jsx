@@ -1,18 +1,32 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Navbar, IconButton, Collapse } from "@material-tailwind/react";
 import Link from "next/link";
 import dacacLogo from "/public/brands/dacac-log.png";
 import Image from "next/image";
 
 export function NavbarUi() {
-    const [openNav, setOpenNav] = React.useState(false);
+    const [openNav, setOpenNav] = useState(false);
 
-    React.useEffect(() => {
+    useEffect(() => {
+        // Add event listener for window resize
         window.addEventListener(
             "resize",
             () => window.innerWidth >= 960 && setOpenNav(false)
         );
+
+        // Add event listener for window scroll
+        window.addEventListener("scroll", () => {
+            let header = document.querySelector(".stickyHeader");
+
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+
+        // Clean up event listeners when the component unmounts
+        return () => {
+            window.removeEventListener("resize", () => {});
+            window.removeEventListener("scroll", () => {});
+        };
     }, []);
 
     const navList = (
@@ -45,7 +59,7 @@ export function NavbarUi() {
     );
 
     return (
-        <Navbar className=" sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4">
+        <Navbar className="stickyHeader absolute backdrop-blur-none backdrop-saturate-100 bg-opacity-0 border-none top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 shadow-none transition-all duration-300">
             <div className=" flex items-center justify-between">
                 <Link href="/" className=" flex gap-5 items-center">
                     <Image

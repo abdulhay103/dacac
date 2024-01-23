@@ -28,3 +28,9 @@ export async function getSingleUser(id) {
         where: { id: id },
     });
 }
+
+// Count all unreaded massage
+export async function countUnreadedMassages(status) {
+    const prisma = new PrismaClient();
+    return await prisma.massages.count({ where: { status: status } });
+}

@@ -1,7 +1,6 @@
 import { SendMailer } from "@/utils/emailHelper";
 import { PrismaClient } from "@prisma/client";
 import { NextResponse } from "next/server";
-import bcrypt from "bcrypt";
 
 //Send OTP Route
 export async function POST(req) {
@@ -101,17 +100,16 @@ export async function PATCH(req) {
                 return "0";
             }
         };
-        let checkedPassword = checkPassword();
-        let hashedPassword = await bcrypt.hash(checkedPassword, 10);
+        let password = checkPassword();
 
         if (findUser === null) {
             return NextResponse.json({ status: "Invaild User!" });
-        } else if (checkedPassword === "0") {
+        } else if (password === "0") {
             return NextResponse.json({ status: "Passwor dosn't match!" });
         } else {
             let resetPassword = await prisma.users.update({
                 where: { email: reqBody["email"] },
-                data: { password: hashedPassword, otp: "0" },
+                data: { password: password, otp: "0" },
             });
             return NextResponse.json({
                 status: "Successfully Reset Password.",

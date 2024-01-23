@@ -1,5 +1,5 @@
 {
-    "name": "mec-trade-link",
+    "name": "dream-angels-center-for-autistic-children",
     "version": "0.1.0",
     "private": true,
     "scripts": {
@@ -14,7 +14,6 @@
         "@next/third-parties": "^14.0.4",
         "@phosphor-icons/react": "^2.0.15",
         "@prisma/client": "^5.8.0",
-        "bcrypt": "^5.1.1",
         "cloudinary": "^1.41.1",
         "html-react-parser": "^5.0.11",
         "jose": "^5.1.3",

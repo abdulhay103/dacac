@@ -52,3 +52,9 @@ h6 {
     color: var(--secondary-400);
     font-weight: 400;
 }
+
+.stickyHeader.sticky {
+    padding: 20px 36px;
+    background: white;
+    box-shadow: 0 4px 4px 0 rgb(203, 200, 200);
+}
