@@ -59,7 +59,7 @@ export function NavbarUi() {
     );
 
     return (
-        <Navbar className="stickyHeader bg-transparent sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 shadow-none">
+        <Navbar className="stickyHeader absolute backdrop-blur-none backdrop-saturate-100 bg-opacity-0 border-none top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 shadow-none transition-all duration-300">
             <div className=" flex items-center justify-between">
                 <Link href="/" className=" flex gap-5 items-center">
                     <Image
