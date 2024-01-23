@@ -7,7 +7,7 @@ export const metadata = {
         "Dream Angels Centre for Autistic Children (DACAC) is a specialized centre for physically and mentally challenged children between the ages of 2- 8 years especially with symptoms of AUTISM. DACAC is run and managed by professional speech therapists, occupational therapists, physiotherapists and special educators ably supported by caregivers and administrative staff.",
 };
 
-export default function ServicesLayout({ children }) {
+export default function directorsLayout({ children }) {
     return (
         <section>
             <MainHeader />

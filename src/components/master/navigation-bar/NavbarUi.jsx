@@ -31,36 +31,60 @@ export function NavbarUi() {
 
     const navList = (
         <ul className="mt-5 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-            <Link className=" text-deep-orange-700" href="/">
+            <Link
+                className=" text-black font-semibold hover:text-deep-orange-700 text-lg transition-all"
+                href="/"
+            >
                 Home
             </Link>
-            <Link className=" text-deep-orange-700" href="/about">
-                About Us
+            <Link
+                className=" text-black font-semibold hover:text-deep-orange-700 text-lg transition-all"
+                href="/about"
+            >
+                About
             </Link>
-            <Link className=" text-deep-orange-700" href="/services">
+            <Link
+                className=" text-black font-semibold hover:text-deep-orange-700 text-lg transition-all"
+                href="/services"
+            >
                 Services
             </Link>
-            <Link className=" text-deep-orange-700" href="/directors">
+            <Link
+                className=" text-black font-semibold hover:text-deep-orange-700 text-lg transition-all"
+                href="/directors"
+            >
                 Board of Directors
             </Link>
-            <Link className=" text-deep-orange-700" href="/blogs">
+            <Link
+                className=" text-black font-semibold hover:text-deep-orange-700 text-lg transition-all"
+                href="/blogs"
+            >
                 Blogs
             </Link>
-            <Link className=" text-deep-orange-700" href="/notices">
+            <Link
+                className=" text-black font-semibold hover:text-deep-orange-700 text-lg transition-all"
+                href="/notices"
+            >
                 Notices
             </Link>
-            <Link className=" text-deep-orange-700" href="/contact">
+            <Link
+                className=" text-black font-semibold hover:text-deep-orange-700 text-lg transition-all"
+                href="/contact"
+            >
                 Contact
             </Link>
-            <Link className=" text-deep-orange-700" href="/user/login">
+            <Link
+                className=" text-black font-semibold hover:text-deep-orange-700 text-lg transition-all"
+                href="/user/login"
+            >
                 Login
             </Link>
         </ul>
     );
 
     return (
-        <Navbar className="stickyHeader absolute backdrop-blur-none backdrop-saturate-100 bg-opacity-0 border-none top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 shadow-none transition-all duration-300">
-            <div className=" flex items-center justify-between">
+        <Navbar className="stickyHeader absolute lg:backdrop-blur-none lg:backdrop-saturate-100 lg:bg-opacity-0 border-none top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 shadow-none transition-all duration-300">
+            <div className=" lg:container flex items-center justify-between">
                 <Link href="/" className=" flex gap-5 items-center">
                     <Image
                         src={dacacLogo}

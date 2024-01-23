@@ -5,13 +5,7 @@ import SectionHeader from "@/components/utils/SectionHeader";
 export default function Contact() {
     return (
         <>
-            <SectionHeader
-                title="Contact Us"
-                desc="Thank you for your interest in reaching out to us. We
-                      value your feedback, inquiries, and any other messages
-                      you may have. Please feel free to contact us using the
-                      information below-"
-            />
+            <SectionHeader pathName="contact" title="Contact Us" />
             <ContactInfo />
             <GoogleMapArea />
         </>
