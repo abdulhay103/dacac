@@ -11,10 +11,10 @@ export default function Hero() {
         <div className="pt-20 bg-gradient-to-br from-cyan-50 to-deep-purple-100">
             <div className=" container">
                 <div className=" flex justify-between">
-                    <div className="py-20 lg:pt-32 2xl:pt-36 w-full lg:w-[600px]">
+                    <div className="py-20 lg:pt-32 w-full lg:w-[600px]">
                         <div className=" w-full">
-                            <div className=" flex gap-2">
-                                <span className=" bg-blue-500 px-2"></span>
+                            <div className=" flex gap-2 items-center">
+                                <div className=" w-3 h-3 bg-blue-500"></div>
                                 <h5 className=" uppercase text-light-blue-700">
                                     welcome to dacac
                                 </h5>
@@ -32,18 +32,18 @@ export default function Hero() {
                                 and mentally challenged children.
                             </p>
                         </div>
-                        <div className=" mt-20 flex gap-16 items-center">
+                        <div className=" mt-16 flex gap-10 lg:gap-16 items-center">
                             <Link
                                 href="#"
-                                className=" px-10 py-4 bg-deep-orange-500 rounded-full text-xl font-semibold text-white uppercase border-2 border-deep-orange-500 hover:bg-white hover:text-deep-orange-600 transition-all"
+                                className=" px-6 py-3 lg:px-10 lg:py-4 bg-deep-orange-500 rounded-full text-xl font-semibold text-white uppercase border-2 border-deep-orange-500 hover:bg-white hover:text-deep-orange-600 transition-all"
                             >
                                 Learn more
                             </Link>
-                            <div className="w-20 h-20 relative flex">
+                            <div className="w-16 h-16 relative flex">
                                 <div className=" w-full h-full animate-ping bg-[#3d525c] rounded-full absolute"></div>
-                                <div className=" absolute w-14 h-14 top-3 left-3 bg-white rounded-full"></div>
+                                <div className=" absolute w-10 h-10 top-3 left-3 bg-white rounded-full"></div>
                                 <Link href="#" className=" absolute">
-                                    <PlayCircleIcon className=" w-20 h-20 text-[#3d525c] hover:text-deep-orange-600 transition-all" />
+                                    <PlayCircleIcon className=" w-16 h-16 text-[#3d525c] hover:text-deep-orange-600 transition-all" />
                                 </Link>
                             </div>
                         </div>

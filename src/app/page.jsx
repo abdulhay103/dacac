@@ -1,3 +1,4 @@
+import AcademicInfo from "@/components/home/AcademicInfo";
 import ActivitiesCounter from "@/components/home/ActivitiesCounter";
 import CertificatesUi from "@/components/home/CertificatesUi";
 import FounderUi from "@/components/home/FounderUi";
@@ -10,9 +11,8 @@ export default function Home() {
     return (
         <>
             <MainHeader />
-            {/* <SliderUi /> */}
             <Hero />
-            <ActivitiesCounter />
+            <AcademicInfo />
             <FounderUi />
             <CertificatesUi />
             <Footer />
