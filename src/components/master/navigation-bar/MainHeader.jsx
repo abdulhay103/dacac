@@ -1,5 +1,7 @@
+import { getUser } from "@/utils/assetsData";
 import { NavbarUi } from "./NavbarUi";
 
 export default async function MainHeader() {
-    return <NavbarUi />;
+    let user = await getUser();
+    return <NavbarUi user={user} />;
 }

@@ -73,7 +73,7 @@ export function SidebarUi({ totalMassage }) {
                                 className="mr-auto font-normal"
                             >
                                 <Link href="#" className="w-full">
-                                    Orders
+                                    Pages
                                 </Link>
                             </Typography>
                         </AccordionHeader>
@@ -88,10 +88,10 @@ export function SidebarUi({ totalMassage }) {
                                     />
                                 </ListItemPrefix>
                                 <Link
-                                    href="/dashboard/orders/pending"
+                                    href="/dashboard/about"
                                     className=" w-full"
                                 >
-                                    Pending Orders
+                                    About
                                 </Link>
                             </ListItem>
                             <ListItem>
@@ -102,10 +102,10 @@ export function SidebarUi({ totalMassage }) {
                                     />
                                 </ListItemPrefix>
                                 <Link
-                                    href="/dashboard/orders/approved"
+                                    href="/dashboard/services"
                                     className=" w-full"
                                 >
-                                    Approved Orders
+                                    Services
                                 </Link>
                             </ListItem>
                             <ListItem>
@@ -116,10 +116,10 @@ export function SidebarUi({ totalMassage }) {
                                     />
                                 </ListItemPrefix>
                                 <Link
-                                    href="/dashboard/orders/on-delivary"
+                                    href="/dashboard/directors"
                                     className=" w-full"
                                 >
-                                    On Delivery
+                                    Directors
                                 </Link>
                             </ListItem>
                             <ListItem>
@@ -130,10 +130,24 @@ export function SidebarUi({ totalMassage }) {
                                     />
                                 </ListItemPrefix>
                                 <Link
-                                    href="/dashboard/orders/cancel"
+                                    href="/dashboard/blogs"
                                     className=" w-full"
                                 >
-                                    Rejected Orders
+                                    Blogs
+                                </Link>
+                            </ListItem>
+                            <ListItem>
+                                <ListItemPrefix>
+                                    <ChevronRightIcon
+                                        strokeWidth={3}
+                                        className="h-3 w-5"
+                                    />
+                                </ListItemPrefix>
+                                <Link
+                                    href="/dashboard/notices"
+                                    className=" w-full"
+                                >
+                                    Notices
                                 </Link>
                             </ListItem>
                         </List>

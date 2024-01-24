@@ -11,7 +11,10 @@ export default function SubmitBtn(props) {
         );
     } else {
         return (
-            <button disabled={true} className={props.className}>
+            <button
+                disabled={true}
+                className={`${props.className} cursor-not-allowed`}
+            >
                 <div
                     className="spinner-border spinner-border-sm"
                     role="status"
