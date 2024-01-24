@@ -4,8 +4,11 @@ import { Navbar, IconButton, Collapse } from "@material-tailwind/react";
 import Link from "next/link";
 import dacacLogo from "/public/brands/dacac-log.png";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { UserCircle } from "@phosphor-icons/react";
 
-export function NavbarUi() {
+export function NavbarUi({ user }) {
+    const pathname = usePathname();
     const [openNav, setOpenNav] = useState(false);
 
     useEffect(() => {
@@ -32,58 +35,106 @@ export function NavbarUi() {
     const navList = (
         <ul className="mt-5 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
             <Link
-                className=" text-black font-semibold hover:text-deep-orange-700 text-lg transition-all"
+                className={
+                    pathname === "/"
+                        ? "text-deep-orange-700 text-lg font-semibold hover:text-deep-orange-700 inline-block relative before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-[3px] before:rounded-full before:opacity-100 before:bg-deep-orange-600"
+                        : " text-gray-800 text-lg font-semibold hover:text-deep-orange-700 inline-block relative transition-all duration-300 before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[3px] before:rounded-full before:opacity-0 before:transition-all before:duration-300 before:bg-deep-orange-600 hover:before:w-full hover:before:opacity-100 "
+                }
                 href="/"
             >
                 Home
             </Link>
             <Link
-                className=" text-black font-semibold hover:text-deep-orange-700 text-lg transition-all"
+                className={
+                    pathname === "/about"
+                        ? "text-deep-orange-700 text-lg font-semibold hover:text-deep-orange-700 inline-block relative before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-[3px] before:rounded-full before:opacity-100 before:bg-deep-orange-600"
+                        : " text-gray-800 text-lg font-semibold hover:text-deep-orange-700 inline-block relative transition-all duration-300 before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[3px] before:rounded-full before:opacity-0 before:transition-all before:duration-300 before:bg-deep-orange-600 hover:before:w-full hover:before:opacity-100 "
+                }
                 href="/about"
             >
                 About
             </Link>
             <Link
-                className=" text-black font-semibold hover:text-deep-orange-700 text-lg transition-all"
+                className={
+                    pathname === "/services"
+                        ? "text-deep-orange-700 text-lg font-semibold hover:text-deep-orange-700 inline-block relative before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-[3px] before:rounded-full before:opacity-100 before:bg-deep-orange-600"
+                        : " text-gray-800 text-lg font-semibold hover:text-deep-orange-700 inline-block relative transition-all duration-300 before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[3px] before:rounded-full before:opacity-0 before:transition-all before:duration-300 before:bg-deep-orange-600 hover:before:w-full hover:before:opacity-100 "
+                }
                 href="/services"
             >
                 Services
             </Link>
             <Link
-                className=" text-black font-semibold hover:text-deep-orange-700 text-lg transition-all"
+                className={
+                    pathname === "/directors"
+                        ? "text-deep-orange-700 text-lg font-semibold hover:text-deep-orange-700 inline-block relative before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-[3px] before:rounded-full before:opacity-100 before:bg-deep-orange-600"
+                        : " text-gray-800 text-lg font-semibold hover:text-deep-orange-700 inline-block relative transition-all duration-300 before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[3px] before:rounded-full before:opacity-0 before:transition-all before:duration-300 before:bg-deep-orange-600 hover:before:w-full hover:before:opacity-100 "
+                }
                 href="/directors"
             >
                 Board of Directors
             </Link>
             <Link
-                className=" text-black font-semibold hover:text-deep-orange-700 text-lg transition-all"
+                className={
+                    pathname === "/blogs"
+                        ? "text-deep-orange-700 text-lg font-semibold hover:text-deep-orange-700 inline-block relative before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-[3px] before:rounded-full before:opacity-100 before:bg-deep-orange-600"
+                        : " text-gray-800 text-lg font-semibold hover:text-deep-orange-700 inline-block relative transition-all duration-300 before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[3px] before:rounded-full before:opacity-0 before:transition-all before:duration-300 before:bg-deep-orange-600 hover:before:w-full hover:before:opacity-100 "
+                }
                 href="/blogs"
             >
                 Blogs
             </Link>
             <Link
-                className=" text-black font-semibold hover:text-deep-orange-700 text-lg transition-all"
+                className={
+                    pathname === "/notices"
+                        ? "text-deep-orange-700 text-lg font-semibold hover:text-deep-orange-700 inline-block relative before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-[3px] before:rounded-full before:opacity-100 before:bg-deep-orange-600"
+                        : " text-gray-800 text-lg font-semibold hover:text-deep-orange-700 inline-block relative transition-all duration-300 before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[3px] before:rounded-full before:opacity-0 before:transition-all before:duration-300 before:bg-deep-orange-600 hover:before:w-full hover:before:opacity-100 "
+                }
                 href="/notices"
             >
                 Notices
             </Link>
             <Link
-                className=" text-black font-semibold hover:text-deep-orange-700 text-lg transition-all"
+                className={
+                    pathname === "/contact"
+                        ? "text-deep-orange-700 text-lg font-semibold hover:text-deep-orange-700 inline-block relative before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-[3px] before:rounded-full before:opacity-100 before:bg-deep-orange-600"
+                        : " text-gray-800 text-lg font-semibold hover:text-deep-orange-700 inline-block relative transition-all duration-300 before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[3px] before:rounded-full before:opacity-0 before:transition-all before:duration-300 before:bg-deep-orange-600 hover:before:w-full hover:before:opacity-100 "
+                }
                 href="/contact"
             >
                 Contact
             </Link>
-            <Link
-                className=" text-black font-semibold hover:text-deep-orange-700 text-lg transition-all"
-                href="/user/login"
-            >
-                Login
-            </Link>
+            {user === null ? (
+                <Link
+                    className={
+                        pathname === "/user/login"
+                            ? "text-deep-orange-700 text-lg font-semibold hover:text-deep-orange-700 inline-block relative before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-[3px] before:rounded-full before:opacity-100 before:bg-deep-orange-600"
+                            : " text-gray-800 text-lg font-semibold hover:text-deep-orange-700 inline-block relative transition-all duration-300 before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[3px] before:rounded-full before:opacity-0 before:transition-all before:duration-300 before:bg-deep-orange-600 hover:before:w-full hover:before:opacity-100 "
+                    }
+                    href="/user/login"
+                >
+                    Login
+                </Link>
+            ) : (
+                <Link href="/dashboard">
+                    {user.avater === "0" ? (
+                        <UserCircle size={32} className=" text-gray-800" />
+                    ) : (
+                        <Image
+                            src={user.avater}
+                            width={32}
+                            height={32}
+                            className=" object-cover rounded-full"
+                            alt="User Image"
+                        />
+                    )}
+                </Link>
+            )}
         </ul>
     );
 
     return (
-        <Navbar className="stickyHeader absolute lg:backdrop-blur-none lg:backdrop-saturate-100 lg:bg-opacity-0 border-none top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 shadow-none transition-all duration-300">
+        <Navbar className="stickyHeader absolute lg:backdrop-blur-none lg:backdrop-saturate-100 lg:bg-opacity-0 border-none top-0 z-50 h-max max-w-full rounded-none px-4 py-4 lg:px-8 lg:py-6 shadow-none transition-all duration-300">
             <div className=" lg:container flex items-center justify-between">
                 <Link href="/" className=" flex gap-5 items-center">
                     <Image

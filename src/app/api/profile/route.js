@@ -1,7 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 import { headers } from "next/headers";
 import { NextResponse } from "next/server";
-import bcrypt from "bcrypt";
 
 export async function POST(req) {
     BigInt.prototype.toJSON = function () {
@@ -13,7 +12,6 @@ export async function POST(req) {
     try {
         const prisma = new PrismaClient();
         const reqBody = await req.json();
-        let hashedPassword = await bcrypt.hash(reqBody.password, 10);
         let uniqueUser = await prisma.users.findUnique({
             where: { id: id },
         });
@@ -33,7 +31,7 @@ export async function POST(req) {
                     email: reqBody.email,
                     phone: reqBody.phone,
                     address: reqBody.address,
-                    password: hashedPassword,
+                    password: reqBody.password,
                     otp: "0",
                 },
             });

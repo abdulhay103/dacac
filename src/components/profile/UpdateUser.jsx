@@ -119,6 +119,7 @@ export default function UpdateUser(props) {
             e.toString();
         } finally {
             setSubmit(false);
+            setOpen(!open);
         }
     };
     return (
@@ -317,7 +318,7 @@ export default function UpdateUser(props) {
                             >
                                 Cancel
                             </Button>
-                            <div onClick={handleOpen}>
+                            <div>
                                 <SubmitBtn
                                     submit={submit}
                                     text="Save Change"

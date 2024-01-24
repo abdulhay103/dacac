@@ -34,3 +34,13 @@ export async function countUnreadedMassages(status) {
     const prisma = new PrismaClient();
     return await prisma.massages.count({ where: { status: status } });
 }
+
+// Count all unreaded massage
+export async function getAllMassage() {
+    const prisma = new PrismaClient();
+    return await prisma.massages.findMany({
+        orderBy: {
+            id: "desc",
+        },
+    });
+}
