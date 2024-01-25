@@ -3,7 +3,7 @@ export default function CtaBtn(props) {
     return (
         <Link
             href={props.href}
-            className="px-6 py-3 lg:px-8 bg-gradient-to-br from-cyan-400 to-deep-orange-500 text-white hover:scale-105 rounded-full transition-all"
+            className={`${props.className} px-10 py-3 lg:py-4 bg-deep-orange-400 rounded-full font-semibold text-white uppercase border-2 border-deep-orange-400 hover:bg-white hover:text-deep-orange-500 transition-all`}
         >
             {props.text}
         </Link>
