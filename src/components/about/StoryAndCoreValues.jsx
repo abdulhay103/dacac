@@ -23,38 +23,39 @@ export default function StoryAndCoreValues() {
                 </div>
                 <div className=" pt-10 text-justify">
                     <p className="py-2">
-                        The company was established in 2013. The company has
-                        created tradition on account of its treatment expertise
-                        and approach. "Mec Trade Link" is headed by a proprietor
-                        Md Kamrul Hasan who has completed BSC of EEE Dhaka
-                        International University of the batch 2006. An
-                        Electro-Medical Engineer Md. AL MAMUM, B.Bc (Mechanical
-                        from the Philippines), Dhaka has advised the owner on
-                        technical matters relating to planning, preparation of
-                        technical specifications, installation, and management
-                        of after-sales services for medical equipment. Looking
-                        for very far development in the health sector of our
-                        country, it decided to trade into hospital and medical
-                        equipment, instruments, and furniture.
+                        Realizing the lack of proper educational institutions/
+                        facilities for children with Autism, couple of qualified
+                        Occupational Therapists ventured to set up the school
+                        under the name and style of” Dream Angels School “ in
+                        March, 2011 in rented premises in Mirpur. Starting with
+                        a handful of pupils this school now has 31 students
+                        running on a two shift basis with a combined teaching
+                        staff of 6 who are adequately trained to handle such
+                        students. The minimum educational levels of the
+                        teachers/instructors are either a Bachelors degree or a
+                        Masters degree and possessing special training for
+                        handling the students with this condition.
                     </p>
                     <p className="py-2">
-                        The company is known for its approach and service. In
-                        the year 2013, the company started marketing disposable
-                        and other medical-related items. Our marketed brands are
-                        well known in the market and in some cases, we are
-                        leading the market.
-                    </p>
-                    <p className="py-2">
-                        The company was established in 2013. The company has
-                        created tradition on account of its treatment expertise
-                        and approach. Our company is headed by a proprietor Md
-                        Kamrul Hasan who has completed BSC of EEE Dhaka
-                        International University of the batch 2006. An
-                        Electro-Medical Engineer Md. AL MAMUM, B.Sc (Mechanical
-                        from the Philippines), Dhaka has advised the owner on
-                        technical matters relating to planning, preparation of
-                        technical specifications, installation, and management
-                        of after-sales services for medical equipment.
+                        Considering the limitations of the existing facilities
+                        to service the students adequately and in a true
+                        professional manner the school was given a Corporate
+                        structure whereby the school became a Unit of Dream
+                        Angels Limited, a limited liability company registered
+                        under the Companies ACT, 1994 obtaining its certificate
+                        of incorporation bearing Number C-100516/ 12 dated 29th
+                        March, 2012 issued by the Registrar of Joint Stock
+                        Companies & Firms, Bangladesh. Both the Founders of the
+                        school became the members of the Board of Directors
+                        along with the remaining three who came from various
+                        backgrounds-the Chairman being a Chartered Accountant
+                        from the Institute of England & Wales, UK having a wide
+                        range of experience in various capacities both
+                        nationally and internationally. With this Corporate
+                        structure in place the institution will have the
+                        flexibility and resources to expand in an organized
+                        manner and will be well placed to better serve the
+                        community within Mirpur and the adjoining areas.
                     </p>
                 </div>
             </div>
