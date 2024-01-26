@@ -21,38 +21,38 @@ export default function MissionAndVission() {
                 </div>
                 <div className=" pt-10 text-justify">
                     <p className="py-2">
-                        The company was established in 2013. The company has
-                        created tradition on account of its treatment expertise
-                        and approach. "Mec Trade Link" is headed by a proprietor
-                        Md Kamrul Hasan who has completed BSC of EEE Dhaka
-                        International University of the batch 2006. An
-                        Electro-Medical Engineer Md. AL MAMUM, B.Bc (Mechanical
-                        from the Philippines), Dhaka has advised the owner on
-                        technical matters relating to planning, preparation of
-                        technical specifications, installation, and management
-                        of after-sales services for medical equipment. Looking
-                        for very far development in the health sector of our
-                        country, it decided to trade into hospital and medical
-                        equipment, instruments, and furniture.
+                        Dream Angels Centre for Autistic Children (DACAC) is a
+                        specialized centre for physically and mentally
+                        challenged children between the ages of 2- 8 years
+                        especially with symptoms of AUTISM. DACAC is run and
+                        managed by professional speech therapists, occupational
+                        therapists, physiotherapists and special educators ably
+                        supported by caregivers and administrative staff.
                     </p>
                     <p className="py-2">
-                        The company is known for its approach and service. In
-                        the year 2013, the company started marketing disposable
-                        and other medical-related items. Our marketed brands are
-                        well known in the market and in some cases, we are
-                        leading the market.
+                        Dream Angels Center for Autistic Children (a Unit of
+                        Dream Angels Limited), the Founders being inspired by
+                        the ideals of service towards a segment of society who
+                        were deprived of certain physical abilities/attributes
+                        since birth and guided by the skills, knowledge and
+                        experiences gained from reputable institution in this
+                        field, decided to dedicate themselves to the cause of
+                        improving the lot of the aforesaid segment of the
+                        society. In this mission and goal they were supported by
+                        some segments of society whose mission was to develop
+                        this nascent initiative by the Founders and take it to
+                        bigger heights and enlarge their sphere of activities by
+                        providing all kinds of support so that the Institution
+                        gets both National and International recognition.
                     </p>
                     <p className="py-2">
-                        The company was established in 2013. The company has
-                        created tradition on account of its treatment expertise
-                        and approach. Our company is headed by a proprietor Md
-                        Kamrul Hasan who has completed BSC of EEE Dhaka
-                        International University of the batch 2006. An
-                        Electro-Medical Engineer Md. AL MAMUM, B.Sc (Mechanical
-                        from the Philippines), Dhaka has advised the owner on
-                        technical matters relating to planning, preparation of
-                        technical specifications, installation, and management
-                        of after-sales services for medical equipment.
+                        To materialize the Mission stated above Dream Angels
+                        Center for Autistic Children envisions partnering with
+                        similar types of institutions globally actualizing the
+                        physical and mental formation of the students to a level
+                        that will establish them in line with other normal
+                        students and effecting a social transformation in the
+                        country.
                     </p>
                 </div>
             </div>

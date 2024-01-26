@@ -3,7 +3,7 @@ import React from "react";
 
 export default function AcademicInfo() {
     return (
-        <div className=" py-14 lg:py-20 xl:py-32 2xl:py-40">
+        <div className=" py-14 lg:py-20 xl:py-32 2xl:py-36">
             <div className=" container">
                 <div className=" w-full xl:w-1/2 mx-auto">
                     <div className=" flex gap-2 items-center justify-center pb-2">
@@ -20,7 +20,7 @@ export default function AcademicInfo() {
                         </h2>
                     </div>
                 </div>
-                <div className=" grid grid-flow-row grid-cols-3 gap-10 pt-14 xl:pt-24 2xl:pt-28">
+                <div className=" grid grid-flow-row grid-cols-3 gap-10 pt-14 xl:pt-24">
                     <div className=" col-span-3 xl:col-span-1 flex flex-row items-center hover:text-white">
                         <div className="-mr-10 z-10 w-20 h-20 p-5 flex items-center justify-center bg-deep-orange-400 rounded-full">
                             <Book size={40} className=" text-white" />
