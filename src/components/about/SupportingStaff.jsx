@@ -8,7 +8,7 @@ import {
     TwitterLogo,
 } from "@phosphor-icons/react/dist/ssr";
 
-export default function TechnicalDept() {
+export default function SupportingStaff() {
     return (
         <div className="grid grid-flow-row grid-cols-12 items-center gap-6 lg:gap-8 xl:gap-14 pt-5 lg:pt-6 xl:pt-10">
             <div className="border bg-white border-cyan-500 rounded-md overflow-hidden shadow-lg col-span-12 lg:col-span-4 2xl:col-span-3">
@@ -22,12 +22,9 @@ export default function TechnicalDept() {
                     />
                 </div>
                 <div className="p-6">
-                    <h6 className=" font-semibold">Technical Adviser:</h6>
-                    <p>Engr. Sobuj Rana</p>
-                    <p>
-                        Educational Qualification: B.Sc. Engineering
-                        (Mechanical)
-                    </p>
+                    <h6 className=" font-semibold">Marketing Executive</h6>
+                    <p>Md. Atiq Mollah</p>
+                    <p>Educational Qualification: B.Ba</p>
                 </div>
                 <div className=" flex gap-6 justify-center py-3 bg-cyan-500">
                     <Link
@@ -63,16 +60,13 @@ export default function TechnicalDept() {
                         width="auto"
                         height="auto"
                         className=" object-cover"
-                        alt="Founder-Iamge"
+                        alt="Founder Image"
                     />
                 </div>
                 <div className="p-6">
-                    <h6 className=" font-semibold">Technical Adviser:</h6>
-                    <p>Engr. Sobuj Rana</p>
-                    <p>
-                        Educational Qualification: B.Sc. Engineering
-                        (Mechanical)
-                    </p>
+                    <h6 className=" font-semibold">Marketing Executive</h6>
+                    <p>Md. Atiq Mollah</p>
+                    <p>Educational Qualification: B.Ba</p>
                 </div>
                 <div className=" flex gap-6 justify-center py-3 bg-cyan-500">
                     <Link

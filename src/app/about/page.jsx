@@ -1,8 +1,9 @@
-import MissionAndVission from "../../components/about/MissionAndVission";
 import StoryAndCoreValues from "@/components/about/StoryAndCoreValues";
 import TeamMembers from "@/components/about/TeamMembers";
-import WhyChoseUs from "../../components/about/WhyChoseUs";
 import SectionHeader from "@/components/utils/SectionHeader";
+import Reviews from "@/components/home/Reviews";
+import WhyWeBest from "@/components/about/WhyWeBest";
+import MissionAndVission from "@/components/about/MissionAndVission";
 
 export default function About() {
     return (
@@ -15,7 +16,8 @@ export default function About() {
             <MissionAndVission />
             <StoryAndCoreValues />
             <TeamMembers />
-            <WhyChoseUs />
+            <WhyWeBest />
+            <Reviews />
         </>
     );
 }

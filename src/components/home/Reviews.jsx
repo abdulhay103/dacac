@@ -13,7 +13,7 @@ export default function Reviews() {
                 <div className=" flex gap-2 items-center justify-center pb-2">
                     <div className=" w-3 h-3 bg-white"></div>
                     <h5 className=" uppercase text-white px-2 font-normal">
-                        our academic activities
+                        Our success story
                     </h5>
                     <div className=" w-3 h-3 bg-white"></div>
                 </div>
