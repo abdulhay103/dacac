@@ -9,45 +9,52 @@ import GlobalSourcing from "/public/services/Global-Sourcing.png";
 const servicesArray = [
     {
         img: ProductConsultation,
-        title: "Product Consultation",
-        subTitle: "Guidance at Your Fingertips",
+        title: "Therapeutic Recreation Program",
+        subTitle: "Promote & develop self-awareness",
         details:
-            "Our knowledgeable team is ready to assist you in selecting the right medical equipment for your specific needs. Whether you are setting up a new facility or upgrading existing equipment, count on us for expert advice.",
+            "Offer a comprehensive service where educators, psychologists, and therapists collaborate to create customized IEPs for students with special needs. This service would involve assessment, goal setting, progress tracking, and regular updates to ensure each student's unique requirements are met.",
     },
     {
         img: CustomSolutions,
-        title: "Custom Solutions",
-        subTitle: "Tailored to Your Requirements",
+        title: "Comprehensive IEP Service",
+        subTitle: "Personalized educational plans ",
         details:
             " We understand that each healthcare environment is unique. Our team works closely with you to create custom solutions that align with your budget, space, and functionality requirements.",
     },
     {
+        img: CustomSolutions,
+        title: "Skills Development Program",
+        subTitle: "Social interaction, and communication skills",
+        details:
+            " Develop a structured social skills development program tailored to the needs of students with special needs. This program aims to enhance students' social competence, interpersonal communication, and relationship-building skills in various social contexts.",
+    },
+    {
         img: TrainingSupport,
-        title: "Training and Support",
+        title: "Behavioral and Intervention",
         subTitle: " Empowering Your Team",
         details:
-            "Maximize the potential of your medical equipment with our comprehensive training programs. From product demonstrations to in-depth usage guides, we ensure your team is well-equipped to provide the best care.",
+            "Develop a program that provides behavioral assessment, intervention planning, and ongoing support for students with behavioral challenges. This service would involve collaboration with behavior analysts, psychologists, and educators to develop effective behavior management strategies and create a positive learning environment for all students.",
     },
     {
         img: MaintenanceServices,
-        title: "Maintenance And Services",
+        title: "Family Support and Education",
         subTitle: " Ensuring Longevity and Reliability",
         details:
-            "Our commitment to your success extends beyond the sale. Benefit from our maintenance services, ensuring that your equipment operates at peak performance, minimizing downtime, and prolonging its lifespan.",
+            "Offer workshops, support groups, and individual counseling sessions for families of students with special needs. Topics could include understanding their child's diagnosis, navigating the education system, advocating for their child's needs, and accessing community resources. This service aims to empower families and strengthen their ability to support their child's education and development.",
     },
     {
         img: ProjectManagement,
-        title: "Project Management",
+        title: "Speech and Language Therapy",
         subTitle: "Seamless Execution, Every Time",
         details:
-            "Embarking on a new project? Let us handle the logistics. Our project management team ensures a smooth process, from planning to installation, allowing you to focus on patient care.",
+            "Provide specialized speech and language therapy services for students with communication disorders. This service would involve assessment, individualized therapy sessions, group therapy activities, and collaboration with educators to support language development and communication skills in the classroom.",
     },
     {
         img: GlobalSourcing,
-        title: "Global Sourcing",
+        title: "Sensory Integration Program",
         subTitle: "Access to the Best Worldwide",
         details:
-            "Tap into our global network to source the latest and most advanced medical equipment. We ensure you have access to cutting-edge technologies and innovations from around the world.",
+            "Develop a sensory integration program that addresses the sensory processing needs of students with special needs. This program would include sensory-based activities, environmental modifications, and therapeutic interventions designed to help students regulate their sensory experiences and improve their ability to participate in daily activities.",
     },
 ];
 export default function () {
