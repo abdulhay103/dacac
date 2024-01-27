@@ -22,12 +22,9 @@ export default function ManagementDept() {
                     />
                 </div>
                 <div className="p-6">
-                    <h6 className=" font-semibold">Technical Adviser:</h6>
-                    <p>Engr. Sobuj Rana</p>
-                    <p>
-                        Educational Qualification: B.Sc. Engineering
-                        (Mechanical)
-                    </p>
+                    <h6 className=" font-semibold">General Manager</h6>
+                    <p>Md. Abu Syeed Miah</p>
+                    <p>Educational Qualification: B.Sc</p>
                 </div>
                 <div className=" flex gap-6 justify-center py-3 bg-cyan-500">
                     <Link
@@ -67,12 +64,9 @@ export default function ManagementDept() {
                     />
                 </div>
                 <div className="p-6">
-                    <h6 className=" font-semibold">Technical Adviser:</h6>
-                    <p>Engr. Sobuj Rana</p>
-                    <p>
-                        Educational Qualification: B.Sc. Engineering
-                        (Mechanical)
-                    </p>
+                    <h6 className=" font-semibold">General Manager</h6>
+                    <p>Md. Abu Syeed Miah</p>
+                    <p>Educational Qualification: B.Sc</p>
                 </div>
                 <div className=" flex gap-6 justify-center py-3 bg-cyan-500">
                     <Link
@@ -112,12 +106,9 @@ export default function ManagementDept() {
                     />
                 </div>
                 <div className="p-6">
-                    <h6 className=" font-semibold">Technical Adviser:</h6>
-                    <p>Engr. Sobuj Rana</p>
-                    <p>
-                        Educational Qualification: B.Sc. Engineering
-                        (Mechanical)
-                    </p>
+                    <h6 className=" font-semibold">General Manager</h6>
+                    <p>Md. Abu Syeed Miah</p>
+                    <p>Educational Qualification: B.Sc</p>
                 </div>
                 <div className=" flex gap-6 justify-center py-3 bg-cyan-500">
                     <Link
@@ -157,12 +148,9 @@ export default function ManagementDept() {
                     />
                 </div>
                 <div className="p-6">
-                    <h6 className=" font-semibold">Technical Adviser:</h6>
-                    <p>Engr. Sobuj Rana</p>
-                    <p>
-                        Educational Qualification: B.Sc. Engineering
-                        (Mechanical)
-                    </p>
+                    <h6 className=" font-semibold">General Manager</h6>
+                    <p>Md. Abu Syeed Miah</p>
+                    <p>Educational Qualification: B.Sc</p>
                 </div>
                 <div className=" flex gap-6 justify-center py-3 bg-cyan-500">
                     <Link

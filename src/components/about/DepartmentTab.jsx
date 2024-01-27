@@ -7,8 +7,8 @@ import {
     TabPanel,
 } from "@material-tailwind/react";
 import ManagementDept from "./ManagementDept";
-import BioMedicalDept from "./BioMedicalDept";
-import TechnicalDept from "./TechnicalDept";
+import SpecialTeacher from "./SpecialTeacher";
+import SupportingStaff from "./SupportingStaff";
 
 const data = [
     {
@@ -17,14 +17,14 @@ const data = [
         desc: <ManagementDept />,
     },
     {
-        label: "Bio-Medical",
-        value: "bio-medical",
-        desc: <BioMedicalDept />,
+        label: "Special-Teacher",
+        value: "teachers",
+        desc: <SpecialTeacher />,
     },
     {
-        label: "Technical",
-        value: "technical",
-        desc: <TechnicalDept />,
+        label: "Supporting Staff",
+        value: "staff",
+        desc: <SupportingStaff />,
     },
 ];
 
