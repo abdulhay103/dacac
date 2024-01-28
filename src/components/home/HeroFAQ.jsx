@@ -1,5 +1,5 @@
 import Image from "next/image";
-import sideImage from "/public/home/side-image.png";
+import sideImage from "/public/home/vectoryday.jpg";
 import bgImage from "/public/home/bg-shape-1.png";
 import { ShieldCheck } from "@phosphor-icons/react/dist/ssr";
 import CtaBtn from "../utils/CtaBtn";

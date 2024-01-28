@@ -1,11 +1,9 @@
 "use client";
 import { PlusIcon } from "@heroicons/react/24/solid";
 import {
-    Briefcase,
     CalendarCheck,
     Certificate,
     ChalkboardTeacher,
-    Coffee,
     Student,
 } from "@phosphor-icons/react";
 import CountUp from "react-countup";

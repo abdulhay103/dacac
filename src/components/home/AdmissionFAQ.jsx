@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import bgImage from "/public/home/side-image-2.png";
-import sideImage from "/public/home/side-image.png";
+import sideImage from "/public/home/admission.jpg";
 
 import {
     Accordion,
@@ -83,7 +83,7 @@ export default function AdmissionFAQ() {
                                                     : " text-deep-orange-500"
                                             }
                                         />
-                                        What is the admission peocess?
+                                        What is the admission process?
                                     </div>
                                 </AccordionHeader>
                                 <AccordionBody className=" bg-white px-6">
