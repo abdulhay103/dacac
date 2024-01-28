@@ -25,10 +25,12 @@ export default function WhyWeBest() {
                 </div>
             </div>
             <div className="container grid grid-flow-row grid-cols-3 items-center gap-6 lg:gap-8 xl:gap-10 py-6 lg:py-8 xl:py-16 2xl:py-20">
-                <div className=" col-span-3 lg:col-span-1 border-2 border-gray-400 rounded-lg min-h-[200px] bg-gradient-to-bl from-deep-orange-50 via-white to-red-50">
-                    <h1 className=" pt-3 px-6 text-right text-green-500">01</h1>
+                <div className=" col-span-3 lg:col-span-1 border-2 border-deep-orange-500 rounded-lg min-h-[200px] bg-gradient-to-bl from-deep-orange-50 via-white to-red-50">
+                    <h1 className=" pt-3 px-6 text-right text-deep-orange-500">
+                        01
+                    </h1>
                     <div className=" px-5 pb-5">
-                        <p className=" text-lg font-bold text-green-500">
+                        <p className=" text-lg font-bold text-deep-orange-500">
                             Assess Special Needs and Requirements
                         </p>
                         <p className=" text-justify py-2">
@@ -40,7 +42,7 @@ export default function WhyWeBest() {
                         </p>
                     </div>
                 </div>
-                <div className=" col-span-3 lg:col-span-1 border-2 border-gray-400 rounded-lg min-h-[200px] bg-gradient-to-bl from-deep-orange-50 via-white to-red-50">
+                <div className=" col-span-3 lg:col-span-1 border-2 border-deep-purple-500 rounded-lg min-h-[200px] bg-gradient-to-bl from-deep-orange-50 via-white to-red-50">
                     <h1 className=" pt-3 px-6 text-right text-deep-purple-500">
                         02
                     </h1>
@@ -57,7 +59,7 @@ export default function WhyWeBest() {
                         </p>
                     </div>
                 </div>
-                <div className=" col-span-3 lg:col-span-1 border-2 border-gray-400 rounded-lg min-h-[200px] bg-gradient-to-bl from-deep-orange-50 via-white to-red-50">
+                <div className=" col-span-3 lg:col-span-1 border-2 border-blue-500 rounded-lg min-h-[200px] bg-gradient-to-bl from-deep-orange-50 via-white to-red-50">
                     <h1 className=" pt-3 px-6 text-right text-blue-500">03</h1>
                     <div className=" px-5 pb-5">
                         <p className=" text-lg font-bold text-blue-500">
