@@ -9,7 +9,7 @@ class data {
         {
             id: 1,
             img: ProductConsultation,
-            title: "Therapeutic Recreation Program",
+            title: "Therapeutic Program",
             subTitle: "Promote & develop self-awareness",
             details:
                 "Offer a comprehensive service where educators, psychologists, and therapists collaborate to create customized IEPs for students with special needs. This service would involve assessment, goal setting, progress tracking, and regular updates to ensure each student's unique requirements are met.",
