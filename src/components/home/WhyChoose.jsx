@@ -1,6 +1,7 @@
 import React from "react";
 import CtaBtn from "../utils/CtaBtn";
-import classParty from "/public/home/class-party.jpg";
+import classParty2 from "/public/home/class-party-2.jpg";
+// import classParty1 from "/public/home/class-party.jpg";
 import Image from "next/image";
 
 export default function WhyChoose() {
@@ -14,7 +15,7 @@ export default function WhyChoose() {
                 <div className=" absolute w-full bg-blue-500 lg:bg-transparent z-10 flex gap-8 flex-col p-4 lg:flex-row rounded-lg">
                     <div className=" w-full lg:w-2/5 h-60 lg:h-72 z-20 bg-black rounded-lg overflow-hidden">
                         <Image
-                            src={classParty}
+                            src={classParty2}
                             width="auto"
                             height="auto"
                             className=" object-cover"
