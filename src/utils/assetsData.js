@@ -44,3 +44,15 @@ export async function getAllMassage() {
         },
     });
 }
+
+// Get All Service Data
+export async function getServices() {
+    const prisma = new PrismaClient();
+    return await prisma.services.findMany();
+}
+
+// Single Service Data
+export async function getSingleService(id) {
+    const prisma = new PrismaClient();
+    return await prisma.services.findUnique({ where: { id: id } });
+}
