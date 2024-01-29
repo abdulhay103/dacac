@@ -1,5 +1,5 @@
 import AllServices from "@/components/services/AllServices";
-import CtaSection from "@/components/services/CtaSection";
+import CtaSection from "@/components/utils/CtaSection";
 import SectionHeader from "@/components/utils/SectionHeader";
 import { getServices } from "@/utils/assetsData";
 

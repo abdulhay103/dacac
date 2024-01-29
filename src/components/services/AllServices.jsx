@@ -1,7 +1,6 @@
 import Image from "next/image";
 import CtaBtn from "../utils/CtaBtn";
 export default function ({ services }) {
-    console.log(services);
     return (
         <div className=" container py-10">
             <div className="grid grid-flow-row grid-cols-12 services-center gap-8 lg:gap-10 xl:gap-12 py-10 lg:py-12 xl:py-16 2xl:py-20">
