@@ -17,7 +17,7 @@ export default function HeroFAQ() {
             <div className=" container absolute pt-5 lg:pt-44 left-10 lg:right-10">
                 <div className=" flex gap-20 2xl:gap-28">
                     <div className=" w-full xl:w-1/2 pt-20 2xl:pt-52">
-                        <div className=" flex gap-2 items-center pb-2">
+                        <div className=" flex gap-2 items-center pb-3">
                             <div className=" w-3 h-3 bg-blue-500"></div>
                             <h5 className=" uppercase text-light-blue-700 px-2 font-normal">
                                 who we are

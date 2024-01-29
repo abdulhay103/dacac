@@ -6,7 +6,7 @@ export default function AcademicInfo() {
         <div className=" py-14 lg:py-20 xl:py-32 2xl:py-36">
             <div className=" container">
                 <div className=" w-full xl:w-1/2 mx-auto">
-                    <div className=" flex gap-2 items-center justify-center pb-2">
+                    <div className=" flex gap-2 items-center justify-center pb-3">
                         <div className=" w-3 h-3 bg-blue-500"></div>
                         <h5 className=" uppercase text-light-blue-700 px-2 font-normal">
                             our academic activities
