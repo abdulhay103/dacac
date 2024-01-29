@@ -5,7 +5,7 @@ export default function WhyWeBest() {
         <section className=" py-20 xl:py-24 2xl:py-32">
             <div className=" container w-full">
                 <div className=" w-full xl:w-3/4 mx-auto">
-                    <div className=" flex gap-2 items-center justify-center pb-2">
+                    <div className=" flex gap-2 items-center justify-center pb-3">
                         <div className=" w-3 h-3 bg-blue-500"></div>
                         <h5 className=" uppercase text-blue-500 px-2 font-normal">
                             Why we best!
