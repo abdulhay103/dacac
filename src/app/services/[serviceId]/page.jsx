@@ -4,8 +4,8 @@ import SectionHeader from "@/components/utils/SectionHeader";
 import { getSingleService } from "@/utils/assetsData";
 
 export default async function SingleService({ params }) {
-    let serviceId = parseInt(params.id);
-    let service = await getSingleService(serviceId);
+    let id = parseInt(params.serviceId);
+    let service = await getSingleService(id);
     return (
         <>
             <SectionHeader

@@ -78,3 +78,14 @@ model services {
   createdAt    DateTime @default(now()) @db.Timestamp(0)
   updatedAt    DateTime @default(now()) @updatedAt @db.Timestamp(0)
 }
+
+model directors {
+  id          BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
+  name        String   @unique @db.VarChar(100)
+  profession  String   @db.VarChar(200)
+  designation String   @db.VarChar(200)
+  img         String   @db.TinyText
+  details     String   @db.Text
+  createdAt   DateTime @default(now()) @db.Timestamp(0)
+  updatedAt   DateTime @default(now()) @updatedAt @db.Timestamp(0)
+}
