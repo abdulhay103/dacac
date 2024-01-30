@@ -46,7 +46,7 @@ export default function AdmissionFAQ() {
             <div className=" container absolute left-14 lg:left-10 2xl:left-44">
                 <div className=" flex gap-20 lg:gap-10 xl:gap-10 2xl:gap-28">
                     <div className=" hidden lg:block lg:w-2/5 2xl:w-1/2">
-                        <div className=" lg:w-[450px] 2xl:w-[600px] lg:h-[450px] 2xl:h-[600px] rounded-full bg-blue-gray-500 border-[15px] border-white overflow-hidden">
+                        <div className=" lg:w-[450px] 2xl:w-[600px] lg:h-[450px] 2xl:h-[600px] rounded-3xl bg-blue-gray-500 border-[10px] shadow-xl border-white overflow-hidden">
                             <Image
                                 src={sideImage}
                                 width="auto"

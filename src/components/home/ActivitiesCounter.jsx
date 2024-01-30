@@ -10,7 +10,7 @@ import CountUp from "react-countup";
 
 export default function ActivitiesCounter() {
     return (
-        <div className=" container py-16 xl:py-24 2xl:py-32">
+        <div className=" container py-20 xl:py-28 2xl:py-36">
             <div className=" grid grid-flow-row lg:grid-flow-col grid-cols-4 gap-8">
                 <div className=" col-span-4 lg:col-span-1 text-center p-5 rounded border border-deep-orange-400 hover:shadow-md hover:scale-105 transition-all">
                     <div className=" flex items-center gap-5 justify-center">
