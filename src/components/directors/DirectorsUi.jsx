@@ -1,10 +1,7 @@
 import Image from "next/image";
-import MD from "/public/directors/anima-nupur.jpg";
-import ED from "/public/directors/razia-sultana.jpg";
-import director from "/public/directors/dummy-woman.png";
 import Link from "next/link";
 
-export default function DirectorsUi() {
+export default function DirectorsUi({ directors }) {
     return (
         <div className=" py-16 lg:py-24 2xl:py-32">
             <div className="container">
@@ -24,84 +21,35 @@ export default function DirectorsUi() {
                     </div>
                 </div>
                 <div className="grid grid-flow-row grid-cols-3 gap-16 2xl:gap-24">
-                    <div className=" col-span-3 lg:col-span-1 p-6 shadow rounded-3xl hover:shadow-lg border hover:bg-gray-100 border-l-2 border-b-4 border-gray-400 hover:border-deep-orange-500 hover:scale-[102%] transition-all">
-                        <div className=" w-full h-72 rounded-2xl overflow-hidden">
-                            <Image
-                                src={MD}
-                                width="500"
-                                height="200"
-                                className=" object-cover"
-                                alt="MD of DACAC"
-                            />
+                    {directors.map((director) => (
+                        <div
+                            key={director.id}
+                            className=" col-span-3 lg:col-span-1 p-6 shadow rounded-3xl hover:shadow-lg border hover:bg-gray-100 border-l-2 border-b-4 border-gray-400 hover:border-deep-orange-500 hover:scale-[102%] transition-all"
+                        >
+                            <div className=" w-full h-72 rounded-2xl overflow-hidden">
+                                <Image
+                                    src={director.img}
+                                    width="500"
+                                    height="200"
+                                    className=" object-cover"
+                                    alt="MD of DACAC"
+                                />
+                            </div>
+                            <div className=" py-8">
+                                <h4>{director.name}</h4>
+                                <h5 className=" py-1">{director.profession}</h5>
+                                <h6>{director.designation}</h6>
+                            </div>
+                            <div className=" flex justify-center pb-5">
+                                <Link
+                                    href={`/directors/${director.id}`}
+                                    className=" hover:text-deep-orange-500 text-lg font-medium border-b-2 border-transparent hover:border-deep-orange-500 transition-all duration-150"
+                                >
+                                    See Details
+                                </Link>
+                            </div>
                         </div>
-                        <div className=" py-8">
-                            <h4>Anima Das Nupur</h4>
-                            <h5 className=" py-1">
-                                Sr. Consult. Ocupetional Therapy, DACAC
-                            </h5>
-                            <h6>Chairman (DACAC)</h6>
-                        </div>
-                        <div className=" flex justify-center pb-5">
-                            <Link
-                                href="#"
-                                className=" hover:text-deep-orange-500 text-lg font-medium border-b-2 border-transparent hover:border-deep-orange-500 transition-all duration-150"
-                            >
-                                See Details
-                            </Link>
-                        </div>
-                    </div>
-                    <div className=" col-span-3 lg:col-span-1 p-6 shadow rounded-3xl hover:shadow-lg border hover:bg-gray-100 border-l-2 border-b-4 border-gray-400 hover:border-deep-orange-500 hover:scale-[102%] transition-all">
-                        <div className=" w-full h-72 rounded-2xl overflow-hidden">
-                            <Image
-                                src={ED}
-                                width="500"
-                                height="200"
-                                className=" object-cover"
-                                alt="MD of DACAC"
-                            />
-                        </div>
-                        <div className=" py-8">
-                            <h4>Sultana Razia</h4>
-                            <h5 className=" py-1">
-                                Consult. Ocupetional Therapy, CRP
-                            </h5>
-                            <h6>Executive Director (DACAC)</h6>
-                        </div>
-                        <div className=" flex justify-center pb-5">
-                            <Link
-                                href="#"
-                                className=" hover:text-deep-orange-500 text-lg font-medium border-b-2 border-transparent hover:border-deep-orange-500 transition-all duration-150"
-                            >
-                                See Details
-                            </Link>
-                        </div>
-                    </div>
-                    <div className=" col-span-3 lg:col-span-1 p-6 shadow rounded-3xl hover:shadow-lg border hover:bg-gray-100 border-l-2 border-b-4 border-gray-400 hover:border-deep-orange-500 hover:scale-[102%] transition-all">
-                        <div className=" w-full h-72 rounded-2xl overflow-hidden">
-                            <Image
-                                src={director}
-                                width="500"
-                                height="200"
-                                className=" object-cover"
-                                alt="MD of DACAC"
-                            />
-                        </div>
-                        <div className=" py-8">
-                            <h4>Sabera Bilkis</h4>
-                            <h5 className=" py-1">
-                                Sr. Consultantant, Pediatrics, CRP
-                            </h5>
-                            <h6>Director (DACAC)</h6>
-                        </div>
-                        <div className=" flex justify-center pb-5">
-                            <Link
-                                href="#"
-                                className=" hover:text-deep-orange-500 text-lg font-medium border-b-2 border-transparent hover:border-deep-orange-500 transition-all duration-150"
-                            >
-                                See Details
-                            </Link>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
         </div>

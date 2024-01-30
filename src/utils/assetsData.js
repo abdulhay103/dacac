@@ -56,3 +56,15 @@ export async function getSingleService(id) {
     const prisma = new PrismaClient();
     return await prisma.services.findUnique({ where: { id: id } });
 }
+
+// Get All Directors
+export async function getDirectors() {
+    const prisma = new PrismaClient();
+    return await prisma.directors.findMany();
+}
+
+// Get Director Details
+export async function getDirectorDetails(id) {
+    const prisma = new PrismaClient();
+    return await prisma.directors.findUnique({ where: { id: id } });
+}
