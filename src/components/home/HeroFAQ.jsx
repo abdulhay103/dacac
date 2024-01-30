@@ -6,7 +6,7 @@ import CtaBtn from "../utils/CtaBtn";
 
 export default function HeroFAQ() {
     return (
-        <div className=" relative pt-20 2xl:pt-24 bg-[#f3f7fb] lg:bg-transparent h-[770px] lg:h-[800px] 2xl:h-[1050px]">
+        <div className=" relative pt-20 2xl:pt-24 bg-[#f3f7fb] lg:bg-transparent h-[770px] lg:h-[830px] 2xl:h-[1100px]">
             <Image
                 src={bgImage}
                 className=" absolute hidden lg:block object-cover"
@@ -71,7 +71,7 @@ export default function HeroFAQ() {
                         </div>
                     </div>
                     <div className=" hidden lg:block lg:pl-10 lg:w-1/2 lg:pt-20 2xl:pt-36">
-                        <div className=" lg:w-[450px] 2xl:w-[600px] lg:h-[450px] 2xl:h-[600px] rounded-full bg-blue-gray-500 border-[15px] border-white overflow-hidden">
+                        <div className=" lg:w-[450px] 2xl:w-[600px] lg:h-[450px] 2xl:h-[600px] rounded-full bg-blue-gray-500 border-[15px] shadow-xl border-white overflow-hidden">
                             <Image
                                 src={sideImage}
                                 width="auto"
