@@ -5,7 +5,12 @@ export default function CtaSection(props) {
     return (
         <div className=" bg-gradient-to-t from-gray-200 to-gray-50 pt-10">
             <div className="container py-10 xl:py-16 2xl:py-20 ">
-                <div className=" w-full xl:w-4/5 mx-auto">
+                <div className=" w-full xl:w-4/5 mx-auto pb-6">
+                    <h2 className=" text-center pb-6 text-deep-orange-500 underline underline-offset-8">
+                        {props.title}
+                    </h2>
+                </div>
+                <div>
                     <p className=" text-lg font-medium text-justify">
                         {props.para1}
                     </p>

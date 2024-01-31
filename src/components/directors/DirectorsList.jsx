@@ -1,7 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import {
+    FacebookLogo,
+    InstagramLogo,
+    LinkedinLogo,
+    TwitterLogo,
+} from "@phosphor-icons/react/dist/ssr";
 
-export default function DirectorsUi({ directors }) {
+export default function DirectorsList({ directors }) {
     return (
         <div className=" py-16 lg:py-24 2xl:py-32">
             <div className="container">
@@ -39,11 +45,38 @@ export default function DirectorsUi({ directors }) {
                                 <h4>{director.name}</h4>
                                 <h5 className=" py-1">{director.profession}</h5>
                                 <h6>{director.designation}</h6>
+                                <div className="flex gap-5 pt-5">
+                                    <Link href="#" target="_blank">
+                                        <FacebookLogo
+                                            size={28}
+                                            className=" text-blue-800 rounded-full hover:scale-125 hover:skew-x-3 transition-all duration-150"
+                                        />
+                                    </Link>
+                                    <Link href="#" target="_blank">
+                                        <InstagramLogo
+                                            size={28}
+                                            className=" text-pink-500 rounded-full hover:scale-125 hover:skew-x-3 transition-all duration-150"
+                                        />
+                                    </Link>
+                                    <Link href="#" target="_blank">
+                                        <LinkedinLogo
+                                            size={28}
+                                            className=" text-blue-800 rounded-full hover:scale-125 hover:skew-x-3 transition-all duration-150"
+                                        />
+                                    </Link>
+                                    <Link href="#" target="_blank">
+                                        <TwitterLogo
+                                            size={28}
+                                            className=" text-cyan-500 rounded-full hover:scale-125 hover:skew-x-3 transition-all duration-150"
+                                        />
+                                    </Link>
+                                </div>
                             </div>
+
                             <div className=" flex justify-center pb-5">
                                 <Link
                                     href={`/directors/${director.id}`}
-                                    className=" hover:text-deep-orange-500 text-lg font-medium border-b-2 border-transparent hover:border-deep-orange-500 transition-all duration-150"
+                                    className=" hover:text-deep-orange-500 text-lg font-medium border-b-4 border-gray-500 rounded-3xl px-4 pb-1 hover:border-deep-orange-500 transition-all duration-150"
                                 >
                                     See Details
                                 </Link>
