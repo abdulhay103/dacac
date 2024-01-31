@@ -11,20 +11,22 @@ datasource db {
 }
 
 model users {
-  id         BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
-  firstName  String   @db.VarChar(25)
-  lastName   String   @db.VarChar(25)
-  profession String   @db.VarChar(50)
-  bio        String   @db.VarChar(1000)
-  avater     String   @db.VarChar(300)
-  email      String   @unique @db.VarChar(50)
-  phone      String   @db.VarChar(20)
-  address    String   @db.VarChar(500)
-  password   String   @db.VarChar(500)
-  otp        String   @db.VarChar(10)
-  type       String   @db.VarChar(10)
-  createdAt  DateTime @default(now()) @db.Timestamp(0)
-  updatedAt  DateTime @default(now()) @updatedAt @db.Timestamp(0)
+  id         BigInt       @id @default(autoincrement()) @db.UnsignedBigInt
+  firstName  String       @db.VarChar(25)
+  lastName   String       @db.VarChar(25)
+  profession String       @db.VarChar(50)
+  bio        String       @db.VarChar(1000)
+  avater     String       @db.VarChar(300)
+  email      String       @unique @db.VarChar(50)
+  phone      String       @db.VarChar(20)
+  address    String       @db.VarChar(500)
+  password   String       @db.VarChar(500)
+  otp        String       @db.VarChar(10)
+  type       String       @db.VarChar(10)
+  createdAt  DateTime     @default(now()) @db.Timestamp(0)
+  updatedAt  DateTime     @default(now()) @updatedAt @db.Timestamp(0)
+  categories categories[]
+  blogs      blogs[]
 }
 
 model teams {
@@ -91,4 +93,27 @@ model directors {
   details       String   @db.Text
   createdAt     DateTime @default(now()) @db.Timestamp(0)
   updatedAt     DateTime @default(now()) @updatedAt @db.Timestamp(0)
+}
+
+model categories {
+  id        BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
+  name      String   @unique @db.VarChar(100)
+  usersId   BigInt   @db.UnsignedBigInt
+  createdAt DateTime @default(now()) @db.DateTime()
+  updatedAt DateTime @default(now()) @updatedAt @db.DateTime()
+
+  users users @relation(fields: [usersId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+}
+
+model blogs {
+  id        BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
+  title     String   @db.VarChar(100)
+  category  Int      @db.TinyInt
+  image     String   @db.VarChar(200)
+  details   String   @db.VarChar(5000)
+  usersId   BigInt   @db.UnsignedBigInt
+  createdAt DateTime @default(now()) @db.DateTime()
+  updatedAt DateTime @default(now()) @updatedAt @db.DateTime()
+
+  users users @relation(fields: [usersId], references: [id], onDelete: Restrict, onUpdate: Cascade)
 }
