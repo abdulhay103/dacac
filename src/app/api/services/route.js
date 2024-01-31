@@ -10,7 +10,7 @@ export async function POST(req) {
         const prisma = new PrismaClient();
         const reqBody = await req.json();
 
-        let createService = await prisma.services.create({ data: reqBody });
+        let createService = await prisma.services.createMany({ data: reqBody });
         return NextResponse.json({
             status: "Successfully Create Service",
             data: createService,
