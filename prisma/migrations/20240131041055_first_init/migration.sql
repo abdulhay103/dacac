@@ -42,7 +42,7 @@ CREATE TABLE `teams` (
 CREATE TABLE `notices` (
     `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
     `title` VARCHAR(500) NOT NULL,
-    `details` LONGTEXT NOT NULL,
+    `details` TEXT NOT NULL,
     `status` VARCHAR(15) NOT NULL,
     `createdAt` TIMESTAMP(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0),
     `updatedAt` TIMESTAMP(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0),
@@ -71,5 +71,38 @@ CREATE TABLE `subscribers` (
     `updatedAt` TIMESTAMP(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0),
 
     UNIQUE INDEX `subscribers_email_key`(`email`),
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- CreateTable
+CREATE TABLE `services` (
+    `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `title` VARCHAR(100) NOT NULL,
+    `subTitle` VARCHAR(200) NOT NULL,
+    `shortDetails` MEDIUMTEXT NOT NULL,
+    `img` TINYTEXT NOT NULL,
+    `details` TEXT NOT NULL,
+    `createdAt` TIMESTAMP(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0),
+    `updatedAt` TIMESTAMP(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0),
+
+    UNIQUE INDEX `services_title_key`(`title`),
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- CreateTable
+CREATE TABLE `directors` (
+    `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `name` VARCHAR(100) NOT NULL,
+    `qualification` TINYTEXT NOT NULL,
+    `profession` VARCHAR(200) NOT NULL,
+    `designation` VARCHAR(200) NOT NULL,
+    `phone` VARCHAR(20) NOT NULL,
+    `email` VARCHAR(100) NOT NULL,
+    `img` TINYTEXT NOT NULL,
+    `details` TEXT NOT NULL,
+    `createdAt` TIMESTAMP(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0),
+    `updatedAt` TIMESTAMP(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0),
+
+    UNIQUE INDEX `directors_name_key`(`name`),
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
