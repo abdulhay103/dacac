@@ -98,11 +98,11 @@ model directors {
 model categories {
   id        BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
   name      String   @unique @db.VarChar(100)
+  details   String   @db.MediumText
   usersId   BigInt   @db.UnsignedBigInt
   createdAt DateTime @default(now()) @db.DateTime()
   updatedAt DateTime @default(now()) @updatedAt @db.DateTime()
-
-  users users @relation(fields: [usersId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  users     users    @relation(fields: [usersId], references: [id], onDelete: Restrict, onUpdate: Cascade)
 }
 
 model blogs {
@@ -115,6 +115,5 @@ model blogs {
   usersId    BigInt   @db.UnsignedBigInt
   createdAt  DateTime @default(now()) @db.DateTime()
   updatedAt  DateTime @default(now()) @updatedAt @db.DateTime()
-
-  users users @relation(fields: [usersId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  users      users    @relation(fields: [usersId], references: [id], onDelete: Restrict, onUpdate: Cascade)
 }
