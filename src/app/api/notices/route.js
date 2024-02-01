@@ -1,8 +1,7 @@
 import { PrismaClient } from "@prisma/client";
-import { data } from "autoprefixer";
 import { NextResponse } from "next/server";
 
-// Create Order
+// Create Notice
 export async function POST(req) {
     BigInt.prototype.toJSON = function () {
         return this.toString();
@@ -10,19 +9,13 @@ export async function POST(req) {
     try {
         let prisma = new PrismaClient();
         let reqBody = await req.json();
-        let createOrder = await prisma.orders.create({ data: reqBody });
+        reqBody.status = "open";
+        let createNotice = await prisma.notices.create({ data: reqBody });
 
-        if (reqBody["status"] === "white Listed") {
-            return NextResponse.json({
-                status: "Successfully added in cart",
-                data: createOrder,
-            });
-        } else {
-            return NextResponse.json({
-                status: "Successfully Placed Order",
-                data: createOrder,
-            });
-        }
+        return NextResponse.json({
+            status: "Successfully Create Notice",
+            data: createNotice,
+        });
     } catch (e) {
         return NextResponse.json({
             status: "Fail, Internal Error!",
