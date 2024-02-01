@@ -72,7 +72,10 @@ export default function FooterUi() {
                         />
                     </div>
                     <div className="flex gap-5 py-6">
-                        <Link href="#">
+                        <Link
+                            href="https://www.facebook.com/dacac.bd"
+                            target="_blank"
+                        >
                             <FacebookLogo
                                 size={28}
                                 className=" text-white hover:text-deep-orange-500 hover:scale-110 transition-all"

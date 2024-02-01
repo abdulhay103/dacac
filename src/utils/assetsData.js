@@ -68,3 +68,22 @@ export async function getDirectorDetails(id) {
     const prisma = new PrismaClient();
     return await prisma.directors.findUnique({ where: { id: id } });
 }
+
+// Get All Notices
+export async function getNotices() {
+    const prisma = new PrismaClient();
+    return await prisma.notices.findMany({
+        take: 3,
+        orderBy: {
+            id: "desc",
+        },
+    });
+}
+
+// Get Single Notice
+export async function getNoticesDetails(id) {
+    const prisma = new PrismaClient();
+    return await prisma.notices.findUnique({
+        where: { id: id, status: "open" },
+    });
+}
