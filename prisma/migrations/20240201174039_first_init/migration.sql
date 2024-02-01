@@ -122,14 +122,16 @@ CREATE TABLE `categories` (
 -- CreateTable
 CREATE TABLE `blogs` (
     `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
-    `title` VARCHAR(100) NOT NULL,
-    `category` TINYINT NOT NULL,
-    `image` VARCHAR(200) NOT NULL,
-    `details` VARCHAR(5000) NOT NULL,
+    `title` VARCHAR(200) NOT NULL,
+    `short_desc` MEDIUMTEXT NOT NULL,
+    `image` TINYTEXT NOT NULL,
+    `details` TEXT NOT NULL,
+    `categoryId` BIGINT UNSIGNED NOT NULL,
     `usersId` BIGINT UNSIGNED NOT NULL,
     `createdAt` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
     `updatedAt` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
 
+    UNIQUE INDEX `blogs_title_key`(`title`),
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 

@@ -1,7 +1,10 @@
 import { PrismaClient } from "@prisma/client";
+import { headers } from "next/headers";
 import { NextResponse } from "next/server";
 
 export async function POST(req) {
+    let headerList = headers();
+    console.log(headerList);
     try {
         let prisma = new PrismaClient();
         let reqBody = await req.json();

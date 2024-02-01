@@ -106,14 +106,15 @@ model categories {
 }
 
 model blogs {
-  id        BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
-  title     String   @db.VarChar(100)
-  category  Int      @db.TinyInt
-  image     String   @db.VarChar(200)
-  details   String   @db.VarChar(5000)
-  usersId   BigInt   @db.UnsignedBigInt
-  createdAt DateTime @default(now()) @db.DateTime()
-  updatedAt DateTime @default(now()) @updatedAt @db.DateTime()
+  id         BigInt   @id @default(autoincrement()) @db.UnsignedBigInt
+  title      String   @unique @db.VarChar(200)
+  short_desc String   @db.MediumText
+  image      String   @db.TinyText
+  details    String   @db.Text
+  categoryId BigInt   @db.UnsignedBigInt
+  usersId    BigInt   @db.UnsignedBigInt
+  createdAt  DateTime @default(now()) @db.DateTime()
+  updatedAt  DateTime @default(now()) @updatedAt @db.DateTime()
 
   users users @relation(fields: [usersId], references: [id], onDelete: Restrict, onUpdate: Cascade)
 }
