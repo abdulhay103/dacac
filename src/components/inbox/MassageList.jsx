@@ -26,7 +26,7 @@ export default function MassageList({ allMassage }) {
                 ErrorToast(res.status);
             }
         } catch (e) {
-            console.log(e.toString());
+            throw new Error(e.toString());
         }
     };
     return (

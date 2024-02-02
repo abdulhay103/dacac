@@ -57,7 +57,7 @@ export default function ContactInfo() {
                 }
             }
         } catch (error) {
-            console.log(error);
+            throw new Error(error.toString());
         } finally {
             setSubmit(false);
         }

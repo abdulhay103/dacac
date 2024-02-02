@@ -155,14 +155,6 @@ export function SidebarUi({ totalMassage }) {
                 </Accordion>
                 <ListItem>
                     <ListItemPrefix>
-                        <FolderStar weight="fill" className="h-5 w-5" />
-                    </ListItemPrefix>
-                    <Link href="/dashboard/products" className="w-full">
-                        Products
-                    </Link>
-                </ListItem>
-                <ListItem>
-                    <ListItemPrefix>
                         <InboxIcon className="h-5 w-5" />
                     </ListItemPrefix>
                     <Link href="/dashboard/inbox" className="w-full">
