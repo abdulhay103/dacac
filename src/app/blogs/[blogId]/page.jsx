@@ -5,7 +5,6 @@ import { getBlogDetails } from "@/utils/assetsData";
 export default async function BlogsDetails({ params }) {
     const id = parseInt(params.blogId);
     let blogDetails = await getBlogDetails(id);
-    console.log(blogDetails);
     return (
         <>
             <SectionHeader pathName="blogs" title="Blog Details" />

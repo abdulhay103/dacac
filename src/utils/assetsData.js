@@ -104,5 +104,9 @@ export async function getBlogDetails(id) {
         where: {
             id: id,
         },
+        include: {
+            users: { select: { firstName: true, lastName: true } },
+            // categories: { select: { name: true } },
+        },
     });
 }
