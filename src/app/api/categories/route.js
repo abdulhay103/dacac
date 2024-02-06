@@ -13,9 +13,8 @@ export async function POST(req) {
     try {
         let prisma = new PrismaClient();
         let reqBody = await req.json();
-        // reqBody.userId = id;
+
         let createCategory = await prisma.categories.create({
-            // connect: { userId: id },
             data: { ...reqBody, users: { connect: { id: id } } },
         });
         return NextResponse.json({
