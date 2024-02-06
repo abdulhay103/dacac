@@ -29,7 +29,7 @@ export function ReadMassageModal({ modalData }) {
                 setOpen(!open);
             }
         } catch (e) {
-            console.log(e.toString());
+            throw new Error(e.toString());
         }
     };
 

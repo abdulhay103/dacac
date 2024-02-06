@@ -11,7 +11,7 @@ export async function POST(req) {
         const reqBody = await req.json();
         reqBody.profession = "0";
         reqBody.bio = "0";
-        reqBody.avater =
+        reqBody.avatar =
             "https://ucarecdn.com/0b2cf336-fb74-444a-8d97-781c09dbf43f/dumpyuser.jpg";
         reqBody.address = "0";
         reqBody.otp = "0";

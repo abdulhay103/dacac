@@ -87,3 +87,22 @@ export async function getNoticesDetails(id) {
         where: { id: id, status: "open" },
     });
 }
+
+// Get All Blog
+export async function getAllBlogs() {
+    const prisma = new PrismaClient();
+    return await prisma.blogs.findMany({
+        take: 9,
+        orderBy: { id: "desc" },
+    });
+}
+
+// Get Single Blogs
+export async function getBlogDetails(id) {
+    const prisma = new PrismaClient();
+    return await prisma.blogs.findUnique({
+        where: {
+            id: id,
+        },
+    });
+}

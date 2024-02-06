@@ -117,11 +117,11 @@ export function NavbarUi({ user }) {
                 </Link>
             ) : (
                 <Link href="/dashboard">
-                    {user.avater === "0" ? (
+                    {user.avatar === "0" ? (
                         <UserCircle size={32} className=" text-gray-800" />
                     ) : (
                         <Image
-                            src={user.avater}
+                            src={user.avatar}
                             width={32}
                             height={32}
                             className=" object-cover rounded-full"
