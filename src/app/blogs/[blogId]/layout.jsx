@@ -17,11 +17,5 @@ export const metadata = {
 // }
 
 export default function BlogDetailsLayout({ children }) {
-    return (
-        <section>
-            <MainHeader />
-            {children}
-            <Footer />
-        </section>
-    );
+    return <>{children}</>;
 }
