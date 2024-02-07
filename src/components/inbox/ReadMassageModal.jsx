@@ -29,7 +29,7 @@ export function ReadMassageModal({ modalData }) {
                 setOpen(!open);
             }
         } catch (e) {
-            console.log(e.toString());
+            throw new Error(e.toString());
         }
     };
 
@@ -69,7 +69,7 @@ export function ReadMassageModal({ modalData }) {
                 <DialogFooter className="space-x-2">
                     <Button
                         variant="text"
-                        color="deep-orange-gray"
+                        color="blue-gray"
                         onClick={closeHandler}
                         className=" border "
                     >

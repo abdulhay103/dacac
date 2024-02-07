@@ -42,7 +42,7 @@ export default function UpdateUser(props) {
                 setPublicId("");
             }
         } catch (e) {
-            console.log(e);
+            throw new Error(e.toString());
         }
     };
     const [inputValues, setInputValues] = useState({
@@ -50,7 +50,7 @@ export default function UpdateUser(props) {
         lastName: userData.lastName,
         profession: userData.profession,
         bio: userData.bio,
-        avater: userData.avater,
+        avatar: userData.avatar,
         email: userData.email,
         phone: userData.phone,
         address: userData.address,
@@ -61,7 +61,7 @@ export default function UpdateUser(props) {
         lastName: inputValues.lastName,
         profession: inputValues.profession,
         bio: inputValues.bio,
-        avater: imgUrl === "" ? userData.avater : imgUrl,
+        avatar: imgUrl === "" ? userData.avatar : imgUrl,
         email: inputValues.email,
         phone: inputValues.phone,
         address: inputValues.address,
@@ -82,8 +82,8 @@ export default function UpdateUser(props) {
                 ErrorToast("Profession Required");
             } else if (IsEmpty(submitVales.bio)) {
                 ErrorToast("Bio Required");
-            } else if (IsEmpty(submitVales.avater)) {
-                ErrorToast("Avater Required");
+            } else if (IsEmpty(submitVales.avatar)) {
+                ErrorToast("avatar Required");
             } else if (IsEmail(submitVales.email)) {
                 ErrorToast("Valid Email Address Required");
             } else if (IsEmpty(submitVales.phone)) {
@@ -260,11 +260,11 @@ export default function UpdateUser(props) {
                                             <ImageSquare size={35} />
                                             <p>Upload image-1</p>
                                         </div>
-                                        {inputValues.avater && (
+                                        {inputValues.avatar && (
                                             <Image
                                                 src={
                                                     imgUrl === ""
-                                                        ? inputValues.avater
+                                                        ? inputValues.avatar
                                                         : imgUrl
                                                 }
                                                 fill

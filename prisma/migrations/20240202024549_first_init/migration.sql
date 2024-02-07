@@ -1,19 +1,19 @@
 -- CreateTable
 CREATE TABLE `users` (
     `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
-    `firstName` VARCHAR(25) NOT NULL,
-    `lastName` VARCHAR(25) NOT NULL,
+    `firstName` VARCHAR(50) NOT NULL,
+    `lastName` VARCHAR(50) NOT NULL,
     `profession` VARCHAR(50) NOT NULL,
-    `bio` VARCHAR(1000) NOT NULL,
-    `avater` VARCHAR(300) NOT NULL,
-    `email` VARCHAR(50) NOT NULL,
+    `bio` TEXT NOT NULL,
+    `avatar` VARCHAR(300) NOT NULL,
+    `email` VARCHAR(100) NOT NULL,
     `phone` VARCHAR(20) NOT NULL,
-    `address` VARCHAR(500) NOT NULL,
+    `address` TEXT NOT NULL,
     `password` VARCHAR(500) NOT NULL,
     `otp` VARCHAR(10) NOT NULL,
-    `type` VARCHAR(10) NOT NULL,
-    `createdAt` TIMESTAMP(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0),
-    `updatedAt` TIMESTAMP(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0),
+    `type` VARCHAR(20) NOT NULL,
+    `createdAt` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+    `updatedAt` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
 
     UNIQUE INDEX `users_email_key`(`email`),
     PRIMARY KEY (`id`)
@@ -26,7 +26,7 @@ CREATE TABLE `teams` (
     `lastName` VARCHAR(25) NOT NULL,
     `profession` VARCHAR(50) NOT NULL,
     `bio` TEXT NOT NULL,
-    `avater` VARCHAR(300) NOT NULL,
+    `avatar` VARCHAR(300) NOT NULL,
     `email` VARCHAR(50) NOT NULL,
     `phone` VARCHAR(20) NOT NULL,
     `qualification` VARCHAR(150) NOT NULL,
@@ -111,6 +111,7 @@ CREATE TABLE `directors` (
 CREATE TABLE `categories` (
     `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
     `name` VARCHAR(100) NOT NULL,
+    `details` TEXT NOT NULL,
     `usersId` BIGINT UNSIGNED NOT NULL,
     `createdAt` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
     `updatedAt` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
@@ -122,14 +123,16 @@ CREATE TABLE `categories` (
 -- CreateTable
 CREATE TABLE `blogs` (
     `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
-    `title` VARCHAR(100) NOT NULL,
-    `category` TINYINT NOT NULL,
-    `image` VARCHAR(200) NOT NULL,
-    `details` VARCHAR(5000) NOT NULL,
+    `title` VARCHAR(200) NOT NULL,
+    `short_desc` MEDIUMTEXT NOT NULL,
+    `image` TINYTEXT NOT NULL,
+    `details` TEXT NOT NULL,
+    `categoryId` BIGINT UNSIGNED NOT NULL,
     `usersId` BIGINT UNSIGNED NOT NULL,
     `createdAt` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
     `updatedAt` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
 
+    UNIQUE INDEX `blogs_title_key`(`title`),
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
@@ -138,3 +141,6 @@ ALTER TABLE `categories` ADD CONSTRAINT `categories_usersId_fkey` FOREIGN KEY (`
 
 -- AddForeignKey
 ALTER TABLE `blogs` ADD CONSTRAINT `blogs_usersId_fkey` FOREIGN KEY (`usersId`) REFERENCES `users`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE `blogs` ADD CONSTRAINT `blogs_categoryId_fkey` FOREIGN KEY (`categoryId`) REFERENCES `categories`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
