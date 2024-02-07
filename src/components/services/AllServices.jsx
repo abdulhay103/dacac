@@ -21,7 +21,7 @@ export default function ({ services }) {
                             </div>
                             <div className=" text-center">
                                 <h4 className="pt-2 capitalize">
-                                    {service.title.slice(0, 20)}
+                                    {service.title.slice(0, 25)}
                                 </h4>
                                 <p className="font-semibold">
                                     {service.subTitle}
