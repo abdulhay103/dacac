@@ -46,9 +46,12 @@ export async function getAllMassage() {
 }
 
 // Get All Service Data
-export async function getServices() {
+export async function getServices(count) {
     const prisma = new PrismaClient();
-    return await prisma.services.findMany();
+    return await prisma.services.findMany({
+        take: count,
+        orderBy: { id: "desc" },
+    });
 }
 
 // Single Service Data
@@ -89,10 +92,10 @@ export async function getNoticesDetails(id) {
 }
 
 // Get All Blog
-export async function getAllBlogs() {
+export async function getAllBlogs(count) {
     const prisma = new PrismaClient();
     return await prisma.blogs.findMany({
-        take: 9,
+        take: count,
         orderBy: { id: "desc" },
     });
 }
@@ -108,5 +111,16 @@ export async function getBlogDetails(id) {
             users: { select: { firstName: true, lastName: true } },
             // categories: { select: { name: true } },
         },
+    });
+}
+// Get Related Blogs
+export async function getRelatedBlogs(id) {
+    const prisma = new PrismaClient();
+    return await prisma.blogs.findMany({
+        where: {
+            categoryId: id,
+        },
+        take: 3,
+        orderBy: { id: "desc" },
     });
 }

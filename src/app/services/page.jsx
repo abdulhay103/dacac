@@ -4,7 +4,7 @@ import SectionHeader from "@/components/utils/SectionHeader";
 import { getServices } from "@/utils/assetsData";
 
 export default async function Services() {
-    const services = await getServices();
+    const services = await getServices(6);
     return (
         <>
             <SectionHeader
