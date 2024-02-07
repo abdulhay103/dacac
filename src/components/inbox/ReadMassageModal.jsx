@@ -69,7 +69,7 @@ export function ReadMassageModal({ modalData }) {
                 <DialogFooter className="space-x-2">
                     <Button
                         variant="text"
-                        color="deep-orange-gray"
+                        color="blue-gray"
                         onClick={closeHandler}
                         className=" border "
                     >

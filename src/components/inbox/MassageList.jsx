@@ -45,7 +45,7 @@ export default function MassageList({ allMassage }) {
                                 >
                                     <Typography
                                         variant="small"
-                                        color="deep-orange-gray"
+                                        color="blue-gray"
                                         className="font-normal leading-none opacity-70"
                                     >
                                         {head}
@@ -60,14 +60,14 @@ export default function MassageList({ allMassage }) {
                                 const isLast = index === allMassage.length - 1;
                                 const classes =
                                     status === "unread"
-                                        ? "p-4 bg-orange-50 border-b border-deep-orange-gray-100"
+                                        ? "p-4 bg-orange-50 border-b border-blue-gray-100"
                                         : "p-4 border-b bg-white border-deep-orange-gray-100";
                                 return (
                                     <tr key={id}>
                                         <td className={classes}>
                                             <Typography
                                                 variant="small"
-                                                color="deep-orange-gray"
+                                                color="blue-gray"
                                                 className="font-normal"
                                             >
                                                 {name}
@@ -76,7 +76,7 @@ export default function MassageList({ allMassage }) {
                                         <td className={classes}>
                                             <Typography
                                                 variant="small"
-                                                color="deep-orange-gray"
+                                                color="blue-gray"
                                                 className="font-normal"
                                             >
                                                 {email}
@@ -85,7 +85,7 @@ export default function MassageList({ allMassage }) {
                                         <td className={classes}>
                                             <Typography
                                                 variant="small"
-                                                color="deep-orange-gray"
+                                                color="blue-gray"
                                                 className="font-normal"
                                             >
                                                 {massage}
