@@ -25,7 +25,7 @@ export default function AcademicInfo() {
                         <div className="-mr-10 z-10 w-20 h-20 p-5 flex items-center justify-center bg-deep-purple-400 rounded-full">
                             <Book size={40} className=" text-white" />
                         </div>
-                        <div className="px-10 py-6 bg-blue-50 rounded-md -skew-x-6 border-l-4 border-deep-purple-400 hover:bg-blue-400 transition-all">
+                        <div className="px-10 py-6 bg-blue-50 rounded-md -skew-x-6 border-l-4 border-deep-purple-400 hover:bg-blue-400 transition-all duration-300">
                             <h4 className=" text-deep-purple-400">
                                 Occupational Therapists
                             </h4>
@@ -39,7 +39,7 @@ export default function AcademicInfo() {
                         <div className="-mr-10 z-10 w-20 h-20 p-5 flex items-center justify-center bg-lime-600 rounded-full">
                             <Book size={40} className=" text-white" />
                         </div>
-                        <div className="px-10 py-6 bg-blue-50 rounded-md -skew-x-6 border-l-4 border-lime-600 hover:bg-blue-400 transition-all">
+                        <div className="px-10 py-6 bg-blue-50 rounded-md -skew-x-6 border-l-4 border-lime-600 hover:bg-blue-400 transition-all duration-300">
                             <h4 className=" text-lime-600">
                                 Speech & Language Therapists
                             </h4>
@@ -54,7 +54,7 @@ export default function AcademicInfo() {
                         <div className="-mr-10 z-10 w-20 h-20 p-5 flex items-center justify-center bg-deep-orange-400 rounded-full">
                             <Book size={40} className=" text-white" />
                         </div>
-                        <div className="px-10 py-6 bg-blue-50 rounded-md -skew-x-6 border-l-4 border-deep-orange-400 hover:bg-blue-400 transition-all">
+                        <div className="px-10 py-6 bg-blue-50 rounded-md -skew-x-6 border-l-4 border-deep-orange-400 hover:bg-blue-400 transition-all duration-300">
                             <h4 className=" text-deep-orange-400">
                                 Modern supporting tools
                             </h4>
@@ -68,7 +68,7 @@ export default function AcademicInfo() {
                         <div className="-mr-10 z-10 w-20 h-20 p-5 flex items-center justify-center bg-deep-orange-400 rounded-full">
                             <Book size={40} className=" text-white" />
                         </div>
-                        <div className="px-10 py-6 bg-blue-50 rounded-md -skew-x-6 border-l-4 border-deep-orange-400 hover:bg-blue-400 transition-all">
+                        <div className="px-10 py-6 bg-blue-50 rounded-md -skew-x-6 border-l-4 border-deep-orange-400 hover:bg-blue-400 transition-all duration-300">
                             <h4 className=" text-deep-orange-400">
                                 Pediatrician
                             </h4>
@@ -82,7 +82,7 @@ export default function AcademicInfo() {
                         <div className="-mr-10 z-10 w-20 h-20 p-5 flex items-center justify-center bg-deep-purple-400 rounded-full">
                             <Book size={40} className=" text-white" />
                         </div>
-                        <div className="px-10 py-6 bg-blue-50 rounded-md -skew-x-6 border-l-4 border-deep-purple-400 hover:bg-blue-400 transition-all">
+                        <div className="px-10 py-6 bg-blue-50 rounded-md -skew-x-6 border-l-4 border-deep-purple-400 hover:bg-blue-400 transition-all duration-300">
                             <h4 className=" text-deep-purple-400">
                                 1:1 Teaching System
                             </h4>
@@ -96,7 +96,7 @@ export default function AcademicInfo() {
                         <div className="-mr-10 z-10 w-20 h-20 p-5 flex items-center justify-center bg-lime-600 rounded-full">
                             <Book size={40} className=" text-white" />
                         </div>
-                        <div className="px-10 py-6 bg-blue-50 rounded-md -skew-x-6 border-l-4 border-lime-600 hover:bg-blue-400 transition-all">
+                        <div className="px-10 py-6 bg-blue-50 rounded-md -skew-x-6 border-l-4 border-lime-600 hover:bg-blue-400 transition-all duration-300">
                             <h4 className=" text-lime-600">Physiotherapist</h4>
                             <p className=" pl-3">
                                 Lorem ipsum dolor sit amet consectetur
