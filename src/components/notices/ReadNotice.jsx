@@ -2,17 +2,14 @@
 import { Button, Dialog, DialogFooter } from "@material-tailwind/react";
 import { useState } from "react";
 
-export function ReadNotice({ details }) {
+export function ReadNotice({ details, className }) {
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(!open);
 
     return (
         <>
-            <Button
-                onClick={handleOpen}
-                className=" py-2 2xl:py-3 px-10 bg-blue-500 text-base text-white border-2 border-blue-500 rounded-md text-center hover:bg-transparent hover:text-blue-500 transition-all"
-            >
-                Read More
+            <Button onClick={handleOpen} className={className}>
+                read more
             </Button>
 
             <Dialog

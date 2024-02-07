@@ -7,7 +7,7 @@ export default function ({ services }) {
                 {services.map((service) => (
                     <div
                         key={service.id}
-                        className=" p-5 lg:p-6 col-span-12 lg:col-span-4 gap-6 lg:gap-8 xl:gap-10 min-h-[430px] border rounded-md bg-white shadow-lg hover:shadow-xl hover:border-deep-orange-500 hover:scale-105 transition-all"
+                        className=" p-5 lg:p-6 col-span-12 lg:col-span-4 gap-6 lg:gap-8 xl:gap-10 min-h-[430px] border rounded-md bg-white shadow-lg hover:shadow-xl hover:border-deep-orange-500 hover:scale-105 transition-all duration-300"
                     >
                         <div className=" flex flex-col gap-5 items-center justify-center">
                             <div className=" w-28 h-28 lg:w-32 lg:h-32 overflow-hidden bg-white rounded-full border">

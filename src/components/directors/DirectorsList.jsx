@@ -30,7 +30,7 @@ export default function DirectorsList({ directors }) {
                     {directors.map((director) => (
                         <div
                             key={director.id}
-                            className=" col-span-3 lg:col-span-1 p-6 shadow rounded-3xl hover:shadow-lg border hover:bg-gray-100 border-l-2 border-b-4 border-gray-400 hover:border-deep-orange-500 hover:scale-[102%] transition-all"
+                            className=" col-span-3 lg:col-span-1 p-6 shadow rounded-3xl hover:shadow-lg border hover:bg-gray-100 border-l-2 border-b-4 border-gray-400 hover:border-deep-orange-500 hover:scale-[102%] transition-all duration-300"
                         >
                             <div className=" w-full h-72 rounded-2xl overflow-hidden">
                                 <Image

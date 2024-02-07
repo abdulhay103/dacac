@@ -73,10 +73,11 @@ export async function getDirectorDetails(id) {
 }
 
 // Get All Notices
-export async function getNotices() {
+export async function getNotices(skip, count) {
     const prisma = new PrismaClient();
     return await prisma.notices.findMany({
-        take: 3,
+        skip: skip,
+        take: count,
         orderBy: {
             id: "desc",
         },
