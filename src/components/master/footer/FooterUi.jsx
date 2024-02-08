@@ -15,7 +15,6 @@ import {
 import { ErrorToast, IsEmail, SuccessToast } from "@/utils/formHelper";
 
 export default function FooterUi({ blogs }) {
-    console.log(blogs);
     const [submit, setSubmit] = useState(false);
     const date = new Date();
     let getYear = date.getFullYear();
