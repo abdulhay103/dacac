@@ -1,5 +1,6 @@
 "use client";
 import { Button, Dialog, DialogFooter } from "@material-tailwind/react";
+import HTMLReactParser from "html-react-parser";
 import { useState } from "react";
 
 export function ReadNotice({ details, className }) {
@@ -19,10 +20,17 @@ export function ReadNotice({ details, className }) {
             >
                 <h3 className=" border-b-2 border-gray-600">{details.title}</h3>
                 <p className=" text-blue-500 pt-1">
-                    Published At: {details.createdAt.toLocaleDateString()}
+                    Published Date:{" "}
+                    {details.createdAt.toLocaleDateString("en-US", {
+                        month: "short",
+                        day: "2-digit",
+                        year: "numeric",
+                    })}
                 </p>
                 <div className=" py-6">
-                    <p className=" text-justify">{details.details}</p>
+                    <p className=" text-justify">
+                        {HTMLReactParser(details.details)}
+                    </p>
                     <h5 className=" pt-8 xl:pt-10">
                         Published By: DACAC Authority
                     </h5>
