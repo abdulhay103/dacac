@@ -14,7 +14,7 @@ import {
 } from "@phosphor-icons/react";
 import { ErrorToast, IsEmail, SuccessToast } from "@/utils/formHelper";
 
-export default function FooterUi() {
+export default function FooterUi({ blogs }) {
     const [submit, setSubmit] = useState(false);
     const date = new Date();
     let getYear = date.getFullYear();
@@ -72,31 +72,34 @@ export default function FooterUi() {
                         />
                     </div>
                     <div className="flex gap-5 py-6">
-                        <Link href="#">
+                        <Link
+                            href="https://www.facebook.com/dacac.bd"
+                            target="_blank"
+                        >
                             <FacebookLogo
                                 size={28}
                                 className=" text-white hover:text-deep-orange-500 hover:scale-110 transition-all"
                             />
                         </Link>
-                        <Link href="#">
+                        <Link href="https://twitter.com/home" target="_blank">
                             <TwitterLogo
                                 size={28}
                                 className=" text-white hover:text-deep-orange-500 hover:scale-110 transition-all"
                             />
                         </Link>
-                        <Link href="#">
+                        <Link href="https://bd.linkedin.com/" target="_blank">
                             <LinkedinLogo
                                 size={28}
                                 className=" text-white hover:text-deep-orange-500 hover:scale-110 transition-all"
                             />
                         </Link>
-                        <Link href="#">
+                        <Link href="https://www.instagram.com/" target="_blank">
                             <InstagramLogo
                                 size={28}
                                 className=" text-white hover:text-deep-orange-500 hover:scale-110 transition-all"
                             />
                         </Link>
-                        <Link href="#">
+                        <Link href="https://www.youtube.com/" target="_blank">
                             <YoutubeLogo
                                 size={28}
                                 className=" text-white hover:text-deep-orange-500 hover:scale-110 transition-all"
@@ -140,38 +143,17 @@ export default function FooterUi() {
                     </div>
                 </div>
                 <div className=" col-span-6 lg:col-span-1">
-                    <h4 className=" text-white pb-6">Posts</h4>
+                    <h4 className=" text-white pb-6">Latest Blogs</h4>
                     <div className=" flex flex-col gap-1">
-                        <Link
-                            href="/"
-                            className=" text-white hover:text-deep-orange-600"
-                        >
-                            Post-1
-                        </Link>
-                        <Link
-                            href="/"
-                            className=" text-white hover:text-deep-orange-600"
-                        >
-                            Post-2
-                        </Link>
-                        <Link
-                            href="/"
-                            className=" text-white hover:text-deep-orange-600"
-                        >
-                            Post-3
-                        </Link>
-                        <Link
-                            href="/"
-                            className=" text-white hover:text-deep-orange-600"
-                        >
-                            Post-5
-                        </Link>
-                        <Link
-                            href="/"
-                            className=" text-white hover:text-deep-orange-600"
-                        >
-                            Post-6
-                        </Link>
+                        {blogs.map((blog) => (
+                            <Link
+                                key={blog.id}
+                                href={`/blogs/${blog.id}`}
+                                className=" py-1 text-white hover:text-deep-orange-600"
+                            >
+                                {blog.title.slice(0, 20)}..
+                            </Link>
+                        ))}
                     </div>
                 </div>
                 <div className=" col-span-6 lg:col-span-2">

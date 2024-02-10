@@ -9,6 +9,7 @@ import {
 import ManagementDept from "./ManagementDept";
 import SpecialTeacher from "./SpecialTeacher";
 import SupportingStaff from "./SupportingStaff";
+import Therapists from "./Therapists";
 
 const data = [
     {
@@ -17,7 +18,12 @@ const data = [
         desc: <ManagementDept />,
     },
     {
-        label: "Special-Teacher",
+        label: "Therapists",
+        value: "therapists",
+        desc: <Therapists />,
+    },
+    {
+        label: "Special-Teachers",
         value: "teachers",
         desc: <SpecialTeacher />,
     },

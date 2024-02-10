@@ -1,11 +1,13 @@
 import StoryAndCoreValues from "@/components/about/StoryAndCoreValues";
 import TeamMembers from "@/components/about/TeamMembers";
 import SectionHeader from "@/components/utils/SectionHeader";
-import Reviews from "@/components/home/Reviews";
 import WhyWeBest from "@/components/about/WhyWeBest";
 import MissionAndVission from "@/components/about/MissionAndVission";
+import BlogList from "@/components/blogs/BlogList";
+import { getAllBlogs } from "@/utils/assetsData";
 
-export default function About() {
+export default async function About() {
+    let blogs = await getAllBlogs();
     return (
         <>
             <SectionHeader
@@ -17,7 +19,10 @@ export default function About() {
             <StoryAndCoreValues />
             <TeamMembers />
             <WhyWeBest />
-            <Reviews />
+            <BlogList
+                blogs={blogs}
+                bgColor="bg-gradient-to-br from-orange-50 to-cyan-50"
+            />
         </>
     );
 }

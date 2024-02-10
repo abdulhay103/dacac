@@ -13,9 +13,8 @@ const removeImage = async (publicId) => {
             invalidate: true,
             resource_type: "image",
         });
-        console.log("Image remove");
     } catch (e) {
-        console.log(e);
+        throw new Error(e.toString());
     }
 };
 export async function POST(req) {

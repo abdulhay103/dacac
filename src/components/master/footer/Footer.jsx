@@ -1,5 +1,7 @@
+import { getAllBlogs } from "@/utils/assetsData";
 import FooterUi from "./FooterUi";
 
 export default async function Footer() {
-    return <FooterUi />;
+    let blogs = await getAllBlogs(4);
+    return <FooterUi blogs={blogs} />;
 }

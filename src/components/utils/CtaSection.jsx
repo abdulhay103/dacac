@@ -1,33 +1,28 @@
 import Link from "next/link";
 import React from "react";
 
-export default function CtaSection() {
+export default function CtaSection(props) {
     return (
-        <div className=" bg-gray-100 pt-10">
+        <div className=" bg-gradient-to-t from-gray-200 to-gray-50 pt-10">
             <div className="container py-10 xl:py-16 2xl:py-20 ">
-                <div className=" w-full xl:w-4/5 mx-auto">
+                <div className=" w-full xl:w-4/5 mx-auto pb-6">
+                    <h2 className=" text-center pb-6 text-deep-orange-500 underline underline-offset-8">
+                        {props.title}
+                    </h2>
+                </div>
+                <div>
                     <p className=" text-lg font-medium text-justify">
-                        At Dream Angels Center for Autistic Children (DACAC), we
-                        believe that every child has the potential to thrive and
-                        succeed. Our dedicated team of educators is committed to
-                        providing a nurturing and inclusive learning environment
-                        where students can grow academically, socially, and
-                        emotionally.
+                        {props.para1}
                     </p>
-                    <p className=" text-lg font-medium pt-2 text-justify">
-                        Whether you're a prospective parent exploring our school
-                        for the first time or a current member of our community,
-                        we're delighted to have you here. From our rigorous
-                        academic programs to our enriching extracurricular
-                        activities, we offer a diverse range of opportunities to
-                        inspire and empower every student.
+                    <p className=" text-lg font-medium pt-3 text-justify">
+                        {props.para2 && props.para2}
                     </p>
                     <div className=" flex justify-center py-10 lg:pt-16 xl:py-20">
                         <Link
                             href="/contact"
-                            className=" py-3 px-8 bg-gradient-to-tr from-deep-orange-500 to-purple-300 rounded-full text-white hover:scale-105 transition-all"
+                            className=" py-3 lg:py-4 lg:px-10 px-8 text-lg font-medium bg-gradient-to-tr from-deep-orange-500 to-purple-300 rounded-full text-white hover:scale-105 transition-all"
                         >
-                            Contact to us!
+                            {props.ctaText}
                         </Link>
                     </div>
                 </div>

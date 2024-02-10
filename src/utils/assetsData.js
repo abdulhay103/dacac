@@ -46,13 +46,82 @@ export async function getAllMassage() {
 }
 
 // Get All Service Data
-export async function getServices() {
+export async function getServices(count) {
     const prisma = new PrismaClient();
-    return await prisma.services.findMany();
+    return await prisma.services.findMany({
+        take: count,
+        orderBy: { id: "desc" },
+    });
 }
 
 // Single Service Data
 export async function getSingleService(id) {
     const prisma = new PrismaClient();
     return await prisma.services.findUnique({ where: { id: id } });
+}
+
+// Get All Directors
+export async function getDirectors() {
+    const prisma = new PrismaClient();
+    return await prisma.directors.findMany();
+}
+
+// Get Director Details
+export async function getDirectorDetails(id) {
+    const prisma = new PrismaClient();
+    return await prisma.directors.findUnique({ where: { id: id } });
+}
+
+// Get All Notices
+export async function getNotices(skip, count) {
+    const prisma = new PrismaClient();
+    return await prisma.notices.findMany({
+        skip: skip,
+        take: count,
+        orderBy: {
+            id: "desc",
+        },
+    });
+}
+
+// Get Single Notice
+export async function getNoticesDetails(id) {
+    const prisma = new PrismaClient();
+    return await prisma.notices.findUnique({
+        where: { id: id, status: "open" },
+    });
+}
+
+// Get All Blog
+export async function getAllBlogs(count) {
+    const prisma = new PrismaClient();
+    return await prisma.blogs.findMany({
+        take: count,
+        orderBy: { id: "desc" },
+    });
+}
+
+// Get Single Blogs
+export async function getBlogDetails(id) {
+    const prisma = new PrismaClient();
+    return await prisma.blogs.findUnique({
+        where: {
+            id: id,
+        },
+        include: {
+            users: { select: { firstName: true, lastName: true } },
+            // categories: { select: { name: true } },
+        },
+    });
+}
+// Get Related Blogs
+export async function getRelatedBlogs(id) {
+    const prisma = new PrismaClient();
+    return await prisma.blogs.findMany({
+        where: {
+            categoryId: id,
+        },
+        take: 3,
+        orderBy: { id: "desc" },
+    });
 }

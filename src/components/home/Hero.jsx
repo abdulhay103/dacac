@@ -41,7 +41,7 @@ export default function Hero() {
                                 <div className=" w-full h-full animate-ping bg-[#3d525c] rounded-full absolute"></div>
                                 <div className=" absolute w-10 h-10 top-3 left-3 bg-white rounded-full"></div>
                                 <Link href="#" className=" absolute">
-                                    <PlayCircleIcon className=" w-16 h-16 text-[#3d525c] hover:text-deep-orange-600 transition-all" />
+                                    <PlayCircleIcon className=" w-16 h-16 text-[#3d525c] hover:text-deep-orange-600 transition-all duration-300" />
                                 </Link>
                             </div>
                         </div>
