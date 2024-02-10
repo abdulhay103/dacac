@@ -18,14 +18,14 @@ export default function Hero() {
                                     welcome to dacac
                                 </h5>
                             </div>
-                            <h1 className=" text-[40px] lg:text-[62px] py-3 leading-normal">
+                            <h1 className=" text-[32px] lg:text-[58px] leading-normal">
                                 Angels grew with{" "}
                                 <span className=" text-deep-orange-400 underline underline-offset-8 pr-5">
                                     Special
                                 </span>
                                 Education
                             </h1>
-                            <p className=" text-gray-800">
+                            <p className="pt-4 text-gray-800">
                                 Dream Angels Centre for Autistic Children
                                 (DACAC) is a specialized centre for physically
                                 and mentally challenged children.
