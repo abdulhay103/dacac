@@ -1,5 +1,8 @@
+import BlogOverViews from "@/components/blogs/BlogOverViews";
+import { getAllBlogs } from "@/utils/assetsData";
 import React from "react";
 
-export default function Blogs_Dash() {
-    return <div>Blogs_Dash</div>;
+export default async function Blogs_Dash() {
+    let blogs = await getAllBlogs();
+    return <BlogOverViews data={blogs} itemsPerPage={2} />;
 }

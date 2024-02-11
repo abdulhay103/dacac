@@ -39,8 +39,6 @@ export function UpdateNotice({ details }) {
         details: editorValue,
         status: inputValues.status,
     };
-
-    console.log(submitVales.status, submitVales.title);
     const submitHandler = async (e) => {
         try {
             e.preventDefault();
