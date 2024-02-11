@@ -5,20 +5,42 @@ const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 import "react-quill/dist/quill.snow.css";
 import { QuillScript } from "@/utils/QuillScript";
 import SubmitBtn from "../utils/SubmitBtn";
-import { ErrorToast, IsEmpty } from "@/utils/formHelper";
+import { ErrorToast, IsEmpty, SuccessToast } from "@/utils/formHelper";
+import { Option, Select } from "@material-tailwind/react";
 
 export function UpdateNotice({ details }) {
     const [open, setOpen] = useState(false);
     const [submit, setSubmit] = useState(false);
+    const statusValues = [
+        {
+            id: 1,
+            name: "open",
+        },
+        {
+            id: 2,
+            name: "close",
+        },
+    ];
 
     const [editorValue, setEditoralue] = useState(details.details);
-    const [title, setTitle] = useState(details.title);
 
-    let submitVales = {
-        title: title,
-        details: editorValue,
+    const [inputValues, setInputValues] = useState({
+        title: details.title,
+        status: details.status,
+    });
+
+    const onChangeHandler = (name, value) => {
+        setInputValues({ ...inputValues, [name]: value });
     };
 
+    let submitVales = {
+        id: details.id,
+        title: inputValues.title,
+        details: editorValue,
+        status: inputValues.status,
+    };
+
+    console.log(submitVales.status, submitVales.title);
     const submitHandler = async (e) => {
         try {
             e.preventDefault();
@@ -29,7 +51,7 @@ export function UpdateNotice({ details }) {
             } else {
                 setSubmit(true);
                 const config = {
-                    method: "POST",
+                    method: "PATCH",
                     headers: {
                         Accept: "application/json",
                         "Content-Type": "application/json",
@@ -44,7 +66,7 @@ export function UpdateNotice({ details }) {
                     ErrorToast(res.status);
                 } else {
                     SuccessToast(res.status);
-                    window.location.reload();
+                    window.location.href = "/dashboard/notices";
                 }
             }
         } catch (e) {
@@ -63,25 +85,50 @@ export function UpdateNotice({ details }) {
             <div className=" py-10">
                 <form
                     action=""
-                    method="post"
+                    method="PATCH"
                     onSubmit={(e) => submitHandler(e)}
                 >
-                    <div className=" w-full">
-                        <label
-                            htmlFor="title"
-                            className=" text-gray-700 font-bold text-lg"
-                        >
-                            Notice Title
-                        </label>
-                        <input
-                            onChange={(e) => setTitle(e.target.value)}
-                            type="text"
-                            name="title"
-                            id="title"
-                            value={title}
-                            placeholder="Notice Title"
-                            className=" w-full py-1 px-5 border rounded outline-deep-orange-300 focus:text-deep-orange-500 mb-4 transition-all duration-300"
-                        />
+                    <div className=" w-full flex gap-10 justify-center items-center">
+                        <div className=" w-4/5">
+                            <label
+                                htmlFor="title"
+                                className=" text-gray-700 font-bold text-lg"
+                            >
+                                Notice Title
+                            </label>
+                            <input
+                                onChange={(e) =>
+                                    onChangeHandler("title", e.target.value)
+                                }
+                                type="text"
+                                name="title"
+                                id="title"
+                                value={inputValues.title}
+                                placeholder="Notice Title"
+                                className=" w-full py-1 px-5 border rounded outline-deep-orange-300 focus:text-deep-orange-500 mb-4 transition-all duration-300"
+                            />
+                        </div>
+                        <div className=" w-1/5">
+                            <Select
+                                label="Notice Status"
+                                value={inputValues.status}
+                                onChange={(e) => onChangeHandler("status", e)}
+                            >
+                                {statusValues.map((item) => (
+                                    <Option
+                                        key={item.id}
+                                        value={item.name}
+                                        className={
+                                            item.name === "open"
+                                                ? "text-green-500 mb-2"
+                                                : "text-red-500 mb-2"
+                                        }
+                                    >
+                                        {item.name}
+                                    </Option>
+                                ))}
+                            </Select>
+                        </div>
                     </div>
                     <div className=" w-full py-2">
                         <label

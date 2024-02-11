@@ -17,7 +17,18 @@ export default function NoticeList({ noticeDatas }) {
                                 className=" grid lg:grid-flow-col gap-6 lg:gap-10 justify-between items-center p-6 border mb-6 xl:mb-10 rounded-md hover:bg-gray-50 transition-all duration-300"
                             >
                                 <div>
-                                    <p>Notice Id: {notice.id}</p>
+                                    <p>
+                                        Notice Status:{" "}
+                                        <span
+                                            className={
+                                                notice.status === "open"
+                                                    ? "text-green-500 "
+                                                    : "text-red-500 "
+                                            }
+                                        >
+                                            {notice.status}
+                                        </span>
+                                    </p>
                                     <h4 className=" py-2">{notice.title}</h4>
                                     <p className=" py-1">
                                         Published Date:{" "}
