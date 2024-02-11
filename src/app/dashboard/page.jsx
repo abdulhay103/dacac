@@ -1,3 +1,4 @@
+import OverViewCard from "@/components/dashboard/OverViewCard";
 import { getUser } from "@/utils/assetsData";
 
 export default async function Dashboard() {
@@ -19,97 +20,93 @@ export default async function Dashboard() {
                         Page Insite Overviews
                     </h4>
                     <div className=" grid grid-cols-6 gap-5 p-6">
-                        <div className=" col-span-6 lg:col-span-3 2xl:col-span-2 rounded shadow-md overflow-hidden">
-                            <h6 className=" text-center py-2 bg-blue-400 text-white">
-                                Blog details
-                            </h6>
-                            <div className=" p-4">
-                                <p>
-                                    Total Published Blog:
-                                    <span className="pl-2 font-bold">{3}</span>
-                                </p>
-                                <p>
-                                    Existing Category:
-                                    <span className="pl-2 font-bold">{5}</span>
-                                </p>
-                            </div>
-                        </div>
-                        <div className=" col-span-6 lg:col-span-3 2xl:col-span-2 rounded shadow-md overflow-hidden">
-                            <h6 className=" text-center py-2 bg-purple-400 text-white">
-                                Service details
-                            </h6>
-                            <div className=" p-4">
-                                <p>
-                                    Available Services:
-                                    <span className="pl-2 font-bold">{6}</span>
-                                </p>
-                                <p>
-                                    Upcomming Services:
-                                    <span className="pl-2 font-bold">{2}</span>
-                                </p>
-                            </div>
-                        </div>
-                        <div className=" col-span-6 lg:col-span-3 2xl:col-span-2 rounded shadow-md overflow-hidden">
-                            <h6 className=" text-center py-2 bg-pink-400 text-white">
-                                Staff Details
-                            </h6>
-                            <div className=" p-4">
-                                <p>
-                                    Mangement:
-                                    <span className="pl-2 font-bold">{4}</span>
-                                </p>
-                                <p>
-                                    Therapist:
-                                    <span className="pl-2 font-bold">{3}</span>
-                                </p>
-                                <p>
-                                    Special Teacher:
-                                    <span className="pl-2 font-bold">{15}</span>
-                                </p>
-                                <p>
-                                    Supporting Staff:
-                                    <span className="pl-2 font-bold">{3}</span>
-                                </p>
-                            </div>
-                        </div>
-                        <div className=" col-span-6 lg:col-span-3 2xl:col-span-2 rounded shadow-md overflow-hidden">
-                            <h6 className=" text-center py-2 bg-lime-500 text-white">
-                                Notice Details
-                            </h6>
-                            <div className=" p-4">
-                                <p>
-                                    Open Notice:
-                                    <span className="pl-2 font-bold">{4}</span>
-                                </p>
-                                <p>
-                                    Close Notice:
-                                    <span className="pl-2 font-bold">{3}</span>
-                                </p>
-                                <p>
-                                    Total Notices:
-                                    <span className="pl-2 font-bold">{15}</span>
-                                </p>
-                            </div>
-                        </div>
-                        <div className=" col-span-6 lg:col-span-3 2xl:col-span-2 rounded shadow-md overflow-hidden">
-                            <h6 className=" text-center py-2 bg-indigo-500 text-white">
-                                Review Details
-                            </h6>
-                            <div className=" p-4">
-                                <p>
-                                    Open Reviews:
-                                    <span className="pl-2 font-bold">{6}</span>
-                                </p>
-                                <p>
-                                    Pending Reviews:
-                                    <span className="pl-2 font-bold">{3}</span>
-                                </p>
-                                <p>
-                                    Total Reviews:
-                                    <span className="pl-2 font-bold">{15}</span>
-                                </p>
-                            </div>
-                        </div>
+                        <OverViewCard
+                            bgColor="bg-blue-400"
+                            header="Blog Details"
+                            contents={[
+                                {
+                                    subTitle: "Total Published Blog",
+                                    counts: 3,
+                                },
+                                {
+                                    subTitle: "Existing Category",
+                                    counts: 5,
+                                },
+                            ]}
+                        />
+                        <OverViewCard
+                            bgColor="bg-purple-400"
+                            header="Service Details"
+                            contents={[
+                                {
+                                    subTitle: "Available Services",
+                                    counts: 6,
+                                },
+                                {
+                                    subTitle: "Upcomming Services",
+                                    counts: 2,
+                                },
+                            ]}
+                        />
+
+                        <OverViewCard
+                            bgColor="bg-lime-500"
+                            header="Notice Details"
+                            contents={[
+                                {
+                                    subTitle: "Open Notice",
+                                    counts: 4,
+                                },
+                                {
+                                    subTitle: "Close Notice",
+                                    counts: 3,
+                                },
+                                {
+                                    subTitle: "Total Notices",
+                                    counts: 15,
+                                },
+                            ]}
+                        />
+                        <OverViewCard
+                            bgColor="bg-indigo-500"
+                            header="Review Details"
+                            contents={[
+                                {
+                                    subTitle: "Open Reviews",
+                                    counts: 6,
+                                },
+                                {
+                                    subTitle: "Total Reviews",
+                                    counts: 20,
+                                },
+                                {
+                                    subTitle: "rejected Reviews",
+                                    counts: 5,
+                                },
+                            ]}
+                        />
+                        <OverViewCard
+                            bgColor="bg-pink-400"
+                            header="Staff Details"
+                            contents={[
+                                {
+                                    subTitle: "Mangement",
+                                    counts: 4,
+                                },
+                                {
+                                    subTitle: "Therapist",
+                                    counts: 3,
+                                },
+                                {
+                                    subTitle: "Special Teacher",
+                                    counts: 15,
+                                },
+                                {
+                                    subTitle: "Supporting Staff",
+                                    counts: 3,
+                                },
+                            ]}
+                        />
                     </div>
                 </div>
                 <div className=" w-full lg:w-1/3 border shadow overflow-hidden rounded-lg">
