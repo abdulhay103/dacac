@@ -11,7 +11,7 @@ import {
 export default function SupportingStaff() {
     return (
         <div className="grid grid-flow-row grid-cols-12 items-center gap-6 lg:gap-8 xl:gap-14 pt-5 lg:pt-6 xl:pt-10">
-            <div className="border bg-white border-cyan-500 rounded-md overflow-hidden shadow-lg col-span-12 lg:col-span-4 2xl:col-span-3">
+            <div className="border bg-white border-cyan-500 rounded-md overflow-hidden shadow-lg col-span-12 lg:col-span-4 2xl:col-span-3 hover:scale-105 transition-all duration-300">
                 <div className="px-4 xl:px-6 h-52 xl:h-60 overflow-hidden">
                     <Image
                         src={FounderImage}
@@ -23,8 +23,8 @@ export default function SupportingStaff() {
                 </div>
                 <div className="p-6">
                     <h6 className=" font-semibold">Marketing Executive</h6>
-                    <p>Md. Atiq Mollah</p>
-                    <p>Educational Qualification: B.Ba</p>
+                    <p>Abdul Hay</p>
+                    <p>Educational Qualification: M.Sc</p>
                 </div>
                 <div className=" flex gap-6 justify-center py-3 bg-cyan-500">
                     <Link
@@ -53,7 +53,7 @@ export default function SupportingStaff() {
                     </Link>
                 </div>
             </div>
-            <div className="border bg-white border-cyan-500 rounded-md overflow-hidden shadow-lg col-span-12 lg:col-span-4 2xl:col-span-3">
+            <div className="border bg-white border-cyan-500 rounded-md overflow-hidden shadow-lg col-span-12 lg:col-span-4 2xl:col-span-3 hover:scale-105 transition-all duration-300">
                 <div className="px-4 xl:px-6 h-52 xl:h-60 overflow-hidden">
                     <Image
                         src={FounderImage}
@@ -65,8 +65,8 @@ export default function SupportingStaff() {
                 </div>
                 <div className="p-6">
                     <h6 className=" font-semibold">Marketing Executive</h6>
-                    <p>Md. Atiq Mollah</p>
-                    <p>Educational Qualification: B.Ba</p>
+                    <p>Abdul Hay</p>
+                    <p>Educational Qualification: M.Sc</p>
                 </div>
                 <div className=" flex gap-6 justify-center py-3 bg-cyan-500">
                     <Link

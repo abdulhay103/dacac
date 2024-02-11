@@ -49,7 +49,8 @@ export default function BlogList(props) {
                                         {blog.title}
                                     </Link>
                                     <p className=" text-justify py-5">
-                                        {blog.short_desc.slice(0, 200)}...
+                                        {blog.short_desc.slice(0, 200)}...আরও
+                                        পড়ুন ।
                                     </p>
                                 </div>
                                 <div className=" px-6 text-right">

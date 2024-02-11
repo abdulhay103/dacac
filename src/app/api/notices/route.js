@@ -24,6 +24,35 @@ export async function POST(req) {
     }
 }
 
+// Update Notice
+export async function PATCH(req) {
+    BigInt.prototype.toJSON = function () {
+        return this.toString();
+    };
+    try {
+        let prisma = new PrismaClient();
+        let reqBody = await req.json();
+        let updateNotice = await prisma.notices.update({
+            where: { id: reqBody.id },
+            data: {
+                title: reqBody.title,
+                details: reqBody.details,
+                status: reqBody.status,
+            },
+        });
+
+        return NextResponse.json({
+            status: "Successfully Update Notice.",
+            data: updateNotice,
+        });
+    } catch (e) {
+        return NextResponse.json({
+            status: "Fail, Internal Error!",
+            data: e.toString(),
+        });
+    }
+}
+
 // // Delete Item From Cart
 // export async function DELETE(req) {
 //     BigInt.prototype.toJSON = function () {
@@ -46,30 +75,6 @@ export async function POST(req) {
 //     }
 // }
 
-// // Update Item/Order From Cart by user
-// export async function PATCH(req) {
-//     BigInt.prototype.toJSON = function () {
-//         return this.toString();
-//     };
-//     try {
-//         let prisma = new PrismaClient();
-//         let reqBody = await req.json();
-//         let placeOrder = await prisma.orders.updateMany({
-//             where: { userId: reqBody.userId, status: "white Listed" },
-//             data: { status: "pending" },
-//         });
-
-//         return NextResponse.json({
-//             status: "Successfully placed order.",
-//             data: placeOrder,
-//         });
-//     } catch (e) {
-//         return NextResponse.json({
-//             status: "Fail, Internal Error!",
-//             data: e.toString(),
-//         });
-//     }
-// }
 // // confirm Item/Order From Cart admin
 // export async function PUT(req) {
 //     BigInt.prototype.toJSON = function () {

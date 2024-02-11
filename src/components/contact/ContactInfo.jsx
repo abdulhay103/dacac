@@ -155,6 +155,7 @@ export default function ContactInfo() {
                             </h5>
                         </div>
                         <p>+88 01678690707</p>
+                        <p>+88 0248038759</p>
                     </div>
                     <div className=" p-3">
                         <div className="flex items-center gap-2">

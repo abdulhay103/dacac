@@ -1,18 +1,16 @@
 "use client";
 import { Button, Dialog, DialogFooter } from "@material-tailwind/react";
+import HTMLReactParser from "html-react-parser";
 import { useState } from "react";
 
-export function ReadNotice({ details }) {
+export function ReadNotice({ details, className }) {
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(!open);
 
     return (
         <>
-            <Button
-                onClick={handleOpen}
-                className=" py-2 2xl:py-3 px-10 bg-blue-500 text-base text-white border-2 border-blue-500 rounded-md text-center hover:bg-transparent hover:text-blue-500 transition-all"
-            >
-                Read More
+            <Button onClick={handleOpen} className={className}>
+                read more
             </Button>
 
             <Dialog
@@ -22,10 +20,17 @@ export function ReadNotice({ details }) {
             >
                 <h3 className=" border-b-2 border-gray-600">{details.title}</h3>
                 <p className=" text-blue-500 pt-1">
-                    Published At: {details.createdAt.toLocaleDateString()}
+                    Published Date:{" "}
+                    {details.createdAt.toLocaleDateString("en-US", {
+                        month: "short",
+                        day: "2-digit",
+                        year: "numeric",
+                    })}
                 </p>
                 <div className=" py-6">
-                    <p className=" text-justify">{details.details}</p>
+                    <p className=" text-justify">
+                        {HTMLReactParser(details.details)}
+                    </p>
                     <h5 className=" pt-8 xl:pt-10">
                         Published By: DACAC Authority
                     </h5>

@@ -18,14 +18,14 @@ export default function Hero() {
                                     welcome to dacac
                                 </h5>
                             </div>
-                            <h1 className=" text-[40px] lg:text-[62px] py-3 leading-normal">
+                            <h1 className=" text-[32px] lg:text-[58px] leading-normal">
                                 Angels grew with{" "}
                                 <span className=" text-deep-orange-400 underline underline-offset-8 pr-5">
                                     Special
                                 </span>
                                 Education
                             </h1>
-                            <p className=" text-gray-800">
+                            <p className="pt-4 text-gray-800">
                                 Dream Angels Centre for Autistic Children
                                 (DACAC) is a specialized centre for physically
                                 and mentally challenged children.
@@ -41,7 +41,7 @@ export default function Hero() {
                                 <div className=" w-full h-full animate-ping bg-[#3d525c] rounded-full absolute"></div>
                                 <div className=" absolute w-10 h-10 top-3 left-3 bg-white rounded-full"></div>
                                 <Link href="#" className=" absolute">
-                                    <PlayCircleIcon className=" w-16 h-16 text-[#3d525c] hover:text-deep-orange-600 transition-all" />
+                                    <PlayCircleIcon className=" w-16 h-16 text-[#3d525c] hover:text-deep-orange-600 transition-all duration-300" />
                                 </Link>
                             </div>
                         </div>
