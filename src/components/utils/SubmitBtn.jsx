@@ -1,3 +1,5 @@
+import { Spinner } from "@material-tailwind/react";
+
 export default function SubmitBtn(props) {
     if (props.submit === false) {
         return (
@@ -19,7 +21,9 @@ export default function SubmitBtn(props) {
                     className="spinner-border spinner-border-sm"
                     role="status"
                 ></div>
-                <div className=" flex gap-2 items-center">Processing...</div>
+                <div className=" flex gap-2 items-center">
+                    <Spinner className="h-5 w-5 text-white" /> Processing...
+                </div>
             </button>
         );
     }
