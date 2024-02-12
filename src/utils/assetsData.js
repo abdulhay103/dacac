@@ -98,6 +98,9 @@ export async function getAllBlogs(count) {
     return await prisma.blogs.findMany({
         take: count,
         orderBy: { id: "desc" },
+        include: {
+            categories: { select: { name: true } },
+        },
     });
 }
 
