@@ -12,7 +12,7 @@ export default function DashboardLayout({ children }) {
             <div className=" xl:col-span-3 2xl:col-span-2 fixed">
                 <Sidebar />
             </div>
-            <div className="w-[1000px] 2xl:w-[1500px] absolute right-0">
+            <div className=" w-full lg:w-[1000px] 2xl:w-[1500px] absolute right-0">
                 {children}
             </div>
         </section>

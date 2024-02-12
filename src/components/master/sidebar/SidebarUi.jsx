@@ -32,7 +32,7 @@ export function SidebarUi({ totalMassage }) {
         setOpen(open === value ? 0 : value);
     };
     return (
-        <Card className="h-[100vh] w-80 2xl:w-96  p-4 shadow-xl shadow-blue-gray-900/5">
+        <Card className="h-[100vh] hidden lg:block w-80 2xl:w-96  p-4 shadow-xl shadow-blue-gray-900/5">
             <Link href="/" className=" w-11/12 px-10 py-5">
                 <Image
                     src={dacacLogo}
