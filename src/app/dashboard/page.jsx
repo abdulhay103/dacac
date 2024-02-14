@@ -120,11 +120,11 @@ export default async function Dashboard() {
                             </h6>
                             <div className=" p-4">
                                 <p>
-                                    Valid Subscriber:
+                                    Valid Subscriber
                                     <span className="pl-2 font-bold">{6}</span>
                                 </p>
                                 <p>
-                                    Invalid Subscriber:
+                                    Invalid Subscriber
                                     <span className="pl-2 font-bold">{3}</span>
                                 </p>
                             </div>
@@ -139,7 +139,7 @@ export default async function Dashboard() {
                                     <span className="pl-2 font-bold">{7}</span>
                                 </p>
                                 <p>
-                                    Total Massages:
+                                    Total Massages
                                     <span className="pl-2 font-bold">
                                         {113}
                                     </span>
