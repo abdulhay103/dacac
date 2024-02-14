@@ -98,6 +98,22 @@ export function CreateBlog({}) {
                                 className=" w-full py-1 px-5 border rounded outline-deep-orange-300 focus:text-deep-orange-500 mb-4 transition-all duration-300"
                             />
                         </div>
+                        <div className=" w-full">
+                            <label
+                                htmlFor="short_desc"
+                                className=" text-gray-700 font-bold text-lg"
+                            >
+                                Short Description
+                            </label>
+                            <input
+                                onChange={(e) => setTitle(e.target.value)}
+                                type="text"
+                                name="short_desc"
+                                id="short_desc"
+                                placeholder="Short Description"
+                                className=" w-full py-1 px-5 border rounded outline-deep-orange-300 focus:text-deep-orange-500 mb-4 transition-all duration-300"
+                            />
+                        </div>
                         <div className=" w-full py-2">
                             <label
                                 htmlFor="details"
