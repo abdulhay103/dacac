@@ -1,8 +1,12 @@
 import BlogOverViews from "@/components/blogs/BlogOverViews";
-import { getAllBlogs } from "@/utils/assetsData";
+import { getAllBlogs, getCategories } from "@/utils/assetsData";
 import React from "react";
 
 export default async function Blogs_Dash() {
-    let blogs = await getAllBlogs();
-    return <BlogOverViews data={blogs} itemsPerPage={2} />;
+  let blogsPromise = getAllBlogs();
+  let categoryPromise = getCategories();
+  let [blogs, categories] = await Promise.all([blogsPromise, categoryPromise]);
+  return (
+    <BlogOverViews data={blogs} itemsPerPage={2} categories={categories} />
+  );
 }
