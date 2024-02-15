@@ -148,7 +148,7 @@ export default function BlogOverViews({ data, itemsPerPage }) {
                                         </td>
                                         <td className={classes}>
                                             <Link
-                                                href={`/dashboard/notices/${id}`}
+                                                href={`/dashboard/blogs/${id}`}
                                             >
                                                 <Tooltip content="Edit Notice">
                                                     <IconButton variant="text">
