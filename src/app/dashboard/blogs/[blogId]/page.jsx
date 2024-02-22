@@ -10,7 +10,5 @@ export default async function BlogUpdatePage({ params }) {
     detailsPromise,
     categoriesPromise,
   ]);
-  // console.log(categories);
-  console.log(details);
   return <UpdateBlog details={details} categories={categories} />;
 }
