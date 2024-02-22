@@ -55,8 +55,6 @@ export function CreateBlog({ categories }) {
     setInputValues({ ...inputValues, [name]: value });
   };
 
-  console.log("Category Id", submitVales.categoryId);
-
   const submitHandler = async (e) => {
     try {
       e.preventDefault();

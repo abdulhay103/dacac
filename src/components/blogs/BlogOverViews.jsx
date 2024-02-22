@@ -78,7 +78,6 @@ export default function BlogOverViews({ data, itemsPerPage, categories }) {
                 const classes = isLast
                   ? "p-4"
                   : "p-4 border-b border-blue-gray-50";
-
                 return (
                   <tr key={id}>
                     <td className={classes}>
@@ -134,7 +133,7 @@ export default function BlogOverViews({ data, itemsPerPage, categories }) {
                     </td>
                     <td className={classes}>
                       <Link href={`/dashboard/blogs/${id}`}>
-                        <Tooltip content="Edit Notice">
+                        <Tooltip content="Edit Blog">
                           <IconButton variant="text">
                             <PencilIcon className="h-4 w-4" />
                           </IconButton>
