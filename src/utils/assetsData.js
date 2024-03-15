@@ -139,3 +139,8 @@ export async function getTeamMembers() {
   const prisma = new PrismaClient();
   return await prisma.teams.findMany();
 }
+// Get Team Members
+export async function singleMember(id) {
+  const prisma = new PrismaClient();
+  return await prisma.teams.findUnique({ where: { id: id } });
+}
