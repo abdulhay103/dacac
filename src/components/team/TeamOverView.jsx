@@ -10,7 +10,6 @@ import {
 import { useState } from "react";
 import Link from "next/link";
 import { PencilIcon } from "@heroicons/react/24/solid";
-import { CreateBlog } from "./CreateBlog";
 import Image from "next/image";
 
 const TABLE_HEAD = [
@@ -18,7 +17,7 @@ const TABLE_HEAD = [
   "Member Name",
   "Designation",
   "Phone Number",
-  "Joining Date",
+  "Last Update",
   "",
 ];
 
@@ -34,16 +33,17 @@ export default function TeamOverView({ data, itemsPerPage }) {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = Math.min(startIndex + itemsPerPage, data.length);
   const currentData = data.slice(startIndex, endIndex);
+  console.log(currentData);
   return (
     <Card className="h-full w-full mt-5">
       <CardHeader floated={false} shadow={false} className="rounded-none">
         <div className="flex items-center justify-between gap-8 pt-4 px-6">
           <div>
             <Typography variant="h5" color="blue-gray">
-              Blogs Over Views
+              Team Member Over Views
             </Typography>
             <Typography color="gray" className="mt-1 font-normal">
-              See information about all blogs.
+              See all member details.
             </Typography>
           </div>
           <div className="flex shrink-0 flex-col gap-2 sm:flex-row">
@@ -71,9 +71,20 @@ export default function TeamOverView({ data, itemsPerPage }) {
               ))}
             </tr>
           </thead>
-          {/* <tbody>
+          <tbody>
             {currentData.map(
-              ({ id, title, image, categories, createdAt }, index) => {
+              (
+                {
+                  id,
+                  firstName,
+                  lastName,
+                  avatar,
+                  designation,
+                  phone,
+                  updatedAt,
+                },
+                index
+              ) => {
                 const isLast = index === currentData.length - 1;
                 const classes = isLast
                   ? "p-4"
@@ -83,11 +94,11 @@ export default function TeamOverView({ data, itemsPerPage }) {
                     <td className={classes}>
                       <div className=" h-10 overflow-hidden rounded-md">
                         <Image
-                          src={image}
+                          src={avatar}
                           width="100"
                           height="100"
                           className=" object-cover"
-                          alt={title}
+                          alt={firstName}
                         />
                       </div>
                     </td>
@@ -97,7 +108,7 @@ export default function TeamOverView({ data, itemsPerPage }) {
                         color="blue-gray"
                         className="font-normal"
                       >
-                        {title}
+                        {firstName + " " + lastName}
                       </Typography>
                     </td>
                     <td className={classes}>
@@ -106,7 +117,7 @@ export default function TeamOverView({ data, itemsPerPage }) {
                         color="blue-gray"
                         className="font-normal"
                       >
-                        {categories.name}
+                        {designation}
                       </Typography>
                     </td>
                     <td className={classes}>
@@ -115,7 +126,7 @@ export default function TeamOverView({ data, itemsPerPage }) {
                         color="blue-gray"
                         className="font-normal"
                       >
-                        Published
+                        {phone}
                       </Typography>
                     </td>
                     <td className={classes}>
@@ -124,7 +135,7 @@ export default function TeamOverView({ data, itemsPerPage }) {
                         color="blue-gray"
                         className="font-normal"
                       >
-                        {createdAt.toLocaleDateString("en-US", {
+                        {updatedAt.toLocaleDateString("en-US", {
                           month: "short",
                           day: "2-digit",
                           year: "numeric",
@@ -132,7 +143,7 @@ export default function TeamOverView({ data, itemsPerPage }) {
                       </Typography>
                     </td>
                     <td className={classes}>
-                      <Link href={`/dashboard/blogs/${id}`}>
+                      <Link href={`/dashboard/teams/${id}`}>
                         <Tooltip content="Edit Blog">
                           <IconButton variant="text">
                             <PencilIcon className="h-4 w-4" />
@@ -144,7 +155,7 @@ export default function TeamOverView({ data, itemsPerPage }) {
                 );
               }
             )}
-          </tbody> */}
+          </tbody>
         </table>
       </CardBody>
 
