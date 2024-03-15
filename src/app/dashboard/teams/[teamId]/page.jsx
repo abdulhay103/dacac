@@ -1,7 +1,12 @@
+import { UpdateTeam } from "@/components/team/UpdateTeam";
+import { singleMember } from "@/utils/assetsData";
 import React from "react";
 
-export default function EditTeam({ params }) {
+export default async function EditTeam({ params }) {
   let id = parseInt(params.teamId);
-  console.log(id);
-  return <div>EditTeam Id: {id}</div>;
+  let teamMember = await singleMember(id);
+
+  console.log(teamMember);
+
+  return <UpdateTeam details={teamMember} />;
 }

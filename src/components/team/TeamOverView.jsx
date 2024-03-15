@@ -95,8 +95,8 @@ export default function TeamOverView({ data, itemsPerPage }) {
                       <div className=" h-10 overflow-hidden rounded-md">
                         <Image
                           src={avatar}
-                          width="100"
-                          height="100"
+                          width="40"
+                          height="40"
                           className=" object-cover"
                           alt={firstName}
                         />
@@ -144,7 +144,7 @@ export default function TeamOverView({ data, itemsPerPage }) {
                     </td>
                     <td className={classes}>
                       <Link href={`/dashboard/teams/${id}`}>
-                        <Tooltip content="Edit Blog">
+                        <Tooltip content="Edit Member">
                           <IconButton variant="text">
                             <PencilIcon className="h-4 w-4" />
                           </IconButton>
