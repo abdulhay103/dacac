@@ -34,7 +34,6 @@ export default function TeamOverView({ data, itemsPerPage }) {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = Math.min(startIndex + itemsPerPage, data.length);
   const currentData = data.slice(startIndex, endIndex);
-  console.log(currentData);
   return (
     <Card className="h-full w-full mt-5">
       <CardHeader floated={false} shadow={false} className="rounded-none">

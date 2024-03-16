@@ -1,12 +1,20 @@
 "use client";
 import { ImageSquare } from "@phosphor-icons/react";
-import { Input, Textarea } from "@material-tailwind/react";
+import { Input, Option, Select, Textarea } from "@material-tailwind/react";
 import { useState } from "react";
 import SubmitBtn from "../utils/SubmitBtn";
 import { ErrorToast, IsEmpty, SuccessToast } from "@/utils/formHelper";
 import { CldUploadButton, CldUploadWidgetResults } from "next-cloudinary";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
+
+let Designation = [
+  "General Menager",
+  "Therapist",
+  "Special Teacher",
+  "Office Staff",
+];
 
 export function UpdateTeam({ details }) {
   const router = useRouter();
@@ -182,16 +190,22 @@ export function UpdateTeam({ details }) {
               placeholder="Profession"
               className=" w-full border rounded py-[6px]"
             />
-            <Input
-              onChange={(e) => onChangeHandler("designation", e.target.value)}
-              value={inputValues.designation}
-              type="text"
-              name="designation"
+            <Select
+              label="designation"
               id="designation"
-              label="Designation"
-              placeholder="Designation"
+              name="designation"
               className=" w-full border rounded py-[6px]"
-            />
+              onChange={(e) => {
+                onChangeHandler("designation", e);
+              }}
+              value={inputValues.designation}
+            >
+              {Designation.map((item, index) => (
+                <Option key={index} value={item}>
+                  {item}
+                </Option>
+              ))}
+            </Select>
           </div>
           <div className=" w-full flex gap-5 pb-5">
             <Input
@@ -294,7 +308,13 @@ export function UpdateTeam({ details }) {
               className=" w-full border rounded py-[6px]"
             />
           </div>
-          <div className=" flex justify-around pt-6">
+          <div className=" flex justify-end gap-6 pt-6">
+            <Link
+              href="/dashboard/teams"
+              className=" px-6 py-2 text-gray-800 border border-gray-800 rounded flex gap-2 text-lg"
+            >
+              Cancel
+            </Link>
             <SubmitBtn
               text="Update"
               submit={submit}
