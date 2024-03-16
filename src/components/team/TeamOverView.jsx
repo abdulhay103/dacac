@@ -11,6 +11,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { PencilIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
+import { CreateMember } from "./CreateMember";
 
 const TABLE_HEAD = [
   "Image",
@@ -47,7 +48,7 @@ export default function TeamOverView({ data, itemsPerPage }) {
             </Typography>
           </div>
           <div className="flex shrink-0 flex-col gap-2 sm:flex-row">
-            <p>Create Member</p>
+            <CreateMember />
           </div>
         </div>
       </CardHeader>
