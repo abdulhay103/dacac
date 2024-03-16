@@ -3,7 +3,7 @@ import { ImageSquare } from "@phosphor-icons/react";
 import { Input, Textarea } from "@material-tailwind/react";
 import { useState } from "react";
 import SubmitBtn from "../utils/SubmitBtn";
-import { ErrorToast, IsEmpty } from "@/utils/formHelper";
+import { ErrorToast, IsEmpty, SuccessToast } from "@/utils/formHelper";
 import { CldUploadButton, CldUploadWidgetResults } from "next-cloudinary";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -65,44 +65,61 @@ export function UpdateTeam({ details }) {
     setInputValues({ ...inputValues, [name]: value });
   };
 
-  // const submitHandler = async (e) => {
-  //   try {
-  //     e.preventDefault();
-  //     if (IsEmpty(submitVales.title)) {
-  //       ErrorToast("Blog Title Required");
-  //     } else if (IsEmpty(submitVales.short_desc)) {
-  //       ErrorToast("Blog Short description Required");
-  //     } else if (IsEmpty(submitVales.image)) {
-  //       ErrorToast("Blog Image Required");
-  //     } else if (IsEmpty(submitVales.details)) {
-  //       ErrorToast("Blog Details Required");
-  //     } else {
-  //       setSubmit(true);
-  //       const config = {
-  //         method: "PATCH",
-  //         headers: {
-  //           Accept: "application/json",
-  //           "Content-Type": "application/json",
-  //         },
-  //         body: JSON.stringify(submitVales),
-  //       };
-  //       const req = await fetch("/api/blogs", config);
-  //       const res = await req.json();
-  //       if (!req.ok) {
-  //         ErrorToast(res.status);
-  //       } else if (res.status === "Fail, Internal Error!") {
-  //         ErrorToast(res.status);
-  //       } else {
-  //         SuccessToast(res.status);
-  //         window.location.href("/dashboard/blogs");
-  //       }
-  //     }
-  //   } catch (e) {
-  //     e.toString();
-  //   } finally {
-  //     setSubmit(false);
-  //   }
-  // };
+  const submitHandler = async (e) => {
+    e.preventDefault();
+    try {
+      if (IsEmpty(submitVales.firstName)) {
+        ErrorToast("First Name Required");
+      } else if (IsEmpty(submitVales.lastName)) {
+        ErrorToast("First Name Required");
+      } else if (IsEmpty(submitVales.profession)) {
+        ErrorToast("Profession Required");
+      } else if (IsEmpty(submitVales.bio)) {
+        ErrorToast("Bio Required");
+      } else if (IsEmpty(submitVales.avatar)) {
+        ErrorToast("Avatar Required");
+      } else if (IsEmpty(submitVales.email)) {
+        ErrorToast("Email Required");
+      } else if (IsEmpty(submitVales.phone)) {
+        ErrorToast("Phone Number Required");
+      } else if (IsEmpty(submitVales.designation)) {
+        ErrorToast("Designation Required");
+      } else if (IsEmpty(submitVales.qualification)) {
+        ErrorToast("Qualification Required");
+      } else if (IsEmpty(submitVales.instragram)) {
+        ErrorToast("Instragram Id Required");
+      } else if (IsEmpty(submitVales.facebook)) {
+        ErrorToast("Facebook Id Required");
+      } else if (IsEmpty(submitVales.linkedin)) {
+        ErrorToast("Linkedin Id Required");
+      } else if (IsEmpty(submitVales.twiter)) {
+        ErrorToast("Twiter Id Required");
+      } else {
+        setSubmit(true);
+        const config = {
+          method: "PATCH",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(submitVales),
+        };
+        const req = await fetch("/api/teams", config);
+        const res = await req.json();
+        if (res.status === "Internal Error!") {
+          ErrorToast(res.status);
+        } else {
+          SuccessToast(res.status);
+
+          router.replace("/dashboard/teams");
+        }
+      }
+    } catch (e) {
+      e.toString();
+    } finally {
+      setSubmit(false);
+    }
+  };
 
   return (
     <div className=" container pt-10">
@@ -110,7 +127,7 @@ export function UpdateTeam({ details }) {
         Update Team Member
       </h3>
       <div className=" py-10">
-        <form action="" method="post">
+        <form action="" method="PATCH" onSubmit={(e) => submitHandler(e)}>
           <div className=" w-full flex gap-5 pb-5">
             <Input
               onChange={(e) => onChangeHandler("firstName", e.target.value)}
