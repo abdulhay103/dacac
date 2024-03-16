@@ -4,5 +4,5 @@ import React from "react";
 
 export default async function Team_Dash() {
   let allTeamMembers = await getTeamMembers();
-  return <TeamOverView data={allTeamMembers} itemsPerPage={2} />;
+  return <TeamOverView data={allTeamMembers} itemsPerPage={5} />;
 }
