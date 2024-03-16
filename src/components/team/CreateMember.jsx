@@ -1,12 +1,26 @@
 "use client";
-import { ImageSquare, NotePencil } from "@phosphor-icons/react";
-import { Button, Dialog, Input, Textarea } from "@material-tailwind/react";
+import { ImageSquare, UserPlus } from "@phosphor-icons/react";
+import {
+  Button,
+  Dialog,
+  Input,
+  Option,
+  Select,
+  Textarea,
+} from "@material-tailwind/react";
 import { useState } from "react";
 import SubmitBtn from "../utils/SubmitBtn";
 import { ErrorToast, IsEmpty, SuccessToast } from "@/utils/formHelper";
 import { CldUploadButton, CldUploadWidgetResults } from "next-cloudinary";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+
+let Designation = [
+  "General Menager",
+  "Therapist",
+  "Special Teacher",
+  "Office Staff",
+];
 
 export function CreateMember() {
   const [open, setOpen] = useState(false);
@@ -24,7 +38,7 @@ export function CreateMember() {
     setImgUrl(imageUrl);
     setPublicId(publicId);
   };
-
+  console.log("id=>", publicId, "URL>", imgUrl);
   const removeImage = () => {
     setImgUrl("");
     setPublicId("");
@@ -50,7 +64,7 @@ export function CreateMember() {
     lastName: inputValues.lastName,
     profession: inputValues.profession,
     bio: inputValues.bio,
-    avatar: inputValues.avatar,
+    avatar: imgUrl,
     email: inputValues.email,
     phone: inputValues.phone,
     qualification: inputValues.qualification,
@@ -128,7 +142,7 @@ export function CreateMember() {
         className="flex items-center gap-3"
         size="sm"
       >
-        <NotePencil size={20} strokeWidth={2} className="h-4 w-4" /> Add Blog
+        <UserPlus size={20} strokeWidth={2} className="h-4 w-4" /> Add Member
       </Button>
 
       <Dialog
@@ -196,7 +210,7 @@ export function CreateMember() {
                 placeholder="Profession"
                 className=" w-full border rounded py-[6px]"
               />
-              <Input
+              {/* <Input
                 onChange={(e) => onChangeHandler("designation", e.target.value)}
                 value={inputValues.designation}
                 type="text"
@@ -205,7 +219,22 @@ export function CreateMember() {
                 label="Designation"
                 placeholder="Designation"
                 className=" w-full border rounded py-[6px]"
-              />
+              /> */}
+              <Select
+                label="designation"
+                id="designation"
+                name="designation"
+                className=" w-full border rounded py-[6px]"
+                onChange={(e) => {
+                  onChangeHandler("designation", e);
+                }}
+              >
+                {Designation.map((item, index) => (
+                  <Option key={index} value={item}>
+                    {item}
+                  </Option>
+                ))}
+              </Select>
             </div>
             <div className=" w-full flex gap-5 pb-5">
               <Input
@@ -300,6 +329,8 @@ export function CreateMember() {
                 className=" w-full border rounded py-[6px]"
               />
               <Input
+                onChange={(e) => onChangeHandler("instragram", e.target.value)}
+                value={inputValues.instragram}
                 type="text"
                 name="instragram"
                 id="instragram"

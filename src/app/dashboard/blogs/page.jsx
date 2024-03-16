@@ -7,6 +7,6 @@ export default async function Blogs_Dash() {
   let categoryPromise = getCategories();
   let [blogs, categories] = await Promise.all([blogsPromise, categoryPromise]);
   return (
-    <BlogOverViews data={blogs} itemsPerPage={2} categories={categories} />
+    <BlogOverViews data={blogs} itemsPerPage={5} categories={categories} />
   );
 }

@@ -110,7 +110,6 @@ export function UpdateTeam({ details }) {
           ErrorToast(res.status);
         } else {
           SuccessToast(res.status);
-
           router.replace("/dashboard/teams");
         }
       }
@@ -242,7 +241,7 @@ export function UpdateTeam({ details }) {
                     </div>
                   )}
                 </CldUploadButton>
-                {publicId && (
+                {imgUrl && (
                   <p
                     onClick={removeImage}
                     className=" absolute right-0 bottom-0 py-2 z-20 px-4 text-center cursor-pointer bg-red-500 text-white rounded-md hover:opacity-80 transition-all mt-2 duration-300"
@@ -285,6 +284,8 @@ export function UpdateTeam({ details }) {
               className=" w-full border rounded py-[6px]"
             />
             <Input
+              onChange={(e) => onChangeHandler("instragram", e.target.value)}
+              value={inputValues.instragram}
               type="text"
               name="instragram"
               id="instragram"
