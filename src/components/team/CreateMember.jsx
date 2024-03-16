@@ -38,7 +38,6 @@ export function CreateMember() {
     setImgUrl(imageUrl);
     setPublicId(publicId);
   };
-  console.log("id=>", publicId, "URL>", imgUrl);
   const removeImage = () => {
     setImgUrl("");
     setPublicId("");
@@ -210,16 +209,6 @@ export function CreateMember() {
                 placeholder="Profession"
                 className=" w-full border rounded py-[6px]"
               />
-              {/* <Input
-                onChange={(e) => onChangeHandler("designation", e.target.value)}
-                value={inputValues.designation}
-                type="text"
-                name="designation"
-                id="designation"
-                label="Designation"
-                placeholder="Designation"
-                className=" w-full border rounded py-[6px]"
-              /> */}
               <Select
                 label="designation"
                 id="designation"

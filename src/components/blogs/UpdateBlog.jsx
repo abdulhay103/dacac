@@ -47,7 +47,6 @@ export function UpdateBlog({ details, categories }) {
     categoryId: parseInt(inputValues.categoryId),
   };
 
-  console.log(submitVales.categoryId);
   const onChangeHandler = (name, value) => {
     setInputValues({ ...inputValues, [name]: value });
   };
