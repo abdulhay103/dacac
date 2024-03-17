@@ -16,7 +16,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 let Designation = [
-  "General Menager",
+  "Management/Admin",
   "Therapist",
   "Special Teacher",
   "Office Staff",
