@@ -10,7 +10,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 let Designation = [
-  "General Menager",
+  "Management/Admin",
   "Therapist",
   "Special Teacher",
   "Office Staff",
