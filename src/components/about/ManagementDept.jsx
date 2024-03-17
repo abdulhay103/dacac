@@ -14,9 +14,9 @@ export default function ManagementDept({ members }) {
       {members.map((member) => (
         <div
           key={member.id}
-          className="border bg-white border-cyan-500 rounded-md overflow-hidden shadow-lg col-span-12 lg:col-span-4 2xl:col-span-3 hover:scale-105 transition-all duration-500"
+          className="border bg-white border-cyan-500 rounded-md shadow-lg col-span-12 lg:col-span-4 2xl:col-span-3 hover:scale-105 transition-all duration-500"
         >
-          <div className="xl:m-5 2xl:m-3 xl:px-6 h-52 xl:h-60 overflow-hidden flex justify-center items-center">
+          <div className="m-5 h-52 xl:h-60 overflow-hidden flex justify-center items-center rounded-md">
             <Image
               src={member.avatar}
               width={250}
