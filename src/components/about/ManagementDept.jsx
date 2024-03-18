@@ -1,5 +1,4 @@
 import Image from "next/image";
-import FounderImage from "/public/users/team-member.png";
 import Link from "next/link";
 import {
   FacebookLogo,
