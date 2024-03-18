@@ -52,7 +52,7 @@ export default function BlogDetails({ blogDatas }) {
                   <Link
                     href={`/blogs/${item.id}`}
                     key={item.id}
-                    className=" col-span-4 lg:col-span-3 p-3 bg-gray-100 rounded-xl border border-deep-purple-300 hover:scale-105 hover:shadow-md transition-all duration-300"
+                    className=" col-span-6 lg:col-span-4 2xl:col-span-3 p-3 bg-gray-100 rounded-xl border border-deep-purple-300 hover:scale-105 hover:shadow-md transition-all duration-300"
                   >
                     <div className=" lg:h-20 rounded-lg overflow-hidden">
                       <Image

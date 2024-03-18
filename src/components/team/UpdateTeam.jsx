@@ -118,7 +118,7 @@ export function UpdateTeam({ details }) {
           ErrorToast(res.status);
         } else {
           SuccessToast(res.status);
-          router.replace("/dashboard/teams");
+          window.location.href = "/dashboard/teams";
         }
       }
     } catch (e) {
