@@ -58,7 +58,7 @@ export function UpdateTeam({ details }) {
     lastName: inputValues.lastName,
     profession: inputValues.profession,
     bio: inputValues.bio,
-    avatar: inputValues.avatar,
+    avatar: imgUrl,
     email: inputValues.email,
     phone: inputValues.phone,
     qualification: inputValues.qualification,
