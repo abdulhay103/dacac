@@ -13,6 +13,7 @@ import { PencilIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import { Trash } from "@phosphor-icons/react";
 import { ErrorToast, SuccessToast } from "@/utils/formHelper";
+import { CreateService } from "./CreateService";
 
 const TABLE_HEAD = ["Image", "Member Name", "Designation", "Last Update", ""];
 
@@ -69,7 +70,7 @@ export default function ServicesOverView({ data, itemsPerPage }) {
             </Typography>
           </div>
           <div className="flex shrink-0 flex-col gap-2 sm:flex-row">
-            Create Service
+            <CreateService />
           </div>
         </div>
       </CardHeader>

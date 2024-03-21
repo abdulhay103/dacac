@@ -1,25 +1,12 @@
 "use client";
-import { ImageSquare, UserPlus } from "@phosphor-icons/react";
-import {
-  Button,
-  Dialog,
-  Input,
-  Option,
-  Select,
-  Textarea,
-} from "@material-tailwind/react";
+import { ImageSquare, NotePencil } from "@phosphor-icons/react";
+import { Button, Dialog, Input, Textarea } from "@material-tailwind/react";
 import { useState } from "react";
 import SubmitBtn from "../utils/SubmitBtn";
 import { ErrorToast, IsEmpty, SuccessToast } from "@/utils/formHelper";
 import { CldUploadButton, CldUploadWidgetResults } from "next-cloudinary";
 import Image from "next/image";
-
-let Designation = [
-  "Management/Admin",
-  "Therapist",
-  "Special Teacher",
-  "Office Staff",
-];
+import Link from "next/link";
 
 export function CreateService() {
   const [open, setOpen] = useState(false);
@@ -42,34 +29,18 @@ export function CreateService() {
   };
 
   const [inputValues, setInputValues] = useState({
-    firstName: "",
-    lastName: "",
-    profession: "",
-    bio: "",
-    avatar: "",
-    email: "",
-    phone: "",
-    qualification: "",
-    designation: "",
-    facebook: "#",
-    twiter: "#",
-    linkedin: "#",
-    instragram: "#",
+    title: "",
+    subTitle: "",
+    shortDetails: "",
+    details: "",
+    img: "",
   });
   let submitVales = {
-    firstName: inputValues.firstName,
-    lastName: inputValues.lastName,
-    profession: inputValues.profession,
-    bio: inputValues.bio,
-    avatar: imgUrl,
-    email: inputValues.email,
-    phone: inputValues.phone,
-    qualification: inputValues.qualification,
-    designation: inputValues.designation,
-    facebook: inputValues.facebook,
-    twiter: inputValues.twiter,
-    linkedin: inputValues.linkedin,
-    instragram: inputValues.instragram,
+    title: inputValues.title,
+    subTitle: inputValues.subTitle,
+    shortDetails: inputValues.shortDetails,
+    details: inputValues.details,
+    img: imgUrl,
   };
 
   const onChangeHandler = (name, value) => {
@@ -79,32 +50,16 @@ export function CreateService() {
   const submitHandler = async (e) => {
     e.preventDefault();
     try {
-      if (IsEmpty(submitVales.firstName)) {
-        ErrorToast("First Name Required");
-      } else if (IsEmpty(submitVales.lastName)) {
-        ErrorToast("First Name Required");
-      } else if (IsEmpty(submitVales.profession)) {
-        ErrorToast("Profession Required");
-      } else if (IsEmpty(submitVales.bio)) {
-        ErrorToast("Bio Required");
-      } else if (IsEmpty(submitVales.avatar)) {
-        ErrorToast("Avatar Required");
-      } else if (IsEmpty(submitVales.email)) {
-        ErrorToast("Email Required");
-      } else if (IsEmpty(submitVales.phone)) {
-        ErrorToast("Phone Number Required");
-      } else if (IsEmpty(submitVales.designation)) {
-        ErrorToast("Designation Required");
-      } else if (IsEmpty(submitVales.qualification)) {
-        ErrorToast("Qualification Required");
-      } else if (IsEmpty(submitVales.instragram)) {
-        ErrorToast("Instragram Id Required");
-      } else if (IsEmpty(submitVales.facebook)) {
-        ErrorToast("Facebook Id Required");
-      } else if (IsEmpty(submitVales.linkedin)) {
-        ErrorToast("Linkedin Id Required");
-      } else if (IsEmpty(submitVales.twiter)) {
-        ErrorToast("Twiter Id Required");
+      if (IsEmpty(submitVales.title)) {
+        ErrorToast("Title Required");
+      } else if (IsEmpty(submitVales.subTitle)) {
+        ErrorToast("Sub Title Required");
+      } else if (IsEmpty(submitVales.shortDetails)) {
+        ErrorToast("Short Details Required");
+      } else if (IsEmpty(submitVales.details)) {
+        ErrorToast("Details Required");
+      } else if (IsEmpty(submitVales.img)) {
+        ErrorToast("Image Required");
       } else {
         setSubmit(true);
         const config = {
@@ -115,14 +70,14 @@ export function CreateService() {
           },
           body: JSON.stringify(submitVales),
         };
-        const req = await fetch("/api/teams", config);
+        const req = await fetch("/api/services", config);
         const res = await req.json();
         if (res.status === "Internal Error!") {
           ErrorToast(res.status);
         } else {
           SuccessToast(res.status);
 
-          window.location.href = "/dashboard/teams";
+          window.location.href = "/dashboard/services";
         }
       }
     } catch (e) {
@@ -139,7 +94,7 @@ export function CreateService() {
         className="flex items-center gap-3"
         size="sm"
       >
-        <UserPlus size={20} strokeWidth={2} className="h-4 w-4" /> Add Member
+        <NotePencil size={20} strokeWidth={2} className="h-4 w-4" /> Add Service
       </Button>
 
       <Dialog
@@ -148,107 +103,46 @@ export function CreateService() {
         className=" p-6 lg:p-10 2xl:p-12 h-[40rem] overflow-y-auto"
       >
         <h3 className=" text-center underline underline-offset-8">
-          Create Team Member
+          Create Service
         </h3>
         <div className=" py-10">
-          <form action="" method="PATCH" onSubmit={(e) => submitHandler(e)}>
-            <div className=" w-full flex gap-5 pb-5">
+          <form action="" method="POST" onSubmit={(e) => submitHandler(e)}>
+            <div className=" w-full flex gap-5 pb-8">
               <Input
-                onChange={(e) => onChangeHandler("firstName", e.target.value)}
-                value={inputValues.firstName}
+                onChange={(e) => onChangeHandler("title", e.target.value)}
+                value={inputValues.title}
                 type="text"
-                name="firstName"
-                id="firstName"
-                label="First Name"
-                placeholder="First Name"
+                name="title"
+                id="title"
+                label="Title"
+                placeholder="Title"
                 className=" w-full border rounded py-[6px]"
               />
               <Input
-                onChange={(e) => onChangeHandler("lastName", e.target.value)}
-                value={inputValues.lastName}
+                onChange={(e) => onChangeHandler("subTitle", e.target.value)}
+                value={inputValues.subTitle}
                 type="text"
-                name="lastName"
-                id="lastName"
-                label="Last Name"
-                placeholder="Last Name"
+                name="subTitle"
+                id="subTitle"
+                label="Sub Title"
+                placeholder="Sub Title"
                 className=" w-full border rounded py-[6px]"
               />
             </div>
-            <div className=" w-full flex gap-5 pb-5">
-              <Input
-                onChange={(e) => onChangeHandler("phone", e.target.value)}
-                value={inputValues.phone}
-                type="tel"
-                name="phone"
-                id="phone"
-                label="Contact Number"
-                placeholder="Contact Number"
-                className=" w-full border rounded py-[6px]"
-              />
-              <Input
-                onChange={(e) => onChangeHandler("email", e.target.value)}
-                value={inputValues.email}
-                type="email"
-                name="email"
-                id="email"
-                label="Email Address"
-                placeholder="Email Address"
-                className=" w-full border rounded py-[6px]"
-              />
-            </div>
-            <div className=" w-full flex gap-5 pb-5">
-              <Input
-                onChange={(e) => onChangeHandler("profession", e.target.value)}
-                value={inputValues.profession}
-                type="text"
-                name="profession"
-                id="profession"
-                label="Profession"
-                placeholder="Profession"
-                className=" w-full border rounded py-[6px]"
-              />
-              <Select
-                label="designation"
-                id="designation"
-                name="designation"
-                className=" w-full border rounded py-[6px]"
-                onChange={(e) => {
-                  onChangeHandler("designation", e);
-                }}
-              >
-                {Designation.map((item, index) => (
-                  <Option key={index} value={item}>
-                    {item}
-                  </Option>
-                ))}
-              </Select>
-            </div>
-            <div className=" w-full flex gap-5 pb-5">
-              <Input
-                onChange={(e) =>
-                  onChangeHandler("qualification", e.target.value)
-                }
-                value={inputValues.qualification}
-                type="text"
-                name="qualification"
-                id="qualification"
-                label="Last Academic Qualification"
-                placeholder="Last Academic Qualification"
-                className=" w-full border rounded py-[6px]"
-              />
-            </div>
-            <div className=" w-full flex gap-5 pb-5">
+            <div className=" w-full flex gap-5 pb-8">
               <Textarea
-                onChange={(e) => onChangeHandler("bio", e.target.value)}
-                value={inputValues.bio}
+                onChange={(e) =>
+                  onChangeHandler("shortDetails", e.target.value)
+                }
+                value={inputValues.shortDetails}
                 type="text"
-                name="bio"
-                id="bio"
-                label="Bio"
+                name="shortDetails"
+                id="shortDetails"
+                label="Short Details"
                 className=" w-3/4 border rounded py-[6px]"
               />
               <div className=" w-full">
-                <p>Click to Update Profile Picture</p>
+                <p>Click to Update Service Picture</p>
                 <div className=" relative overflow-hidden border-2 border-dotted">
                   <CldUploadButton
                     onUpload={uploadImagehadler}
@@ -261,7 +155,7 @@ export function CreateService() {
                       <ImageSquare size={35} />
                       <p>Upload Image</p>
                     </div>
-                    {submitVales.avatar && (
+                    {submitVales.img && (
                       <div className=" absolute w-full flex justify-center items-center">
                         <Image
                           src={imgUrl}
@@ -273,7 +167,7 @@ export function CreateService() {
                       </div>
                     )}
                   </CldUploadButton>
-                  {publicId && (
+                  {imgUrl && (
                     <p
                       onClick={removeImage}
                       className=" absolute right-0 bottom-0 py-2 z-20 px-4 text-center cursor-pointer bg-red-500 text-white rounded-md hover:opacity-80 transition-all mt-2 duration-300"
@@ -285,50 +179,25 @@ export function CreateService() {
               </div>
             </div>
             <div className=" w-full flex gap-5 pb-5">
-              <Input
-                onChange={(e) => onChangeHandler("facebook", e.target.value)}
-                value={inputValues.facebook}
+              <Textarea
+                onChange={(e) => onChangeHandler("details", e.target.value)}
+                value={inputValues.details}
                 type="text"
-                name="facebook"
-                id="facebook"
-                label="Facebook URL"
-                placeholder="Facebook URL"
-                className=" w-full border rounded py-[6px]"
-              />
-              <Input
-                onChange={(e) => onChangeHandler("twiter", e.target.value)}
-                value={inputValues.twiter}
-                type="text"
-                name="twiter"
-                id="twiter"
-                label="Twiter"
-                placeholder="Twiter"
-                className=" w-full border rounded py-[6px]"
-              />
-              <Input
-                onChange={(e) => onChangeHandler("linkedin", e.target.value)}
-                value={inputValues.linkedin}
-                type="text"
-                name="linkedin"
-                id="linkedin"
-                label="Linkedin Url"
-                placeholder="Linkedin url"
-                className=" w-full border rounded py-[6px]"
-              />
-              <Input
-                onChange={(e) => onChangeHandler("instragram", e.target.value)}
-                value={inputValues.instragram}
-                type="text"
-                name="instragram"
-                id="instragram"
-                label="Instragram url"
-                placeholder="Instragram url"
-                className=" w-full border rounded py-[6px]"
+                name="details"
+                id="details"
+                label="Details"
+                className=" w-3/4 border rounded py-[6px]"
               />
             </div>
-            <div className=" flex justify-around pt-6">
+            <div className=" flex justify-around gap-6 pt-6">
+              <div
+                onClick={handleOpen}
+                className=" px-6 py-2 text-green-500 border border-green-500 rounded flex gap-2 text-lg cursor-pointer"
+              >
+                Cancel
+              </div>
               <SubmitBtn
-                text="Create Member"
+                text="Submit"
                 submit={submit}
                 className=" px-6 py-2 bg-green-500 text-white rounded flex gap-2 text-lg"
               />
