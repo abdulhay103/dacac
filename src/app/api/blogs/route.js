@@ -66,3 +66,28 @@ export async function PATCH(req) {
     });
   }
 }
+
+// Delete Blogs
+export async function DELETE(req) {
+  BigInt.prototype.toJSON = function () {
+    return this.toString();
+  };
+
+  try {
+    const prisma = new PrismaClient();
+    const reqBody = await req.json();
+    let deleteBlog = await prisma.blogs.delete({
+      where: { id: reqBody["id"] },
+    });
+
+    return NextResponse.json({
+      status: "Successfully Delete Blogs",
+      data: deleteBlog,
+    });
+  } catch (e) {
+    return NextResponse.json({
+      status: "Internal Error!",
+      data: e.toString(),
+    });
+  }
+}

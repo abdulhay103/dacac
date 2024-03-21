@@ -15,7 +15,7 @@ export default function ManagementDept({ members }) {
           key={member.id}
           className="border bg-white border-cyan-500 rounded-md shadow-lg col-span-12 lg:col-span-4 2xl:col-span-3 hover:scale-105 transition-all duration-500"
         >
-          <div className="m-5 h-52 xl:h-60 overflow-hidden flex justify-center items-center rounded-md">
+          <div className="m-5 h-52 xl:h-60 overflow-hidden flex justify-center items-center rounded-lg">
             <Image
               src={member.avatar}
               width={250}
