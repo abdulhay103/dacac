@@ -40,6 +40,10 @@ model teams {
   phone         String   @db.VarChar(20)
   qualification String   @db.VarChar(150)
   designation   String   @db.VarChar(50)
+  facebook      String   @db.TinyText
+  twiter        String   @db.TinyText
+  linkedin      String   @db.TinyText
+  instragram    String   @db.TinyText
   createdAt     DateTime @default(now()) @db.Timestamp(0)
   updatedAt     DateTime @default(now()) @updatedAt @db.Timestamp(0)
 }

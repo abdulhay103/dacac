@@ -128,9 +128,42 @@ export async function getRelatedBlogs(id) {
     orderBy: { id: "desc" },
   });
 }
+// Get Recent Blogs
+export async function getRecentBlogs() {
+  const prisma = new PrismaClient();
+  return await prisma.blogs.findMany({
+    skip: 6,
+    take: 5,
+    orderBy: { id: "desc" },
+  });
+}
 
 // Get Categories
 export async function getCategories() {
   const prisma = new PrismaClient();
   return await prisma.categories.findMany();
+}
+// Get Team Members
+export async function getTeamMembers() {
+  const prisma = new PrismaClient();
+  return await prisma.teams.findMany({
+    orderBy: {
+      id: "desc",
+    },
+  });
+}
+// Get Team Members
+export async function singleMember(id) {
+  const prisma = new PrismaClient();
+  return await prisma.teams.findUnique({ where: { id: id } });
+}
+
+// Get Team by designation
+export async function teamMemberByDesignation(designation) {
+  const prisma = new PrismaClient();
+  return await prisma.teams.findMany({
+    where: {
+      designation: designation,
+    },
+  });
 }

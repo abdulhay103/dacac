@@ -7,7 +7,7 @@ const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 import "react-quill/dist/quill.snow.css";
 import { QuillScript } from "@/utils/QuillScript";
 import SubmitBtn from "../utils/SubmitBtn";
-import { ErrorToast, IsEmpty } from "@/utils/formHelper";
+import { ErrorToast, IsEmpty, SuccessToast } from "@/utils/formHelper";
 import { CldUploadButton, CldUploadWidgetResults } from "next-cloudinary";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -47,7 +47,6 @@ export function UpdateBlog({ details, categories }) {
     categoryId: parseInt(inputValues.categoryId),
   };
 
-  console.log(submitVales.categoryId);
   const onChangeHandler = (name, value) => {
     setInputValues({ ...inputValues, [name]: value });
   };
@@ -81,7 +80,7 @@ export function UpdateBlog({ details, categories }) {
           ErrorToast(res.status);
         } else {
           SuccessToast(res.status);
-          window.location.href("/dashboard/blogs");
+          window.location.href = "/dashboard/blogs";
         }
       }
     } catch (e) {

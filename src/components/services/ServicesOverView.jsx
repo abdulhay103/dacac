@@ -4,20 +4,19 @@ import {
   CardHeader,
   Typography,
   CardBody,
-  Chip,
   Tooltip,
   IconButton,
 } from "@material-tailwind/react";
 import { useState } from "react";
-import { CreateNotice } from "./CreateNotice";
 import Link from "next/link";
 import { PencilIcon } from "@heroicons/react/24/solid";
+import Image from "next/image";
 import { Trash } from "@phosphor-icons/react";
 import { ErrorToast, SuccessToast } from "@/utils/formHelper";
 
-const TABLE_HEAD = ["Notice Title", "Status", "Published", ""];
+const TABLE_HEAD = ["Image", "Member Name", "Designation", "Last Update", ""];
 
-export default function NoticeBoard({ data, itemsPerPage }) {
+export default function ServicesOverView({ data, itemsPerPage }) {
   const [submit, setSubmit] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = Math.ceil(data.length / itemsPerPage);
@@ -42,13 +41,13 @@ export default function NoticeBoard({ data, itemsPerPage }) {
         },
         body: JSON.stringify({ id: id }),
       };
-      const req = await fetch("/api/notices", config);
+      const req = await fetch("/api/services", config);
       const res = await req.json();
       if (res.status === "Internal Error!") {
         ErrorToast(res.status);
       } else {
         SuccessToast(res.status);
-        window.location.href = "/dashboard/notices";
+        window.location.href = "/dashboard/services";
       }
     } catch (e) {
       e.toString();
@@ -56,20 +55,21 @@ export default function NoticeBoard({ data, itemsPerPage }) {
       setSubmit(false);
     }
   };
+
   return (
-    <Card className="h-full w-full">
+    <Card className="h-full w-full mt-5">
       <CardHeader floated={false} shadow={false} className="rounded-none">
-        <div className="flex items-center justify-between gap-8">
+        <div className="flex items-center justify-between gap-8 pt-4 px-6">
           <div>
             <Typography variant="h5" color="blue-gray">
-              Notice Board
+              Our Services Over View
             </Typography>
             <Typography color="gray" className="mt-1 font-normal">
-              See information about all notices
+              See all service details.
             </Typography>
           </div>
           <div className="flex shrink-0 flex-col gap-2 sm:flex-row">
-            <CreateNotice />
+            Create Service
           </div>
         </div>
       </CardHeader>
@@ -94,66 +94,80 @@ export default function NoticeBoard({ data, itemsPerPage }) {
             </tr>
           </thead>
           <tbody>
-            {currentData.map(({ id, title, status, createdAt }, index) => {
-              const isLast = index === currentData.length - 1;
-              const classes = isLast
-                ? "p-4"
-                : "p-4 border-b border-blue-gray-50";
-
-              return (
-                <tr key={id}>
-                  <td className={classes}>
-                    <Typography
-                      variant="small"
-                      color="blue-gray"
-                      className="font-normal"
-                    >
-                      {title}
-                    </Typography>
-                  </td>
-                  <td className={classes}>
-                    <div className="w-max">
-                      <Chip
-                        variant="ghost"
-                        size="sm"
-                        value={status}
-                        color={status == "open" ? "green" : "blue-gray"}
-                      />
-                    </div>
-                  </td>
-                  <td className={classes}>
-                    <Typography
-                      variant="small"
-                      color="blue-gray"
-                      className="font-normal"
-                    >
-                      {createdAt.toLocaleDateString("en-US", {
-                        month: "short",
-                        day: "2-digit",
-                        year: "numeric",
-                      })}
-                    </Typography>
-                  </td>
-                  <td className={classes}>
-                    <Link href={`/dashboard/notices/${id}`}>
-                      <Tooltip content="Edit Notice">
-                        <IconButton variant="text">
-                          <PencilIcon className="h-4 w-4" />
-                        </IconButton>
-                      </Tooltip>
-                    </Link>
-                    <Tooltip content="Delete Notice">
-                      <IconButton
-                        variant="text"
-                        onClick={() => deleteHandler(id)}
+            {currentData.map(
+              ({ id, title, subTitle, img, updatedAt }, index) => {
+                const isLast = index === currentData.length - 1;
+                const classes = isLast
+                  ? "p-4"
+                  : "p-4 border-b border-blue-gray-50";
+                return (
+                  <tr key={id}>
+                    <td className={classes}>
+                      <div className=" h-10 overflow-hidden rounded-md">
+                        <Image
+                          src={img}
+                          width="40"
+                          height="40"
+                          className=" object-cover"
+                          alt={title}
+                        />
+                      </div>
+                    </td>
+                    <td className={classes}>
+                      <Typography
+                        variant="small"
+                        color="blue-gray"
+                        className="font-normal"
                       >
-                        <Trash className="h-5 w-5 text-red-500" />
-                      </IconButton>
-                    </Tooltip>
-                  </td>
-                </tr>
-              );
-            })}
+                        {title}
+                      </Typography>
+                    </td>
+                    <td className={classes}>
+                      <Typography
+                        variant="small"
+                        color="blue-gray"
+                        className="font-normal"
+                      >
+                        {subTitle}
+                      </Typography>
+                    </td>
+
+                    <td className={classes}>
+                      <Typography
+                        variant="small"
+                        color="blue-gray"
+                        className="font-normal"
+                      >
+                        {updatedAt.toLocaleDateString("en-US", {
+                          month: "short",
+                          day: "2-digit",
+                          year: "numeric",
+                        })}
+                      </Typography>
+                    </td>
+                    <td className={classes}>
+                      <div className=" flex gap-4">
+                        <Link href={`/dashboard/services/${id}`}>
+                          <Tooltip content="Edit Service">
+                            <IconButton variant="text">
+                              <PencilIcon className="h-4 w-4" />
+                            </IconButton>
+                          </Tooltip>
+                        </Link>
+                        <Tooltip content="Delete Service">
+                          <IconButton
+                            variant="text"
+                            onClick={() => deleteHandler(id)}
+                          >
+                            <Trash className="h-5 w-5 text-red-500" />
+                          </IconButton>
+                        </Tooltip>
+                      </div>
+                    </td>
+                  </tr>
+                );
+              }
+            )}
           </tbody>
         </table>
       </CardBody>
