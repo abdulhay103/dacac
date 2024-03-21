@@ -81,14 +81,6 @@ export function SidebarUi({ totalMassage }) {
                 <ListItemPrefix>
                   <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
                 </ListItemPrefix>
-                <Link href="/dashboard/about" className=" w-full">
-                  About
-                </Link>
-              </ListItem>
-              <ListItem>
-                <ListItemPrefix>
-                  <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
-                </ListItemPrefix>
                 <Link href="/dashboard/services" className=" w-full">
                   Services
                 </Link>

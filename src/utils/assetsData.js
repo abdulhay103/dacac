@@ -146,7 +146,11 @@ export async function getCategories() {
 // Get Team Members
 export async function getTeamMembers() {
   const prisma = new PrismaClient();
-  return await prisma.teams.findMany();
+  return await prisma.teams.findMany({
+    orderBy: {
+      id: "desc",
+    },
+  });
 }
 // Get Team Members
 export async function singleMember(id) {

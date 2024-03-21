@@ -11,11 +11,13 @@ import { useState } from "react";
 import Link from "next/link";
 import { PencilIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
-import { CreateMember } from "./CreateService";
+import { Trash } from "@phosphor-icons/react";
+import { ErrorToast, SuccessToast } from "@/utils/formHelper";
 
 const TABLE_HEAD = ["Image", "Member Name", "Designation", "Last Update", ""];
 
 export default function ServicesOverView({ data, itemsPerPage }) {
+  const [submit, setSubmit] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = Math.ceil(data.length / itemsPerPage);
   const handlePrevious = () => {
@@ -27,6 +29,33 @@ export default function ServicesOverView({ data, itemsPerPage }) {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = Math.min(startIndex + itemsPerPage, data.length);
   const currentData = data.slice(startIndex, endIndex);
+
+  const deleteHandler = async (id) => {
+    try {
+      setSubmit(true);
+      const config = {
+        method: "DELETE",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ id: id }),
+      };
+      const req = await fetch("/api/services", config);
+      const res = await req.json();
+      if (res.status === "Internal Error!") {
+        ErrorToast(res.status);
+      } else {
+        SuccessToast(res.status);
+        window.location.href = "/dashboard/services";
+      }
+    } catch (e) {
+      e.toString();
+    } finally {
+      setSubmit(false);
+    }
+  };
+
   return (
     <Card className="h-full w-full mt-5">
       <CardHeader floated={false} shadow={false} className="rounded-none">
@@ -117,13 +146,23 @@ export default function ServicesOverView({ data, itemsPerPage }) {
                       </Typography>
                     </td>
                     <td className={classes}>
-                      <Link href={`/dashboard/services/${id}`}>
-                        <Tooltip content="Edit Service">
-                          <IconButton variant="text">
-                            <PencilIcon className="h-4 w-4" />
+                      <div className=" flex gap-4">
+                        <Link href={`/dashboard/services/${id}`}>
+                          <Tooltip content="Edit Service">
+                            <IconButton variant="text">
+                              <PencilIcon className="h-4 w-4" />
+                            </IconButton>
+                          </Tooltip>
+                        </Link>
+                        <Tooltip content="Delete Service">
+                          <IconButton
+                            variant="text"
+                            onClick={() => deleteHandler(id)}
+                          >
+                            <Trash className="h-5 w-5 text-red-500" />
                           </IconButton>
                         </Tooltip>
-                      </Link>
+                      </div>
                     </td>
                   </tr>
                 );

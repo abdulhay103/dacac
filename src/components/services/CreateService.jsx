@@ -13,7 +13,6 @@ import SubmitBtn from "../utils/SubmitBtn";
 import { ErrorToast, IsEmpty, SuccessToast } from "@/utils/formHelper";
 import { CldUploadButton, CldUploadWidgetResults } from "next-cloudinary";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 
 let Designation = [
   "Management/Admin",
@@ -25,7 +24,6 @@ let Designation = [
 export function CreateService() {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(!open);
-  const router = useRouter();
   const [submit, setSubmit] = useState(false);
 
   //Upload Image
@@ -124,7 +122,7 @@ export function CreateService() {
         } else {
           SuccessToast(res.status);
 
-          router.replace("/dashboard/teams");
+          window.location.href = "/dashboard/teams";
         }
       }
     } catch (e) {
