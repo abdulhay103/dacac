@@ -22,7 +22,7 @@ let Designation = [
   "Office Staff",
 ];
 
-export function CreateMember() {
+export function CreateService() {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(!open);
   const router = useRouter();

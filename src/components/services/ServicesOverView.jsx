@@ -11,7 +11,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { PencilIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
-import { CreateMember } from "./CreateMember";
+import { CreateMember } from "./CreateService";
 
 const TABLE_HEAD = ["Image", "Member Name", "Designation", "Last Update", ""];
 
@@ -40,7 +40,7 @@ export default function ServicesOverView({ data, itemsPerPage }) {
             </Typography>
           </div>
           <div className="flex shrink-0 flex-col gap-2 sm:flex-row">
-            <CreateMember />
+            Create Service
           </div>
         </div>
       </CardHeader>
