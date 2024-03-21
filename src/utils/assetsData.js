@@ -128,6 +128,15 @@ export async function getRelatedBlogs(id) {
     orderBy: { id: "desc" },
   });
 }
+// Get Recent Blogs
+export async function getRecentBlogs() {
+  const prisma = new PrismaClient();
+  return await prisma.blogs.findMany({
+    skip: 6,
+    take: 5,
+    orderBy: { id: "desc" },
+  });
+}
 
 // Get Categories
 export async function getCategories() {

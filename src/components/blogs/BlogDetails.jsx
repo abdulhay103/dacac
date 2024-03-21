@@ -72,7 +72,7 @@ export default function BlogDetails({ blogDatas }) {
           <div className="col-span-12 lg:col-span-4 border rounded-xl shadow-md bg-gray-50">
             <div className="p-6">
               <h4 className=" underline underline-offset-4 text-center text-deep-orange-500 pb-4">
-                Latest Post:
+                Recent Posts:
               </h4>
               {latestBlogs.map((blog) => (
                 <Link
