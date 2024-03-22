@@ -12,11 +12,11 @@ export default function UserProfile({ user }) {
             <div className=" w-full lg:w-2/3 p-6 xl:p-10 2xl:p-14 border border-deep-orange-200 shadow-lg rounded-xl">
                 <div className="flex flex-col lg:flex-row gap-6 justify-center items-center">
                     <div className=" w-28 h-28">
-                        {user.avater === "0" ? (
+                        {user.avatar === "0" ? (
                             <UserCircleGear size={100} weight="fill" />
                         ) : (
                             <Image
-                                src={user.avater}
+                                src={user.avatar}
                                 alt={user.firstName}
                                 width={100}
                                 height={100}

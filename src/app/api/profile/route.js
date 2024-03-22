@@ -27,7 +27,7 @@ export async function POST(req) {
                     lastName: reqBody.lastName,
                     profession: reqBody.profession,
                     bio: reqBody.bio,
-                    avater: reqBody.avater,
+                    avatar: reqBody.avatar,
                     email: reqBody.email,
                     phone: reqBody.phone,
                     address: reqBody.address,

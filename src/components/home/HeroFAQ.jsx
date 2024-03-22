@@ -14,7 +14,7 @@ export default function HeroFAQ() {
                 height="auto"
                 alt="bg-shape"
             />
-            <div className=" container absolute pt-5 lg:pt-44 left-10 lg:right-10">
+            <div className=" container absolute pt-5 lg:pt-44 lg:right-10">
                 <div className=" flex gap-20 2xl:gap-28">
                     <div className=" w-full xl:w-1/2 pt-20 2xl:pt-52">
                         <div className=" flex gap-2 items-center pb-3">

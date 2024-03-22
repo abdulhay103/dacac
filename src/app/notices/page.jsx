@@ -3,11 +3,17 @@ import SectionHeader from "@/components/utils/SectionHeader";
 import { getNotices } from "@/utils/assetsData";
 
 export default async function Notices() {
-    const latestNotice = await getNotices();
-    return (
-        <>
-            <SectionHeader pathName="notices" title="Notice Board" />
-            <NoticeList latestNotice={latestNotice} />
-        </>
-    );
+  let latestNoticePromise = getNotices(0, 3);
+  let recentNoticePromise = getNotices(3, 5);
+  let [latestNotice, recentNotice] = await Promise.all([
+    latestNoticePromise,
+    recentNoticePromise,
+  ]);
+
+  return (
+    <>
+      <SectionHeader pathName="notices" title="Notice Board" />
+      <NoticeList noticeDatas={{ latestNotice, recentNotice }} />
+    </>
+  );
 }

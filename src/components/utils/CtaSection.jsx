@@ -20,7 +20,7 @@ export default function CtaSection(props) {
                     <div className=" flex justify-center py-10 lg:pt-16 xl:py-20">
                         <Link
                             href="/contact"
-                            className=" py-3 lg:py-4 lg:px-10 px-8 text-lg font-medium bg-gradient-to-tr from-deep-orange-500 to-purple-300 rounded-full text-white hover:scale-105 transition-all"
+                            className=" py-3 lg:py-4 lg:px-10 px-8 text-lg font-medium bg-gradient-to-tr from-deep-orange-500 to-purple-300 rounded-full text-white hover:scale-105 transition-all duration-300"
                         >
                             {props.ctaText}
                         </Link>

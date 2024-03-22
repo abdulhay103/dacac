@@ -35,7 +35,7 @@ export default function AdmissionFAQ() {
     const [open, setOpen] = useState(1);
     const handleOpen = (value) => setOpen(open === value ? 0 : value);
     return (
-        <div className=" relative pt-8 lg:pt-14 bg-[#f3f7fb] lg:bg-transparent h-[750px] lg:h-[580px] 2xl:h-[800px]">
+        <div className=" relative pt-8 lg:pt-14 bg-[#f3f7fb] lg:bg-transparent h-[800px] lg:h-[580px] 2xl:h-[800px]">
             <Image
                 src={bgImage}
                 className=" absolute hidden lg:block object-cover"
@@ -43,7 +43,7 @@ export default function AdmissionFAQ() {
                 height="auto"
                 alt="bg-shape"
             />
-            <div className=" container absolute left-6 lg:left-10 2xl:left-44">
+            <div className=" container absolute  lg:left-10 2xl:left-44">
                 <div className=" flex gap-20 lg:gap-10 xl:gap-10 2xl:gap-28">
                     <div className=" hidden lg:block lg:w-2/5 2xl:w-1/2">
                         <div className=" lg:w-[450px] 2xl:w-[600px] lg:h-[450px] 2xl:h-[600px] rounded-3xl bg-blue-gray-500 border-[10px] shadow-xl border-white overflow-hidden">
