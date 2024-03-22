@@ -1,5 +1,9 @@
+import DirectorOverView from "@/components/directors/DirectorOverView";
+import { getDirectors } from "@/utils/assetsData";
 import React from "react";
 
-export default function Directors_Dash() {
-    return <div>Directors_Dash</div>;
+export default async function Directors_Dash() {
+  let directors = await getDirectors();
+  console.log(directors);
+  return <DirectorOverView data={directors} itemsPerPage={3} />;
 }
