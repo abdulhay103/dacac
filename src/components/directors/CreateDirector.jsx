@@ -6,9 +6,8 @@ import SubmitBtn from "../utils/SubmitBtn";
 import { ErrorToast, IsEmpty, SuccessToast } from "@/utils/formHelper";
 import { CldUploadButton, CldUploadWidgetResults } from "next-cloudinary";
 import Image from "next/image";
-import Link from "next/link";
 
-export function UpdateDirector() {
+export function CreateDirector() {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(!open);
   const [submit, setSubmit] = useState(false);
@@ -29,16 +28,22 @@ export function UpdateDirector() {
   };
 
   const [inputValues, setInputValues] = useState({
-    title: "",
-    subTitle: "",
-    shortDetails: "",
+    name: "",
+    qualification: "",
+    profession: "",
+    designation: "",
+    phone: "",
+    email: "",
     details: "",
     img: "",
   });
   let submitVales = {
-    title: inputValues.title,
-    subTitle: inputValues.subTitle,
-    shortDetails: inputValues.shortDetails,
+    name: inputValues.name,
+    qualification: inputValues.qualification,
+    profession: inputValues.profession,
+    designation: inputValues.designation,
+    phone: inputValues.phone,
+    email: inputValues.email,
     details: inputValues.details,
     img: imgUrl,
   };
@@ -50,12 +55,18 @@ export function UpdateDirector() {
   const submitHandler = async (e) => {
     e.preventDefault();
     try {
-      if (IsEmpty(submitVales.title)) {
-        ErrorToast("Title Required");
-      } else if (IsEmpty(submitVales.subTitle)) {
-        ErrorToast("Sub Title Required");
-      } else if (IsEmpty(submitVales.shortDetails)) {
-        ErrorToast("Short Details Required");
+      if (IsEmpty(submitVales.name)) {
+        ErrorToast("Director Name Required");
+      } else if (IsEmpty(submitVales.qualification)) {
+        ErrorToast("Qualification Required");
+      } else if (IsEmpty(submitVales.profession)) {
+        ErrorToast("Profession Required");
+      } else if (IsEmpty(submitVales.designation)) {
+        ErrorToast("Designation Required");
+      } else if (IsEmpty(submitVales.phone)) {
+        ErrorToast("Phone Number Required");
+      } else if (IsEmpty(submitVales.email)) {
+        ErrorToast("Email Required");
       } else if (IsEmpty(submitVales.details)) {
         ErrorToast("Details Required");
       } else if (IsEmpty(submitVales.img)) {
@@ -70,14 +81,14 @@ export function UpdateDirector() {
           },
           body: JSON.stringify(submitVales),
         };
-        const req = await fetch("/api/services", config);
+        const req = await fetch("/api/directors", config);
         const res = await req.json();
         if (res.status === "Internal Error!") {
           ErrorToast(res.status);
         } else {
           SuccessToast(res.status);
 
-          window.location.href = "/dashboard/services";
+          window.location.href = "/dashboard/directors";
         }
       }
     } catch (e) {
@@ -94,7 +105,8 @@ export function UpdateDirector() {
         className="flex items-center gap-3"
         size="sm"
       >
-        <NotePencil size={20} strokeWidth={2} className="h-4 w-4" /> Add Service
+        <NotePencil size={20} strokeWidth={2} className="h-4 w-4" /> Add
+        Director
       </Button>
 
       <Dialog
@@ -109,41 +121,85 @@ export function UpdateDirector() {
           <form action="" method="POST" onSubmit={(e) => submitHandler(e)}>
             <div className=" w-full flex gap-5 pb-8">
               <Input
-                onChange={(e) => onChangeHandler("title", e.target.value)}
-                value={inputValues.title}
+                onChange={(e) => onChangeHandler("name", e.target.value)}
+                value={inputValues.name}
                 type="text"
-                name="title"
-                id="title"
-                label="Title"
-                placeholder="Title"
+                name="name"
+                id="name"
+                label="Director Name"
+                placeholder="Director Name"
                 className=" w-full border rounded py-[6px]"
               />
               <Input
-                onChange={(e) => onChangeHandler("subTitle", e.target.value)}
-                value={inputValues.subTitle}
+                onChange={(e) =>
+                  onChangeHandler("qualification", e.target.value)
+                }
+                value={inputValues.qualification}
                 type="text"
-                name="subTitle"
-                id="subTitle"
-                label="Sub Title"
-                placeholder="Sub Title"
+                name="qualification"
+                id="qualification"
+                label="Qualification"
+                placeholder="Qualification"
+                className=" w-full border rounded py-[6px]"
+              />
+            </div>
+            <div className=" w-full flex gap-5 pb-8">
+              <Input
+                onChange={(e) => onChangeHandler("profession", e.target.value)}
+                value={inputValues.profession}
+                type="text"
+                name="profession"
+                id="profession"
+                label="Profession"
+                placeholder="Profession"
+                className=" w-full border rounded py-[6px]"
+              />
+              <Input
+                onChange={(e) => onChangeHandler("designation", e.target.value)}
+                value={inputValues.designation}
+                type="text"
+                name="designation"
+                id="designation"
+                label="Designation"
+                placeholder="Designation"
+                className=" w-full border rounded py-[6px]"
+              />
+            </div>
+            <div className=" w-full flex gap-5 pb-8">
+              <Input
+                onChange={(e) => onChangeHandler("phone", e.target.value)}
+                value={inputValues.phone}
+                type="tel"
+                name="phone"
+                id="phone"
+                label="Phone Number"
+                placeholder="Phone Number"
+                className=" w-full border rounded py-[6px]"
+              />
+              <Input
+                onChange={(e) => onChangeHandler("email", e.target.value)}
+                value={inputValues.email}
+                type="email"
+                name="email"
+                id="email"
+                label="Email"
+                placeholder="Email"
                 className=" w-full border rounded py-[6px]"
               />
             </div>
             <div className=" w-full flex gap-5 pb-8">
               <Textarea
-                onChange={(e) =>
-                  onChangeHandler("shortDetails", e.target.value)
-                }
-                value={inputValues.shortDetails}
+                onChange={(e) => onChangeHandler("details", e.target.value)}
+                value={inputValues.details}
                 type="text"
-                name="shortDetails"
-                id="shortDetails"
-                label="Short Details"
+                name="details"
+                id="details"
+                label="Details"
                 className=" w-3/4 border rounded py-[6px]"
               />
               <div className=" w-full">
                 <p>Click to Update Service Picture</p>
-                <div className=" relative overflow-hidden border-2 border-dotted">
+                <div className=" relative overflow-hidden border-2 border-dotted rounded-md">
                   <CldUploadButton
                     onUpload={uploadImagehadler}
                     uploadPreset="mec_trade_link"
@@ -177,17 +233,6 @@ export function UpdateDirector() {
                   )}
                 </div>
               </div>
-            </div>
-            <div className=" w-full flex gap-5 pb-5">
-              <Textarea
-                onChange={(e) => onChangeHandler("details", e.target.value)}
-                value={inputValues.details}
-                type="text"
-                name="details"
-                id="details"
-                label="Details"
-                className=" w-3/4 border rounded py-[6px]"
-              />
             </div>
             <div className=" flex justify-around gap-6 pt-6">
               <div
