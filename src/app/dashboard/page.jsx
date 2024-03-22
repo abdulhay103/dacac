@@ -1,8 +1,17 @@
 import OverViewCard from "@/components/dashboard/OverViewCard";
-import { getUser } from "@/utils/assetsData";
+import { getUser, totalBlogs, totalCategoris } from "@/utils/assetsData";
 
 export default async function Dashboard() {
-  let user = await getUser();
+  let userPromise = getUser();
+  let countBlogsPromise = totalBlogs();
+  let countCategoriesPromise = totalCategoris();
+
+  let [user, countBlogs, countCategories] = await Promise.all([
+    userPromise,
+    countBlogsPromise,
+    countCategoriesPromise,
+  ]);
+
   return (
     <section className=" px-8 py-8 2xl:px-10 2xl:py-12">
       <div className=" pb-6">
@@ -26,11 +35,11 @@ export default async function Dashboard() {
               contents={[
                 {
                   subTitle: "Total Published Blog",
-                  counts: 3,
+                  counts: countBlogs._count.id,
                 },
                 {
                   subTitle: "Existing Category",
-                  counts: 5,
+                  counts: countCategories._count.id,
                 },
               ]}
             />
