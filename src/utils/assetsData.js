@@ -138,11 +138,32 @@ export async function getRecentBlogs() {
   });
 }
 
+// Count Blogs
+export async function totalBlogs() {
+  const prisma = new PrismaClient();
+  return await prisma.blogs.aggregate({
+    _count: {
+      id: true,
+    },
+  });
+}
+
 // Get Categories
 export async function getCategories() {
   const prisma = new PrismaClient();
   return await prisma.categories.findMany();
 }
+
+// Count Categories
+export async function totalCategoris() {
+  const prisma = new PrismaClient();
+  return await prisma.categories.aggregate({
+    _count: {
+      id: true,
+    },
+  });
+}
+
 // Get Team Members
 export async function getTeamMembers() {
   const prisma = new PrismaClient();
