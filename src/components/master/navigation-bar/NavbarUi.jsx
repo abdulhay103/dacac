@@ -22,7 +22,9 @@ export function NavbarUi({ user }) {
     window.addEventListener("scroll", () => {
       let header = document.querySelector(".stickyHeader");
 
-      header.classList.toggle("sticky", window.scrollY > 0);
+      if (header !== null) {
+        header.classList.toggle("sticky", window.scrollY > 0);
+      }
     });
 
     // Clean up event listeners when the component unmounts

@@ -6,9 +6,8 @@ import SubmitBtn from "../utils/SubmitBtn";
 import { ErrorToast, IsEmpty, SuccessToast } from "@/utils/formHelper";
 import { CldUploadButton, CldUploadWidgetResults } from "next-cloudinary";
 import Image from "next/image";
-import Link from "next/link";
 
-export function UpdateDirector() {
+export function CreateService() {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(!open);
   const [submit, setSubmit] = useState(false);

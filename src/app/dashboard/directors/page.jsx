@@ -4,6 +4,5 @@ import React from "react";
 
 export default async function Directors_Dash() {
   let directors = await getDirectors();
-  console.log(directors);
   return <DirectorOverView data={directors} itemsPerPage={3} />;
 }
