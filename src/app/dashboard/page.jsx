@@ -51,7 +51,6 @@ export default async function Dashboard() {
     totalUnreadedMassagePromise,
     countSubscriberPromise,
   ]);
-  console.log(countSubscriber);
 
   return (
     <section className=" px-8 py-8 2xl:px-10 2xl:py-12">
