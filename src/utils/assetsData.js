@@ -97,12 +97,18 @@ export async function getNotices(skip, count) {
     },
   });
 }
-
 // Get Single Notice
 export async function getNoticesDetails(id) {
   const prisma = new PrismaClient();
   return await prisma.notices.findUnique({
     where: { id: id },
+  });
+}
+// Count Notice
+export async function totalNotice(status) {
+  const prisma = new PrismaClient();
+  return await prisma.notices.count({
+    where: { status: status },
   });
 }
 

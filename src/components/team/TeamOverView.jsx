@@ -12,6 +12,8 @@ import Link from "next/link";
 import { PencilIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import { CreateMember } from "./CreateMember";
+import { Trash } from "@phosphor-icons/react";
+import { ErrorToast, SuccessToast } from "@/utils/formHelper";
 
 const TABLE_HEAD = [
   "Image",
@@ -23,6 +25,7 @@ const TABLE_HEAD = [
 ];
 
 export default function TeamOverView({ data, itemsPerPage }) {
+  const [submit, setSubmit] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = Math.ceil(data.length / itemsPerPage);
   const handlePrevious = () => {
@@ -34,6 +37,32 @@ export default function TeamOverView({ data, itemsPerPage }) {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = Math.min(startIndex + itemsPerPage, data.length);
   const currentData = data.slice(startIndex, endIndex);
+
+  const deleteHandler = async (id) => {
+    try {
+      setSubmit(true);
+      const config = {
+        method: "DELETE",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ id: id }),
+      };
+      const req = await fetch("/api/teams", config);
+      const res = await req.json();
+      if (res.status === "Internal Error!") {
+        ErrorToast(res.status);
+      } else {
+        SuccessToast(res.status);
+        window.location.href = "/dashboard/teams";
+      }
+    } catch (e) {
+      e.toString();
+    } finally {
+      setSubmit(false);
+    }
+  };
   return (
     <Card className="h-full w-full mt-5">
       <CardHeader floated={false} shadow={false} className="rounded-none">
@@ -142,7 +171,7 @@ export default function TeamOverView({ data, itemsPerPage }) {
                         })}
                       </Typography>
                     </td>
-                    <td className={classes}>
+                    <td className={`${classes} flex gap-2`}>
                       <Link href={`/dashboard/teams/${id}`}>
                         <Tooltip content="Edit Member">
                           <IconButton variant="text">
@@ -150,6 +179,14 @@ export default function TeamOverView({ data, itemsPerPage }) {
                           </IconButton>
                         </Tooltip>
                       </Link>
+                      <Tooltip content="Delete Member">
+                        <IconButton
+                          variant="text"
+                          onClick={() => deleteHandler(id)}
+                        >
+                          <Trash className="h-5 w-5 text-red-500" />
+                        </IconButton>
+                      </Tooltip>
                     </td>
                   </tr>
                 );
