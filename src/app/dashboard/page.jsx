@@ -1,16 +1,57 @@
 import OverViewCard from "@/components/dashboard/OverViewCard";
-import { getUser, totalBlogs, totalCategoris } from "@/utils/assetsData";
+import {
+  countUnreadedMassages,
+  getUser,
+  totalBlogs,
+  totalCategoris,
+  totalMember,
+  totalMemberWithDesig,
+  totalService,
+  totalSubscriber,
+} from "@/utils/assetsData";
 
 export default async function Dashboard() {
   let userPromise = getUser();
   let countBlogsPromise = totalBlogs();
   let countCategoriesPromise = totalCategoris();
+  let countMemberPromise = totalMember();
+  let manageePromise = totalMemberWithDesig("Management/Admin");
+  let therapistPromise = totalMemberWithDesig("Therapist");
+  let teacherPromise = totalMemberWithDesig("Special Teacher");
+  let staffPromise = totalMemberWithDesig("Office Staff");
+  let totalServicePromise = totalService();
+  let totalMassagePromise = countUnreadedMassages();
+  let totalUnreadedMassagePromise = countUnreadedMassages("unread");
+  let countSubscriberPromise = totalSubscriber();
 
-  let [user, countBlogs, countCategories] = await Promise.all([
+  let [
+    user,
+    countBlogs,
+    countCategories,
+    countMember,
+    totalManagee,
+    totalTherapist,
+    TotalTeacher,
+    TotalStaff,
+    totalServices,
+    totalMassage,
+    totalUnreadedMassage,
+    countSubscriber,
+  ] = await Promise.all([
     userPromise,
     countBlogsPromise,
     countCategoriesPromise,
+    countMemberPromise,
+    manageePromise,
+    therapistPromise,
+    teacherPromise,
+    staffPromise,
+    totalServicePromise,
+    totalMassagePromise,
+    totalUnreadedMassagePromise,
+    countSubscriberPromise,
   ]);
+  console.log(countSubscriber);
 
   return (
     <section className=" px-8 py-8 2xl:px-10 2xl:py-12">
@@ -49,7 +90,7 @@ export default async function Dashboard() {
               contents={[
                 {
                   subTitle: "Available Services",
-                  counts: 6,
+                  counts: totalServices._count.id,
                 },
                 {
                   subTitle: "Upcomming Services",
@@ -99,20 +140,24 @@ export default async function Dashboard() {
               header="Staff Details"
               contents={[
                 {
+                  subTitle: "Total Staff",
+                  counts: countMember._count.id,
+                },
+                {
                   subTitle: "Mangement",
-                  counts: 4,
+                  counts: totalManagee._count.id,
                 },
                 {
                   subTitle: "Therapist",
-                  counts: 3,
+                  counts: totalTherapist._count.id,
                 },
                 {
                   subTitle: "Special Teacher",
-                  counts: 15,
+                  counts: TotalTeacher._count.id,
                 },
                 {
                   subTitle: "Supporting Staff",
-                  counts: 3,
+                  counts: TotalStaff._count.id,
                 },
               ]}
             />
@@ -130,7 +175,9 @@ export default async function Dashboard() {
               <div className=" p-4">
                 <p>
                   Valid Subscriber
-                  <span className="pl-2 font-bold">{6}</span>
+                  <span className="pl-2 font-bold">
+                    {countSubscriber._count.id}
+                  </span>
                 </p>
                 <p>
                   Invalid Subscriber
@@ -145,11 +192,11 @@ export default async function Dashboard() {
               <div className=" p-4">
                 <p>
                   Unreaded Massages:
-                  <span className="pl-2 font-bold">{7}</span>
+                  <span className="pl-2 font-bold">{totalUnreadedMassage}</span>
                 </p>
                 <p>
                   Total Massages
-                  <span className="pl-2 font-bold">{113}</span>
+                  <span className="pl-2 font-bold">{totalMassage}</span>
                 </p>
               </div>
             </div>
