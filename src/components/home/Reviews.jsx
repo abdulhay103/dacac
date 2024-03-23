@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import abdulhay from "/public/home/review/Abdul HAy.JPG";
+import abdulhay from "/public/home/review/AbdulHAy.JPG";
 import ClientImage1 from "/public/users/team-member.png";
 import { Rating } from "@material-tailwind/react";
 
@@ -50,8 +50,8 @@ export default function Reviews() {
             <div className=" w-28 h-28 rounded-full overflow-hidden bg-white mx-auto mt-10">
               <Image
                 src={ClientImage1}
-                width="auto"
-                height="auto"
+                width="200"
+                height="200"
                 className=" object-cover"
                 alt="Client Image"
               />
@@ -72,8 +72,8 @@ export default function Reviews() {
             <div className=" w-28 h-28 rounded-full overflow-hidden bg-white mx-auto mt-10">
               <Image
                 src={abdulhay}
-                width="auto"
-                height="auto"
+                width="200"
+                height="200"
                 className=" object-fill"
                 alt="Client Image"
               />
@@ -95,8 +95,8 @@ export default function Reviews() {
             <div className=" w-28 h-28 rounded-full overflow-hidden bg-white mx-auto mt-10">
               <Image
                 src={ClientImage1}
-                width="auto"
-                height="auto"
+                width="200"
+                height="200"
                 className=" object-cover"
                 alt="Client Image"
               />
@@ -118,8 +118,8 @@ export default function Reviews() {
             <div className=" w-28 h-28 rounded-full overflow-hidden bg-white mx-auto mt-10">
               <Image
                 src={ClientImage1}
-                width="auto"
-                height="auto"
+                width="200"
+                height="200"
                 className=" object-cover"
                 alt="Client Image"
               />
@@ -141,8 +141,8 @@ export default function Reviews() {
             <div className=" w-28 h-28 rounded-full overflow-hidden bg-white mx-auto mt-10">
               <Image
                 src={ClientImage1}
-                width="auto"
-                height="auto"
+                width="200"
+                height="200"
                 className=" object-cover"
                 alt="Client Image"
               />
@@ -164,8 +164,8 @@ export default function Reviews() {
             <div className=" w-28 h-28 rounded-full overflow-hidden bg-white mx-auto mt-10">
               <Image
                 src={ClientImage1}
-                width="auto"
-                height="auto"
+                width="200"
+                height="200"
                 className=" object-cover"
                 alt="Client Image"
               />
@@ -187,8 +187,8 @@ export default function Reviews() {
             <div className=" w-28 h-28 rounded-full overflow-hidden bg-white mx-auto mt-10">
               <Image
                 src={ClientImage1}
-                width="auto"
-                height="auto"
+                width="200"
+                height="200"
                 className=" object-cover"
                 alt="Client Image"
               />
