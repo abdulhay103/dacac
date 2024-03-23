@@ -80,7 +80,7 @@ export function CreateBlog({ categories }) {
           ErrorToast(res.status);
         } else {
           SuccessToast(res.status);
-          window.location.reload();
+          window.location.href = "/dashboard/blogs";
         }
       }
     } catch (e) {
@@ -151,7 +151,7 @@ export function CreateBlog({ categories }) {
               <div className="w-full flex gap-6 items-center">
                 <div className=" w-full">
                   <p>Click to Update Profile Picture</p>
-                  <div>
+                  <div className=" overflow-hidden">
                     <CldUploadButton
                       onUpload={uploadImagehadler}
                       uploadPreset="mec_trade_link"

@@ -65,3 +65,27 @@ export async function PATCH(req) {
     });
   }
 }
+// Delete Team Member
+export async function DELETE(req) {
+  BigInt.prototype.toJSON = function () {
+    return this.toString();
+  };
+
+  try {
+    const prisma = new PrismaClient();
+    const reqBody = await req.json();
+    let deleteMember = await prisma.teams.delete({
+      where: { id: reqBody["id"] },
+    });
+
+    return NextResponse.json({
+      status: "Successfully Delete Team Member",
+      data: deleteMember,
+    });
+  } catch (e) {
+    return NextResponse.json({
+      status: "Internal Error!",
+      data: e.toString(),
+    });
+  }
+}

@@ -6,6 +6,7 @@ import {
   totalCategoris,
   totalMember,
   totalMemberWithDesig,
+  totalNotice,
   totalService,
   totalSubscriber,
 } from "@/utils/assetsData";
@@ -23,6 +24,9 @@ export default async function Dashboard() {
   let totalMassagePromise = countUnreadedMassages();
   let totalUnreadedMassagePromise = countUnreadedMassages("unread");
   let countSubscriberPromise = totalSubscriber();
+  let countNoticePromice = totalNotice();
+  let countOpenNoticePromice = totalNotice("open");
+  let countCloseNoticePromice = totalNotice("close");
 
   let [
     user,
@@ -37,6 +41,9 @@ export default async function Dashboard() {
     totalMassage,
     totalUnreadedMassage,
     countSubscriber,
+    countNotice,
+    countOpenNotice,
+    countCloseNotice,
   ] = await Promise.all([
     userPromise,
     countBlogsPromise,
@@ -50,6 +57,9 @@ export default async function Dashboard() {
     totalMassagePromise,
     totalUnreadedMassagePromise,
     countSubscriberPromise,
+    countNoticePromice,
+    countOpenNoticePromice,
+    countCloseNoticePromice,
   ]);
 
   return (
@@ -104,15 +114,15 @@ export default async function Dashboard() {
               contents={[
                 {
                   subTitle: "Open Notice",
-                  counts: 4,
+                  counts: countNotice,
                 },
                 {
                   subTitle: "Close Notice",
-                  counts: 3,
+                  counts: countCloseNotice,
                 },
                 {
                   subTitle: "Total Notices",
-                  counts: 15,
+                  counts: countOpenNotice,
                 },
               ]}
             />
