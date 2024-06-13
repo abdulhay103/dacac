@@ -152,7 +152,7 @@ export function UpdateBlog({ details, categories }) {
                 </div>
                 <div className=" w-full">
                   <p>Update Image</p>
-                  <div>
+                  <div className=" overflow-hidden">
                     <CldUploadButton
                       onUpload={uploadImagehadler}
                       uploadPreset="mec_trade_link"

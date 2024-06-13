@@ -44,6 +44,15 @@ export async function getAllMassage() {
     },
   });
 }
+// Count Subscriber
+export async function totalSubscriber() {
+  const prisma = new PrismaClient();
+  return await prisma.subscribers.aggregate({
+    _count: {
+      id: true,
+    },
+  });
+}
 
 // Get All Service Data
 export async function getServices(count) {
@@ -58,6 +67,11 @@ export async function getServices(count) {
 export async function getSingleService(id) {
   const prisma = new PrismaClient();
   return await prisma.services.findUnique({ where: { id: id } });
+}
+// Single Service Data
+export async function totalService() {
+  const prisma = new PrismaClient();
+  return await prisma.services.aggregate({ _count: { id: true } });
 }
 
 // Get All Directors
@@ -83,12 +97,18 @@ export async function getNotices(skip, count) {
     },
   });
 }
-
 // Get Single Notice
 export async function getNoticesDetails(id) {
   const prisma = new PrismaClient();
   return await prisma.notices.findUnique({
     where: { id: id },
+  });
+}
+// Count Notice
+export async function totalNotice(status) {
+  const prisma = new PrismaClient();
+  return await prisma.notices.count({
+    where: { status: status },
   });
 }
 
@@ -138,11 +158,32 @@ export async function getRecentBlogs() {
   });
 }
 
+// Count Blogs
+export async function totalBlogs() {
+  const prisma = new PrismaClient();
+  return await prisma.blogs.aggregate({
+    _count: {
+      id: true,
+    },
+  });
+}
+
 // Get Categories
 export async function getCategories() {
   const prisma = new PrismaClient();
   return await prisma.categories.findMany();
 }
+
+// Count Categories
+export async function totalCategoris() {
+  const prisma = new PrismaClient();
+  return await prisma.categories.aggregate({
+    _count: {
+      id: true,
+    },
+  });
+}
+
 // Get Team Members
 export async function getTeamMembers() {
   const prisma = new PrismaClient();
@@ -164,6 +205,27 @@ export async function teamMemberByDesignation(designation) {
   return await prisma.teams.findMany({
     where: {
       designation: designation,
+    },
+  });
+}
+// Count Team Member
+export async function totalMember() {
+  const prisma = new PrismaClient();
+  return await prisma.teams.aggregate({
+    _count: {
+      id: true,
+    },
+  });
+}
+// Count Team Member by designation
+export async function totalMemberWithDesig(designation) {
+  const prisma = new PrismaClient();
+  return await prisma.teams.aggregate({
+    where: {
+      designation: designation,
+    },
+    _count: {
+      id: true,
     },
   });
 }
