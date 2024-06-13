@@ -8,9 +8,9 @@ import { Toaster } from "react-hot-toast";
 import { inter, kalam, rubik } from "@/fonts/fonts";
 
 export const metadata = {
-  title: "Home | Dream Angels Centre for Autistic Children (DACAC)",
+  title: "Home | Dream Angels Centre for Autistic Children (UPPC)",
   description:
-    "Dream Angels Centre for Autistic Children (DACAC) is a specialized centre for physically and mentally challenged children between the ages of 2- 8 years especially with symptoms of AUTISM. DACAC is run and managed by professional speech therapists, occupational therapists, physiotherapists and special educators ably supported by caregivers and administrative staff.",
+    "Dream Angels Centre for Autistic Children (UPPC) is a specialized centre for physically and mentally challenged children between the ages of 2- 8 years especially with symptoms of AUTISM. UPPC is run and managed by professional speech therapists, occupational therapists, physiotherapists and special educators ably supported by caregivers and administrative staff.",
 };
 
 export default function RootLayout({ children }) {
