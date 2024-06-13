@@ -104,8 +104,8 @@ model categories {
   name      String   @unique @db.VarChar(100)
   details   String   @db.Text
   usersId   Int
-  createdAt DateTime @default(now()) @db.DateTime
-  updatedAt DateTime @default(now()) @updatedAt @db.DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
   users     users    @relation(fields: [usersId], references: [id], onDelete: Restrict, onUpdate: Cascade)
   blogs     blogs[]
 }
