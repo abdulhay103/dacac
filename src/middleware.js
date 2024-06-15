@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { VerifyToken } from "./utils/jwtHelper";
 
 export async function middleware(req) {
-  if (req.nextUrl.pathname.startsWith("/dashboard")) {
+  if (req.nextUrl.pathname.startsWith("https://www.dacacbd.org/dashboard")) {
     try {
       let token = req.cookies.get("token");
       const reqHeaders = new Headers(req.headers);
